@@ -265,8 +265,8 @@ export default function SocialInsightsCaseStudy() {
             </h1>
             <p className="reveal mt-6 max-w-2xl text-lg leading-8 text-muted md:text-xl">
               Turning Reddit conversations into brand insights marketers can act
-              on — a 0→1 product, validated mid-build and shipped to a public
-              beta inside HubSpot’s Marketing Hub.
+              on. Currently, validated and shipped to a public beta inside
+              HubSpot’s Marketing Hub.
             </p>
 
             <dl className="reveal mt-10 grid grid-cols-2 gap-x-6 gap-y-6 border-t border-line pt-8 sm:grid-cols-4">
