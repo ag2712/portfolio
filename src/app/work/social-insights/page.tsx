@@ -338,6 +338,16 @@ export default function SocialInsightsCaseStudy() {
               confident decisions. Not just another social listening tool.
             </p>
 
+            <figure className="reveal mt-10 border-l-2 border-accent pl-6 md:pl-8">
+              <blockquote className="font-display text-2xl font-medium leading-snug tracking-tight text-ink md:text-3xl">
+                “Reddit is the source of truth. Surveys give you what people will
+                say — Reddit gives you what they actually think.”
+              </blockquote>
+              <figcaption className="mt-4 text-sm text-muted">
+                — Marketing Director, B2B SaaS · validation interview, March 2026
+              </figcaption>
+            </figure>
+
             <div className="mt-14 grid grid-cols-1 gap-12 md:grid-cols-2">
               <div className="reveal">
                 <p className="eyebrow">The problem</p>
@@ -357,16 +367,6 @@ export default function SocialInsightsCaseStudy() {
                 </p>
               </div>
             </div>
-
-            <figure className="reveal mt-14 border-l-2 border-accent pl-6 md:pl-8">
-              <blockquote className="font-display text-2xl font-medium leading-snug tracking-tight text-ink md:text-3xl">
-                “Reddit is the source of truth. Surveys give you what people will
-                say — Reddit gives you what they actually think.”
-              </blockquote>
-              <figcaption className="mt-4 text-sm text-muted">
-                — Marketing Director, B2B SaaS · validation interview, March 2026
-              </figcaption>
-            </figure>
           </div>
         </section>
 
