@@ -3,16 +3,6 @@ import { site } from "@/lib/content";
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
-      {/* soft ambient glow */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-40 right-0 h-[520px] w-[520px] rounded-full opacity-40 blur-3xl"
-        style={{
-          background:
-            "radial-gradient(circle at center, var(--accent) 0%, transparent 65%)",
-        }}
-      />
-
       <div className="mx-auto max-w-6xl px-6 pb-20 pt-20 md:px-10 md:pb-28 md:pt-32">
         <p className="eyebrow reveal">
           {site.role}
@@ -22,7 +12,7 @@ export default function Hero() {
         <h1 className="reveal mt-6 max-w-4xl font-display text-5xl font-medium leading-[1.02] tracking-tight text-ink sm:text-6xl md:text-7xl lg:text-[5.5rem]">
           I make complex tools
           <br className="hidden sm:block" />{" "}
-          feel <span className="italic text-accent-ink">obvious</span>.
+          feel <span className="marker italic">obvious</span>.
         </h1>
 
         <p className="reveal mt-8 max-w-xl text-lg leading-8 text-muted md:text-xl">

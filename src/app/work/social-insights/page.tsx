@@ -258,14 +258,6 @@ export default function SocialInsightsCaseStudy() {
       <main className="flex-1">
         {/* Hero */}
         <section className="relative overflow-hidden">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute -top-40 right-0 h-[520px] w-[520px] rounded-full opacity-40 blur-3xl"
-            style={{
-              background:
-                "radial-gradient(circle at center, var(--accent) 0%, transparent 65%)",
-            }}
-          />
           <div className="mx-auto max-w-4xl px-6 pb-14 pt-16 md:px-10 md:pb-20 md:pt-24">
             <p className="eyebrow reveal">Case study · Reddit-powered brand visibility</p>
             <h1 className="reveal mt-5 font-display text-5xl font-medium leading-[1.02] tracking-tight text-ink sm:text-6xl md:text-7xl">

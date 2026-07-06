@@ -44,6 +44,26 @@ body {
   color: var(--bg-raised);
 }
 
+/* Marker highlight — a warm marigold swipe behind a key word.
+   Sits low like a real highlighter, with soft uneven ends. Personality
+   without decoration; use it sparingly (one word per view). */
+.marker {
+  background-image: linear-gradient(
+    101deg,
+    rgba(224, 160, 33, 0) 0.5%,
+    rgba(224, 160, 33, 0.5) 2%,
+    rgba(224, 160, 33, 0.36) 50%,
+    rgba(224, 160, 33, 0.52) 96%,
+    rgba(224, 160, 33, 0) 99.5%
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 56%;
+  background-position: 0 82%;
+  padding-inline: 0.1em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 /* Thin uppercase eyebrow label used across sections */
 .eyebrow {
   font-size: 0.72rem;
