@@ -15,7 +15,8 @@ export default function Hero() {
 
       <div className="mx-auto max-w-6xl px-6 pb-20 pt-20 md:px-10 md:pb-28 md:pt-32">
         <p className="eyebrow reveal">
-          {site.role} · {site.location}
+          {site.role}
+          {site.location ? ` · ${site.location}` : ""}
         </p>
 
         <h1 className="reveal mt-6 max-w-4xl font-display text-5xl font-medium leading-[1.02] tracking-tight text-ink sm:text-6xl md:text-7xl lg:text-[5.5rem]">
@@ -51,11 +52,11 @@ export default function Hero() {
       <div className="border-y border-line bg-bg-raised/60">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-6 py-4 text-sm text-muted md:px-10">
           <span className="text-accent-ink">●</span>
-          <span>Available for select senior &amp; staff roles</span>
+          <span>Senior Product Designer at HubSpot</span>
           <span className="text-line-strong">/</span>
-          <span>Product · Systems · 0→1</span>
+          <span>Content platform · Systems</span>
           <span className="text-line-strong">/</span>
-          <span>8+ years</span>
+          <span>7+ years</span>
         </div>
       </div>
     </section>

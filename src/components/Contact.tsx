@@ -40,7 +40,7 @@ export default function Contact() {
           <span>
             © {year} {site.name}. Designed &amp; built from scratch.
           </span>
-          <span>{site.location}</span>
+          {site.location ? <span>{site.location}</span> : null}
         </div>
       </div>
     </footer>

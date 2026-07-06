@@ -2,6 +2,9 @@
 // EDIT ME — all portfolio content lives here.
 // Swap the copy, projects, and links below with your own. Everything is typed,
 // so your editor will guide you.
+//
+// TODO markers flag things I couldn't confirm from your LinkedIn paste —
+// fill these in when you get a chance.
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const site = {
@@ -9,31 +12,31 @@ export const site = {
   role: "Senior Product Designer",
   // A short, spoken-word intro used in the hero.
   tagline:
-    "I design calm, considered products for complex problems — from 0→1 bets to systems used by millions.",
-  location: "San Francisco, CA",
+    "Senior product designer at HubSpot. I design scalable, insight-driven experiences for content tooling — research-led, and shipped at platform scale.",
+  // TODO: add your city (left blank so nothing is invented).
+  location: "",
   email: "a27gonsalves@gmail.com",
   // Drop a PDF at /public/resume.pdf to make this button work.
   resumeUrl: "/resume.pdf",
   socials: [
-    { label: "LinkedIn", href: "https://linkedin.com/in/" },
-    { label: "Dribbble", href: "https://dribbble.com/" },
-    { label: "Read.cv", href: "https://read.cv/" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/alisha-gonsalves/" },
+    // TODO: add Dribbble / personal site / Read.cv if you have them.
   ],
 } as const;
 
 export const about = {
   // 2–3 short paragraphs. Keep it human.
   paragraphs: [
-    "I’m a senior product designer with 8+ years shaping software that people reach for every day. I care about the unglamorous middle of a product — the states, the edges, the moments where clarity earns trust.",
-    "My work spans fintech, healthcare, and B2B platforms. I move comfortably between zero-to-one exploration and the systems thinking it takes to scale a mature product without it turning to mush.",
-    "Away from the canvas I’m usually with a film camera, a bread starter that demands attention, or a trail somewhere with no signal.",
+    "I’m a senior product designer at HubSpot, where I design scalable, insight-driven experiences in the content editor space — the tools brands rely on to publish and make informed decisions.",
+    "I came into product design through research. Earlier roles at CentralSquare, the University of Maryland, and Experian were grounded in user interviews, usability testing, and quantitative tracking — and that research instinct still shapes how I approach every problem.",
+    "I care about the parts of a product that are easy to skip: the processes, the edge states, and the handoffs that decide whether good design actually ships.",
   ],
   // Quick facts shown as a small grid.
   facts: [
-    { label: "Focus", value: "Product · Systems · 0→1" },
-    { label: "Experience", value: "8+ years" },
-    { label: "Tools", value: "Figma · Framer · Swift" },
-    { label: "Based in", value: "San Francisco" },
+    { label: "Focus", value: "Content platform · Systems" },
+    { label: "Experience", value: "7+ years" }, // TODO: adjust if you prefer
+    { label: "Currently", value: "Senior PD @ HubSpot" },
+    { label: "Education", value: "University of Maryland" }, // TODO: add degree
   ],
 } as const;
 
@@ -52,38 +55,40 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "atlas-checkout",
-    title: "Rebuilding checkout for a fintech platform",
+    slug: "content-editor",
+    title: "Insight-driven experiences in the content editor",
     summary:
-      "Led the redesign of a multi-step payment flow, collapsing friction and rebuilding trust at the moment money moves. Ran the research, shipped the system, and measured the lift.",
-    role: "Lead Product Designer",
+      "Designing scalable experiences that help brands make informed decisions — shipping multiple features across HubSpot’s content editor and establishing how feature requests get triaged and prioritized.",
+    role: "Senior Product Designer · HubSpot",
     year: "2024",
-    tags: ["Research", "Interaction", "Design System"],
-    metric: { value: "+34%", label: "checkout conversion" },
+    tags: ["Content Tools", "Systems", "Strategy"],
+    // TODO: replace with a real outcome metric when you have one.
+    metric: { value: "Insight-driven", label: "brand decisions" },
     cover: { from: "#e8623c", to: "#f2a65a", ink: "#2a1206" },
     href: "#",
   },
   {
-    slug: "vela-health",
-    title: "A design system for a healthcare suite",
+    slug: "knowledge-bases",
+    title: "Knowledge Bases on the content platform",
     summary:
-      "Built Vela — a token-driven system unifying five products and three platforms. Cut design-to-ship time and gave 40+ engineers a single, accessible source of truth.",
-    role: "Staff Designer, Design Systems",
+      "Designed knowledge base features and shaped the first-run experience as the tool moved onto HubSpot’s content platform — with a focus on getting teams activated early.",
+    role: "Product Designer · HubSpot",
     year: "2023",
-    tags: ["Design System", "Accessibility", "Tokens"],
-    metric: { value: "5→1", label: "products unified" },
+    tags: ["Research", "Activation", "Platform"],
+    metric: { value: "13.6%", label: "activation in 90 days" },
     cover: { from: "#3f6f6b", to: "#7fb2a6", ink: "#0e1f1d" },
     href: "#",
   },
   {
-    slug: "nimbus-onboarding",
-    title: "0→1 onboarding for a B2B SaaS",
+    slug: "platform-migration",
+    title: "Migrating a standalone tool onto the platform",
     summary:
-      "Shaped the first-run experience for a new analytics product — from blank-canvas concept to a guided setup that got teams to their first insight in minutes, not days.",
-    role: "Founding Product Designer",
+      "Led the design strategy to bring a standalone tool onto HubSpot’s content platform, and introduced a testing process for efficient bug resolution before each release.",
+    role: "Product Designer · HubSpot",
     year: "2022",
-    tags: ["0→1", "Prototyping", "Onboarding"],
-    metric: { value: "3 days → 9 min", label: "time to value" },
+    tags: ["Design Strategy", "Platform", "Process"],
+    // TODO: replace with a real outcome metric when you have one.
+    metric: { value: "Standalone → Platform", label: "migration led" },
     cover: { from: "#4b4bd6", to: "#8f7bf0", ink: "#0c0a2b" },
     href: "#",
   },
@@ -98,32 +103,39 @@ export type Role = {
 
 export const experience: Role[] = [
   {
-    company: "Northwind",
+    company: "HubSpot",
     title: "Senior Product Designer",
-    period: "2022 — Present",
+    period: "Nov 2023 — Present",
     blurb:
-      "Own end-to-end design for the payments platform. Partner with PM and eng on strategy, ship the roadmap, and steward the design system.",
+      "Design scalable, insight-driven experiences for brand decision-making in the content editor space. Shipped multiple editor features and established processes to streamline feature requests and prioritization.",
   },
   {
-    company: "Vela Health",
-    title: "Staff Designer, Design Systems",
-    period: "2020 — 2022",
-    blurb:
-      "Founded and scaled the design system across five products; drove the org’s accessibility standards to WCAG 2.1 AA.",
-  },
-  {
-    company: "Nimbus",
-    title: "Founding Product Designer",
-    period: "2018 — 2020",
-    blurb:
-      "First designer at a seed-stage analytics startup. Set the visual language, shipped the MVP, and helped raise a Series A.",
-  },
-  {
-    company: "Studio Field",
+    company: "HubSpot",
     title: "Product Designer",
-    period: "2016 — 2018",
+    period: "Sep 2021 — Oct 2023",
     blurb:
-      "Design consultancy — shipped web and mobile products for clients across fintech, retail, and civic tech.",
+      "Led the design strategy to move a standalone tool onto HubSpot’s content platform. Designed knowledge base features that reached a 13.6% activation rate within 90 days, and created a testing process for faster pre-release bug resolution.",
+  },
+  {
+    company: "CentralSquare Technologies",
+    title: "Associate UX Designer",
+    period: "Aug 2019 — Aug 2021",
+    blurb:
+      "Ran qualitative research — user interviews and usability sessions — and set up product tracking for quantitative insight. Built processes to streamline cross-functional collaboration.",
+  },
+  {
+    company: "University of Maryland",
+    title: "UX Graduate Assistant",
+    period: "Sep 2018 — May 2019",
+    blurb:
+      "Gathered and reported user feedback through usability testing, co-authored a usability issues document with proposed UX solutions, and helped clean faculty data for import.",
+  },
+  {
+    company: "Experian",
+    title: "Business UX Analyst Intern",
+    period: "Jun 2018 — Aug 2018",
+    blurb:
+      "Audited an internal tool for usability and delivered issue artifacts with prototyped improvement solutions.",
   },
 ];
 
@@ -132,8 +144,8 @@ export const capabilities = [
   "Interaction design",
   "Design systems",
   "User research",
+  "Usability testing",
   "Prototyping",
-  "Design ops",
-  "Accessibility",
-  "Front-end (React / SwiftUI)",
+  "Content design",
+  "Cross-functional leadership",
 ] as const;
