@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { projects, type Project } from "@/lib/content";
 
 function ProjectCover({ project }: { project: Project }) {
@@ -35,7 +36,7 @@ function ProjectCover({ project }: { project: Project }) {
 
 function Card({ project, index }: { project: Project; index: number }) {
   return (
-    <a
+    <Link
       href={project.href ?? "#"}
       className="reveal group block"
       style={{ transitionDelay: `${index * 80}ms` }}
@@ -66,7 +67,7 @@ function Card({ project, index }: { project: Project; index: number }) {
           </span>
         ))}
       </div>
-    </a>
+    </Link>
   );
 }
 

@@ -55,17 +55,16 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "content-editor",
-    title: "Insight-driven experiences in the content editor",
+    slug: "social-insights",
+    title: "Social Insights — Reddit-powered brand visibility",
     summary:
-      "I design the experiences brands use to make informed content decisions — shipping features across HubSpot’s editor, and setting up how the team decides what to build next.",
+      "A 0→1 product turning Reddit conversations into brand insights marketers can act on. Validated with 14 marketing leaders mid-build and shipped to a public beta inside HubSpot’s Marketing Hub.",
     role: "Senior Product Designer · HubSpot",
-    year: "2024",
-    tags: ["Content Tools", "Systems", "Strategy"],
-    // TODO: replace with a real outcome metric when you have one.
-    metric: { value: "Insight-driven", label: "brand decisions" },
+    year: "2026",
+    tags: ["0→1", "Research", "AI-assisted"],
+    metric: { value: "32%", label: "beta activation rate" },
     cover: { from: "#e8623c", to: "#f2a65a", ink: "#2a1206" },
-    href: "#",
+    href: "/work/social-insights",
   },
   {
     slug: "knowledge-bases",
