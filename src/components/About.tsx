@@ -11,7 +11,7 @@ export default function About() {
           <div className="reveal md:col-span-4">
             <p className="eyebrow">About</p>
             <h2 className="mt-3 font-display text-3xl font-medium leading-tight tracking-tight text-ink md:text-4xl">
-              I read the room — and the roadmap.
+              I read the room — and the <span className="marker">roadmap</span>.
             </h2>
 
             <dl className="mt-10 grid grid-cols-2 gap-x-6 gap-y-6">

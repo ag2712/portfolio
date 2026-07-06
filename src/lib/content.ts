@@ -63,7 +63,7 @@ export const projects: Project[] = [
     year: "2026",
     tags: ["0→1", "Research", "AI-assisted"],
     metric: { value: "32%", label: "beta activation rate" },
-    cover: { from: "#e8623c", to: "#f2a65a", ink: "#2a1206" },
+    cover: { from: "#3a52cf", to: "#93a4e8", ink: "#0f1633" },
     href: "/work/social-insights",
   },
   {
@@ -88,7 +88,7 @@ export const projects: Project[] = [
     tags: ["Design Strategy", "Platform", "Process"],
     // TODO: replace with a real outcome metric when you have one.
     metric: { value: "Standalone → Platform", label: "migration led" },
-    cover: { from: "#4b4bd6", to: "#8f7bf0", ink: "#0c0a2b" },
+    cover: { from: "#6f7f4a", to: "#a7b681", ink: "#1a2010" },
     href: "#",
   },
 ];

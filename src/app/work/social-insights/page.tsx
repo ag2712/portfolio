@@ -311,17 +311,13 @@ export default function SocialInsightsCaseStudy() {
                   key={e.name}
                   className={`reveal rounded-2xl border p-5 md:p-6 ${
                     e.highlight
-                      ? "border-accent/40 bg-accent/5"
+                      ? "border-sage-ink/30 bg-sage/60"
                       : "border-line bg-bg-raised/40"
                   }`}
                   style={{ marginLeft: `${i * 20}px` }}
                 >
                   <p className="eyebrow">{e.level}</p>
-                  <h3
-                    className={`mt-1.5 font-display text-xl font-medium tracking-tight ${
-                      e.highlight ? "text-accent-ink" : "text-ink"
-                    }`}
-                  >
+                  <h3 className="mt-1.5 font-display text-xl font-medium tracking-tight text-ink">
                     {e.name}
                   </h3>
                   <p className="mt-1.5 max-w-xl text-sm leading-6 text-muted">
@@ -393,14 +389,10 @@ export default function SocialInsightsCaseStudy() {
                   key={c.category}
                   className={`reveal grid grid-cols-1 gap-4 p-5 md:grid-cols-12 md:gap-6 md:p-6 ${
                     i > 0 ? "border-t border-line" : ""
-                  } ${c.highlight ? "bg-accent/5" : ""}`}
+                  } ${c.highlight ? "bg-sage/50" : ""}`}
                 >
                   <div className="md:col-span-3">
-                    <h3
-                      className={`font-display text-lg font-medium tracking-tight ${
-                        c.highlight ? "text-accent-ink" : "text-ink"
-                      }`}
-                    >
+                    <h3 className="font-display text-lg font-medium tracking-tight text-ink">
                       {c.category}
                     </h3>
                     <p className="mt-1 text-xs text-muted">{c.examples}</p>

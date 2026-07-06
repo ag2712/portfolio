@@ -2,15 +2,17 @@
 
 /* ─── Design tokens ──────────────────────────────────────────────────────── */
 :root {
-  --bg: #f6f3ec; /* warm ivory */
-  --bg-raised: #fbf9f4;
-  --ink: #191714; /* warm near-black */
-  --muted: #6f675d;
-  --line: rgba(25, 23, 20, 0.12);
-  --line-strong: rgba(25, 23, 20, 0.22);
-  --accent: #d3542c; /* rust — primary accent */
-  --accent-ink: #8f3315;
-  --marigold: #e0a021; /* secondary spark — decorative only (fails AA on light) */
+  --bg: #f0eee7; /* warm cream / greige */
+  --bg-raised: #f7f5ef;
+  --ink: #18181b; /* neutral near-black */
+  --muted: #64656b;
+  --line: rgba(24, 24, 27, 0.12);
+  --line-strong: rgba(24, 24, 27, 0.22);
+  --accent: #3a52cf; /* blue — links & interactive emphasis */
+  --accent-ink: #2d3fb0; /* darker blue for text (passes AA on cream) */
+  --sage: #dde3cd; /* muted green — highlight surface */
+  --sage-ink: #55663e; /* darker sage — labels, dots, borders */
+  --mist: #dde4e7; /* cool grey-blue — secondary surface */
 }
 
 @theme inline {
@@ -22,9 +24,11 @@
   --color-line-strong: var(--line-strong);
   --color-accent: var(--accent);
   --color-accent-ink: var(--accent-ink);
-  --color-marigold: var(--marigold);
+  --color-sage: var(--sage);
+  --color-sage-ink: var(--sage-ink);
+  --color-mist: var(--mist);
   --font-sans: var(--font-inter);
-  --font-display: var(--font-fraunces);
+  --font-display: var(--font-newsreader);
 }
 
 html {
@@ -50,11 +54,11 @@ body {
 .marker {
   background-image: linear-gradient(
     101deg,
-    rgba(224, 160, 33, 0) 0.5%,
-    rgba(224, 160, 33, 0.5) 2%,
-    rgba(224, 160, 33, 0.36) 50%,
-    rgba(224, 160, 33, 0.52) 96%,
-    rgba(224, 160, 33, 0) 99.5%
+    rgba(151, 173, 108, 0) 0.5%,
+    rgba(151, 173, 108, 0.55) 2%,
+    rgba(151, 173, 108, 0.38) 50%,
+    rgba(151, 173, 108, 0.55) 96%,
+    rgba(151, 173, 108, 0) 99.5%
   );
   background-repeat: no-repeat;
   background-size: 100% 56%;

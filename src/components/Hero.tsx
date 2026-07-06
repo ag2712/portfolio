@@ -41,7 +41,7 @@ export default function Hero() {
       {/* marquee-style capability strip */}
       <div className="border-y border-line bg-bg-raised/60">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-6 py-4 text-sm text-muted md:px-10">
-          <span className="text-marigold">●</span>
+          <span className="text-sage-ink">●</span>
           <span>Senior Product Designer at HubSpot</span>
           <span className="text-line-strong">/</span>
           <span>Content platform · Systems</span>

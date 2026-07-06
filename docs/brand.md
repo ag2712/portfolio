@@ -62,12 +62,12 @@ A deliberately small, two-family system. Restraint here *is* the taste signal.
 
 | Role | Typeface | Notes |
 | --- | --- | --- |
-| **Display** — headlines, project titles, big statements | **Fraunces** (variable; `opsz`, `SOFT` axes) | Warm, editorial, characterful. It supplies the personality so nothing has to be hand-illustrated. Use it *only* at large sizes. |
+| **Display** — headlines, project titles, big statements | **Newsreader** (variable `opsz`; roman + italic) | Elegant, classical letterforms with clean `f`/`j` and a beautiful italic (used for the marker word). Refined, not wonky. Use it *only* at large sizes. |
 | **Text / UI** — body, nav, labels, buttons, metadata | **Inter** | Neutral, legible workhorse. Keeps the whole thing calm and senior. |
 
 **Usage rules**
 - **One display moment per section.** Fraunces earns its impact by being rare.
-- **Never set long-form text in Fraunces.** Below ~24px it loses its charm and legibility.
+- **Never set long-form text in Newsreader display sizes.** It's a display serif here; body stays Inter.
 - **Sentence case, not Title Case.** Warmer, more human, matches the voice.
 - **Eyebrow labels:** Inter, uppercase, 0.18em tracking, muted — the quiet counterpoint
   to the big serif.
@@ -79,28 +79,32 @@ eyebrow 0.72rem. Defined in components + `globals.css`.
 
 ## 4. Color
 
-Warm, analogous, restrained. The warmth **is** the subtle heritage nod — a marigold-and-
-terracotta glow rather than any literal motif.
+Cool, muted, restrained — a warm cream ground under near-black text, with color used
+as *structure* (blue = interactive) and *highlight* (sage = "here / matters"), never as
+decoration.
 
 | Token | Hex | Role |
 | --- | --- | --- |
-| `--bg` | `#f6f3ec` | Warm ivory canvas |
-| `--bg-raised` | `#fbf9f4` | Slightly lifted surfaces |
-| `--ink` | `#191714` | Warm near-black — primary text |
-| `--muted` | `#6f675d` | Secondary text |
-| `--accent` (rust) | `#d3542c` | Primary accent — the confident one |
-| `--accent-ink` | `#8f3315` | Accessible rust for text on ivory (passes AA) |
-| `--marigold` | `#e0a021` | **Secondary spark** — the warmth/heritage nod |
+| `--bg` | `#f0eee7` | Warm cream / greige canvas |
+| `--bg-raised` | `#f7f5ef` | Slightly lifted surfaces |
+| `--ink` | `#18181b` | Neutral near-black — primary text |
+| `--muted` | `#64656b` | Secondary text |
+| `--accent` (blue) | `#3a52cf` | Interactive — links, emphasis, hover |
+| `--accent-ink` | `#2d3fb0` | Darker blue for text (passes AA on cream) |
+| `--sage` | `#dde3cd` | **Highlight surface** — "you are here", featured rows |
+| `--sage-ink` | `#55663e` | Darker sage — the status dot, marker, labels |
+| `--mist` | `#dde4e7` | Cool grey-blue — secondary surface |
 
-**The marigold nod.** Marigold + terracotta on warm ivory quietly evokes warmth and
-celebration without a single literal cue. It stays *subtle* by being **decorative only** —
-status dots, small underlines, hover sparks. Used sparingly, it's personality; used
-everywhere, it's noise.
+**The system.** Blue does the *interactive* work (links, the accented word, step
+numbers). Sage does the *highlight* work (the marker swipe, the "current" card, featured
+table rows) — and doubles as the quiet warmth/heritage nod, a soft green instead of a
+literal motif. Mist is a neutral surface for grouped cards. Near-black text on cream keeps
+it grown-up.
 
 **Usage & guardrails**
-- **Two accents, max.** Rust leads; marigold accents. They're neighbors on the wheel,
-  so they harmonize instead of fight.
-- **Accessibility:** `--ink` and `--accent-ink` pass WCAG AA on ivory. **Marigold does
-  not** — it's low-contrast on light backgrounds, so *never* use it for body text or
-  anything that must be read. Decorative only. This is a real constraint, not a nitpick.
+- **Blue = interactive, sage = highlight.** Keep the two jobs separate; don't tint a
+  highlight surface blue or make a link sage.
+- **Accessibility:** `--ink` and `--accent-ink` pass WCAG AA on cream. `--sage` and
+  `--sage-ink` are **surface/decoration** tones — fine for fills, dots, and the marker, but
+  don't set important body text in them.
 - **Restraint test:** if a screen has more than ~2 spots of color, pull one out.
