@@ -27,9 +27,9 @@ export const site = {
 export const about = {
   // 2–3 short paragraphs. Keep it human.
   paragraphs: [
-    "I’m a senior product designer at HubSpot, where I design scalable, insight-driven experiences in the content editor space — the tools brands rely on to publish and make informed decisions.",
-    "I came into product design through research. Earlier roles at CentralSquare, the University of Maryland, and Experian were grounded in user interviews, usability testing, and quantitative tracking — and that research instinct still shapes how I approach every problem.",
-    "I care about the parts of a product that are easy to skip: the processes, the edge states, and the handoffs that decide whether good design actually ships.",
+    "I’m a senior product designer at HubSpot, designing the content tools brands rely on to publish — and to make smarter calls about what they publish.",
+    "I got here sideways: an engineering degree, a master’s in information management, and a UX career that started in research — picked up across a few different countries along the way. That mix is why I adapt quickly, and why I can speak “engineer,” “researcher,” and “PM” in the same meeting.",
+    "These days I care most about the parts of a product that are easy to skip — the processes, the edge states, and the handoffs that quietly decide whether good design actually ships.",
   ],
   // Quick facts shown as a small grid.
   facts: [
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     slug: "content-editor",
     title: "Insight-driven experiences in the content editor",
     summary:
-      "Designing scalable experiences that help brands make informed decisions — shipping multiple features across HubSpot’s content editor and establishing how feature requests get triaged and prioritized.",
+      "I design the experiences brands use to make informed content decisions — shipping features across HubSpot’s editor, and setting up how the team decides what to build next.",
     role: "Senior Product Designer · HubSpot",
     year: "2024",
     tags: ["Content Tools", "Systems", "Strategy"],
@@ -71,7 +71,7 @@ export const projects: Project[] = [
     slug: "knowledge-bases",
     title: "Knowledge Bases on the content platform",
     summary:
-      "Designed knowledge base features and shaped the first-run experience as the tool moved onto HubSpot’s content platform — with a focus on getting teams activated early.",
+      "I designed the Knowledge Base features and first-run experience as the tool moved onto HubSpot’s content platform — all aimed at getting teams to value fast.",
     role: "Product Designer · HubSpot",
     year: "2023",
     tags: ["Research", "Activation", "Platform"],
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     slug: "platform-migration",
     title: "Migrating a standalone tool onto the platform",
     summary:
-      "Led the design strategy to bring a standalone tool onto HubSpot’s content platform, and introduced a testing process for efficient bug resolution before each release.",
+      "I led the design strategy to bring a standalone tool onto HubSpot’s content platform, and set up a testing process to catch bugs before they shipped.",
     role: "Product Designer · HubSpot",
     year: "2022",
     tags: ["Design Strategy", "Platform", "Process"],

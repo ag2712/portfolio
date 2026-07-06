@@ -16,6 +16,11 @@ export default function Contact() {
           Let&apos;s build something worth using.
         </h2>
 
+        <p className="reveal mt-6 max-w-md text-lg leading-8 text-white/60">
+          Always happy to talk design, content tooling, or the general messy
+          middle. Say hi.
+        </p>
+
         <div className="mt-10 flex flex-wrap items-center gap-3">
           <a
             href={`mailto:${site.email}`}

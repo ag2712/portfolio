@@ -82,8 +82,8 @@ export default function Work() {
             </h2>
           </div>
           <p className="hidden max-w-xs text-sm leading-6 text-muted sm:block">
-            Case studies available on request — including the messy middle,
-            not just the pretty final frames.
+            Deeper case studies on request — the messy middle included, not
+            just the tidy final screens.
           </p>
         </div>
 
