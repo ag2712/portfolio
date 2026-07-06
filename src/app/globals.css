@@ -8,8 +8,9 @@
   --muted: #6f675d;
   --line: rgba(25, 23, 20, 0.12);
   --line-strong: rgba(25, 23, 20, 0.22);
-  --accent: #d3542c; /* rust */
+  --accent: #d3542c; /* rust — primary accent */
   --accent-ink: #8f3315;
+  --marigold: #e0a021; /* secondary spark — decorative only (fails AA on light) */
 }
 
 @theme inline {
@@ -21,6 +22,7 @@
   --color-line-strong: var(--line-strong);
   --color-accent: var(--accent);
   --color-accent-ink: var(--accent-ink);
+  --color-marigold: var(--marigold);
   --font-sans: var(--font-inter);
   --font-display: var(--font-fraunces);
 }

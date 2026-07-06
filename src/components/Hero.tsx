@@ -20,9 +20,9 @@ export default function Hero() {
         </p>
 
         <h1 className="reveal mt-6 max-w-4xl font-display text-5xl font-medium leading-[1.02] tracking-tight text-ink sm:text-6xl md:text-7xl lg:text-[5.5rem]">
-          Designing calm products
+          I make complex tools
           <br className="hidden sm:block" />{" "}
-          for <span className="italic text-accent-ink">complex</span> problems.
+          feel <span className="italic text-accent-ink">obvious</span>.
         </h1>
 
         <p className="reveal mt-8 max-w-xl text-lg leading-8 text-muted md:text-xl">
@@ -51,7 +51,7 @@ export default function Hero() {
       {/* marquee-style capability strip */}
       <div className="border-y border-line bg-bg-raised/60">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-6 py-4 text-sm text-muted md:px-10">
-          <span className="text-accent-ink">●</span>
+          <span className="text-marigold">●</span>
           <span>Senior Product Designer at HubSpot</span>
           <span className="text-line-strong">/</span>
           <span>Content platform · Systems</span>
