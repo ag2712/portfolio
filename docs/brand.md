@@ -45,7 +45,7 @@ One wink per section, not per sentence.
 | Do | Don't |
 | --- | --- |
 | "I make complex tools feel obvious." | "Passionate about crafting delightful experiences." |
-| "Seven years and a few too many strong opinions about content tooling." | "Results-driven design professional." |
+| "Seven years and a few time zones in — I connect the dots other people miss." | "Results-driven design professional." |
 | "Case study's in the oven — ask me about it." | "Coming soon." |
 | "Say hi — I don't bite (much)." | "Please feel free to reach out at your convenience." |
 
