@@ -338,6 +338,15 @@ export default function SocialInsightsCaseStudy() {
               confident decisions. Not just another social listening tool.
             </p>
 
+            <div className="reveal mt-10 max-w-2xl">
+              <p className="eyebrow">The problem</p>
+              <p className="mt-4 text-lg leading-8 text-ink/85">
+                Marketers struggle to understand how customers feel about their
+                brand: insights are scattered across tools and lack context —
+                leaving them reactive, and unsure of their impact.
+              </p>
+            </div>
+
             <figure className="reveal mt-10 border-l-2 border-accent pl-6 md:pl-8">
               <blockquote className="font-display text-2xl font-medium leading-snug tracking-tight text-ink md:text-3xl">
                 “Reddit is the source of truth. Surveys give you what people will
@@ -348,24 +357,14 @@ export default function SocialInsightsCaseStudy() {
               </figcaption>
             </figure>
 
-            <div className="mt-14 grid grid-cols-1 gap-12 md:grid-cols-2">
-              <div className="reveal">
-                <p className="eyebrow">The problem</p>
-                <p className="mt-4 text-lg leading-8 text-ink/85">
-                  Marketers struggle to understand how customers feel about their
-                  brand: insights are scattered across tools and lack context —
-                  leaving them reactive, and unsure of their impact.
-                </p>
-              </div>
-              <div className="reveal">
-                <p className="eyebrow">Who it’s for — the strategy-first marketer</p>
-                <p className="mt-4 text-base leading-7 text-muted">
-                  Marketers who lead brand strategy at mid-market B2B and DTC
-                  companies. They synthesise signals from social, surveys and
-                  support channels — and want reports of patterns to take to
-                  leadership, not more feeds to scan.
-                </p>
-              </div>
+            <div className="reveal mt-14 max-w-2xl">
+              <p className="eyebrow">Who it’s for — the strategy-first marketer</p>
+              <p className="mt-4 text-base leading-7 text-muted">
+                Marketers who lead brand strategy at mid-market B2B and DTC
+                companies. They synthesise signals from social, surveys and
+                support channels — and want reports of patterns to take to
+                leadership, not more feeds to scan.
+              </p>
             </div>
           </div>
         </section>
