@@ -56,7 +56,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "social-insights",
-    title: "Social Insights — Reddit-powered brand visibility",
+    title: "Social Insights: Reddit-powered brand visibility",
     summary:
       "A 0→1 product turning Reddit conversations into brand insights marketers can act on. Validated with 14 marketing leaders mid-build and shipped to a public beta inside HubSpot’s Marketing Hub.",
     role: "Senior Product Designer · HubSpot",

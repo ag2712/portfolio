@@ -10,9 +10,9 @@ import { site } from "@/lib/content";
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: `Social Insights — Case study · ${site.name}`,
+  title: `Social Insights · Case study · ${site.name}`,
   description:
-    "Turning Reddit conversations into brand insights marketers can act on — a 0→1 product shipped to public beta inside HubSpot’s Marketing Hub.",
+    "Turning Reddit conversations into brand insights marketers can act on. A 0→1 product shipped to public beta inside HubSpot’s Marketing Hub.",
 };
 
 const meta = [
@@ -26,7 +26,7 @@ const stats = [
   {
     value: "71%",
     label:
-      "positive sentiment on the prototype across interview tasks — the three-step onboarding scored highest with 14 marketing leaders across 12 businesses, mid-build.",
+      "positive sentiment on the prototype across interview tasks. The three-step onboarding scored highest, tested with 14 marketing leaders across 12 businesses mid-build.",
   },
   {
     value: "1,679",
@@ -57,7 +57,7 @@ const ecosystem = [
   {
     level: "Level 04 · This work",
     name: "Social Insights",
-    desc: "My team — turning Reddit conversations into brand insights marketers can act on.",
+    desc: "My team. We turn Reddit conversations into brand insights marketers can act on.",
     highlight: true,
   },
 ];
@@ -71,17 +71,17 @@ const approach = [
   {
     step: "02",
     name: "Explore",
-    desc: "Prototype several directions fast with AI tools, then pressure-test them with the team early — so we commit on evidence, not opinion.",
+    desc: "Prototype several directions fast with AI tools, then pressure-test them with the team early so we commit on evidence instead of opinion.",
   },
   {
     step: "03",
     name: "Validate",
-    desc: "Put work in front of real users mid-build. Weekly build–share–refine loops keep design, engineering and leadership moving as one.",
+    desc: "Put work in front of real users mid-build. Weekly loops of build, share and refine keep design, engineering and leadership moving together.",
   },
   {
     step: "04",
     name: "Document",
-    desc: "Turn unknowns into owned, named trade-offs. Every decision and its rationale is written down, so the team holds steady through change.",
+    desc: "Turn unknowns into trade-offs the team owns and names. Every decision and its rationale gets written down, so we hold steady when direction shifts.",
   },
 ];
 
@@ -90,7 +90,7 @@ const competitors = [
     category: "Social listening suites",
     examples: "Brandwatch, Sprout, Meltwater",
     strength: "Broad cross-channel coverage. Mature dashboards and alerting.",
-    gap: "Built for volume, not synthesis. Marketers get feeds to scan, not patterns they can act on.",
+    gap: "Built for volume rather than synthesis. Marketers get feeds to scan when what they need is patterns they can act on.",
   },
   {
     category: "Reddit-native scrapers",
@@ -102,22 +102,75 @@ const competitors = [
     category: "Survey & NPS tools",
     examples: "Qualtrics, in-product surveys",
     strength: "Structured, comparable signal. Good for tracking change over time.",
-    gap: "Captures what people will say — not what they actually think when no-one is watching.",
+    gap: "Captures what people will say, not what they actually think when no one is watching.",
+  },
+];
+
+// Pulled out of the comparison table — this is the answer, not another competitor.
+const socialInsights = {
+  strength:
+    "Reddit-deep, and built inside the Marketing Hub where marketers already live.",
+  why: "Patterns and themes instead of feeds, tied to the workflow marketers already use.",
+};
+
+// Design-process timeline. Steps 01–03 are the weekly loop; 04 is the pre-launch phase.
+const processSteps = [
+  { n: "01", name: "Build", sub: "Build the increment" },
+  { n: "02", name: "Share", sub: "Loom walkthrough" },
+  { n: "03", name: "Refine", sub: "Act on feedback" },
+  { n: "04", name: "Friction analysis", sub: "Before launch" },
+];
+
+// Read from the brand-tasks survey chart. Order follows the brand-building
+// lifecycle; values are the reported struggle count per area (max 31).
+const brandTasks = [
+  {
+    name: "Market research & analysis",
+    detail: "Competitor analysis, target audience research, market opportunity analysis",
+    value: 26,
   },
   {
-    category: "Social Insights",
-    examples: "Where we fit",
-    strength: "Reddit-deep, inside the Marketing Hub — where marketers already live.",
-    gap: "Patterns and themes, not feeds — tied to the workflow marketers already use.",
+    name: "Core brand strategy",
+    detail: "Purpose, vision & mission, values, positioning, multi-brand strategy",
+    value: 16,
+  },
+  {
+    name: "Brand identity",
+    detail: "Name, tagline, logo, color palette, typography, images & iconography, brand voice & tone",
+    value: 15,
+  },
+  {
+    name: "Messaging & storytelling",
+    detail: "Key messaging pillars, brand story, value proposition",
+    value: 18,
+  },
+  {
+    name: "Brand governance & enablement",
+    detail: "Brand guidelines, internal training, asset management",
+    value: 31,
+  },
+  {
+    name: "Communications",
+    detail: "Content, ads or campaigns, public relations, social media management",
+    value: 17,
+  },
+  {
+    name: "Performance measurement & optimization",
+    detail: "Brand tracking studies, social listening, sentiment analysis, analytics, brand audits, reputation management",
+    value: 29,
     highlight: true,
   },
 ];
+
+// X-axis for the brand-tasks chart; headroom above the tallest bar (31).
+const TASK_AXIS_MAX = 32;
+const taskAxisTicks = [0, 5, 10, 15, 20, 25, 30];
 
 const aiPartner = [
   {
     n: "01",
     name: "Rapid prototyping",
-    desc: "Built prototypes to test three tool entry-points in days, not weeks — so leadership could see the product before anything was committed in Figma. More options explored, less time lost.",
+    desc: "Built prototypes to test three tool entry points in days rather than weeks, so leadership could see the product before anything was committed in Figma. That let us explore more directions without burning time.",
     tools: "Lovable · Claude · Conductor",
   },
   {
@@ -129,7 +182,7 @@ const aiPartner = [
   {
     n: "03",
     name: "Pushing PRs",
-    desc: "Wrote front-end code with AI assistance and pushed small PRs directly. This tightened handoff loops and let me prototype real interactions, not just static screens.",
+    desc: "Wrote front-end code with AI assistance and pushed small PRs directly. This tightened handoff loops and let me prototype real interactions rather than static screens.",
     tools: "GitHub · Claude · Conductor",
   },
 ];
@@ -145,7 +198,7 @@ const craft = [
   },
   {
     name: "Insight cards, not feeds",
-    desc: "Designed the report unit as a scannable summary with named themes, not a stream of posts. Less to read, more to decide on.",
+    desc: "Designed the report unit as a scannable summary with named themes instead of a stream of posts, so there’s less to read and a faster decision at the end.",
   },
 ];
 
@@ -153,12 +206,12 @@ const nextMoves = [
   {
     n: "01",
     name: "Ask insights a question",
-    desc: "A conversational agent on the dashboard — “What should I do today?”, “Why is sentiment dropping?” — answering in plain language, with the source posts attached.",
+    desc: "A conversational agent on the dashboard that answers questions like “What should I do today?” or “Why is sentiment dropping?” in plain language, with the source posts attached.",
   },
   {
     n: "02",
     name: "Turn insights into next steps",
-    desc: "When a marketer acts on a finding, an agent drafts the reply, social post or blog. They review and approve, with room to edit — never starting from a blank page.",
+    desc: "When a marketer acts on a finding, an agent drafts the reply, social post or blog. They review, edit and approve, so they’re never starting from a blank page.",
   },
   {
     n: "03",
@@ -171,13 +224,13 @@ const challenges = [
   {
     label: "Challenge 01 · Channel",
     name: "Reddit only at launch",
-    desc: "Multi-channel was documented as the next investment. We focused on delivering deep, validated value through a single channel first — rather than thin coverage across many.",
+    desc: "Multi-channel was documented as the next investment. We focused on delivering deep, validated value through a single channel first rather than thin coverage across many.",
     tradeoff: "Narrower scope, deeper validation on one surface.",
   },
   {
     label: "Challenge 02 · Documentation",
     name: "Friction mapped, not hidden",
-    desc: "Every issue created by placing the tool inside the social space came with a resolution plan and a named owner. Unknowns became documented, owned trade-offs — never surprises at launch.",
+    desc: "Every issue created by placing the tool inside the social space came with a resolution plan and a named owner, so unknowns turned into documented trade-offs instead of launch-day surprises.",
     tradeoff: "More upfront documentation, no surprises at launch.",
   },
 ];
@@ -234,6 +287,30 @@ function SectionHead({ eyebrow, title }: { eyebrow: string; title: string }) {
   );
 }
 
+// Abstract avatar mark for the validation quote — geometric, not a fabricated
+// likeness, in the same generative style as the project cover art.
+function MarketingLeaderAvatar() {
+  return (
+    <div className="flex flex-col items-center">
+      <svg
+        viewBox="0 0 200 200"
+        className="h-44 w-44 md:h-52 md:w-52"
+        aria-hidden="true"
+      >
+        <circle cx="100" cy="100" r="100" fill="var(--sage)" />
+        <path
+          d="M40 168c6-34 30-52 60-52s54 18 60 52"
+          fill="var(--ink)"
+          opacity="0.14"
+        />
+        <circle cx="100" cy="82" r="36" fill="var(--ink)" opacity="0.16" />
+        <circle cx="150" cy="46" r="11" fill="var(--accent)" />
+      </svg>
+      <p className="eyebrow mt-4 text-sage-ink">Marketing leader</p>
+    </div>
+  );
+}
+
 export default function SocialInsightsCaseStudy() {
   return (
     <>
@@ -280,29 +357,12 @@ export default function SocialInsightsCaseStudy() {
           </div>
         </section>
 
-        {/* Impact at a glance */}
-        <section className="border-y border-line bg-bg-raised/50 py-16 md:py-20">
-          <div className="mx-auto max-w-4xl px-6 md:px-10">
-            <p className="eyebrow reveal">Impact at a glance</p>
-            <div className="mt-8 grid grid-cols-1 gap-10 sm:grid-cols-3">
-              {stats.map((s) => (
-                <div key={s.value} className="reveal">
-                  <div className="font-display text-5xl font-medium tracking-tight text-ink">
-                    {s.value}
-                  </div>
-                  <p className="mt-3 text-sm leading-6 text-muted">{s.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Context — where it sits */}
         <section className="py-20 md:py-28">
           <div className="mx-auto max-w-4xl px-6 md:px-10">
             <SectionHead eyebrow="The landscape" title="Where this sits" />
             <p className="reveal mt-5 max-w-2xl text-base leading-7 text-muted">
-              New to HubSpot? Here’s the ecosystem this work lives inside — each
+              New to HubSpot? Here’s the ecosystem this work lives inside. Each
               step narrows the focus.
             </p>
             <div className="mt-10 space-y-3">
@@ -320,7 +380,7 @@ export default function SocialInsightsCaseStudy() {
                   <h3 className="mt-1.5 font-display text-xl font-medium tracking-tight text-ink">
                     {e.name}
                   </h3>
-                  <p className="mt-1.5 max-w-xl text-sm leading-6 text-muted">
+                  <p className="mt-1.5 text-sm leading-6 text-muted">
                     {e.desc}
                   </p>
                 </div>
@@ -329,57 +389,169 @@ export default function SocialInsightsCaseStudy() {
           </div>
         </section>
 
-        {/* Brief + problem + persona */}
+        {/* Brief */}
         <section className="border-t border-line bg-bg-raised/50 py-20 md:py-28">
           <div className="mx-auto max-w-4xl px-6 md:px-10">
-            <SectionHead eyebrow="The brief" title="The brief" />
-            <p className="reveal mt-6 max-w-2xl font-display text-2xl font-medium leading-snug tracking-tight text-ink md:text-3xl">
+            <p className="eyebrow reveal">The brief</p>
+            <p className="reveal mt-4 max-w-2xl font-display text-2xl font-medium leading-snug tracking-tight text-ink md:text-3xl">
               Help HubSpot’s strategic marketers turn Reddit conversations into
-              confident decisions. Not just another social listening tool.
+              confident decisions. The goal was a decision tool, not another
+              social listening feed.
             </p>
+          </div>
+        </section>
 
-            <div className="reveal mt-10 max-w-2xl">
-              <p className="eyebrow">The problem</p>
-              <p className="mt-4 text-lg leading-8 text-ink/85">
-                Marketers struggle to understand how customers feel about their
-                brand: insights are scattered across tools and lack context —
-                leaving them reactive, and unsure of their impact.
-              </p>
-            </div>
+        {/* The problem */}
+        <section className="border-t border-line py-20 md:py-28">
+          <div className="mx-auto max-w-4xl px-6 md:px-10">
+            <p className="eyebrow reveal">The problem</p>
+            <p className="reveal mt-5 max-w-3xl font-display text-2xl font-medium leading-snug tracking-tight text-ink md:text-3xl">
+              Users{" "}
+              <span className="rounded bg-accent/15 px-1 text-accent-ink">
+                struggle to understand their customers’ sentiment
+              </span>{" "}
+              about their brand because...{" "}
+              <span className="rounded bg-accent/15 px-1 text-accent-ink">
+                insights are scattered across tools
+              </span>{" "}
+              and lack context, leaving them reactive and unsure of their
+              impact.
+            </p>
+          </div>
+        </section>
 
-            <figure className="reveal mt-10 border-l-2 border-accent pl-6 md:pl-8">
-              <blockquote className="font-display text-2xl font-medium leading-snug tracking-tight text-ink md:text-3xl">
-                “Reddit is the source of truth. Surveys give you what people will
-                say — Reddit gives you what they actually think.”
-              </blockquote>
-              <figcaption className="mt-4 text-sm text-muted">
-                — Marketing Director, B2B SaaS · validation interview, March 2026
-              </figcaption>
-            </figure>
+        {/* Who it's for — persona + validation quote */}
+        <section className="border-t border-line py-20 md:py-28">
+          <div className="mx-auto max-w-4xl px-6 md:px-10">
+            <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-8">
+              <div className="md:col-span-7">
+                <SectionHead eyebrow="Who it’s for" title="The strategy-first marketer" />
+                <p className="reveal mt-5 text-base leading-7 text-muted">
+                  Marketers who lead brand strategy at mid-market B2B and DTC
+                  companies. They synthesise signals from social, surveys and
+                  support channels, and want reports of patterns to take to
+                  leadership rather than more feeds to scan.
+                </p>
 
-            <div className="reveal mt-14 max-w-2xl">
-              <p className="eyebrow">Who it’s for — the strategy-first marketer</p>
-              <p className="mt-4 text-base leading-7 text-muted">
-                Marketers who lead brand strategy at mid-market B2B and DTC
-                companies. They synthesise signals from social, surveys and
-                support channels — and want reports of patterns to take to
-                leadership, not more feeds to scan.
-              </p>
+                <figure className="reveal mt-8 border-l-2 border-accent pl-6 md:pl-8">
+                  <blockquote className="font-display text-xl font-medium leading-snug tracking-tight text-ink md:text-2xl">
+                    “Reddit is the source of truth. Surveys give you what
+                    people will say. Reddit gives you what they actually
+                    think.”
+                  </blockquote>
+                  <figcaption className="mt-4 text-sm text-muted">
+                    Marketing Director, B2B SaaS · validation interview, March
+                    2026
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div className="reveal flex items-center justify-center md:col-span-5">
+                <MarketingLeaderAvatar />
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Research — competitive landscape */}
+        {/* Research — where marketers struggle */}
         <section className="py-20 md:py-28">
           <div className="mx-auto max-w-4xl px-6 md:px-10">
             <SectionHead
               eyebrow="Research"
+              title="The hardest brand tasks"
+            />
+            <p className="reveal mt-5 max-w-2xl text-base leading-7 text-muted">
+              A large-scale, brand-focused survey surfaced that{" "}
+              <span className="rounded bg-accent/15 px-1 text-accent-ink">
+                “Performance measurement &amp; optimization” ranked second
+              </span>{" "}
+              among the top brand tasks marketers struggle with.
+            </p>
+
+            <figure className="reveal mt-10">
+              <figcaption className="eyebrow">
+                Struggle across brand-building tasks
+              </figcaption>
+
+              <div className="relative mt-6">
+                {/* Vertical gridlines — plot column only, md+ */}
+                <div
+                  className="pointer-events-none absolute inset-0 z-0 hidden md:block"
+                  aria-hidden="true"
+                >
+                  <div className="absolute inset-y-0 left-[calc(15rem+1.5rem)] right-0">
+                    {taskAxisTicks.map((v) => (
+                      <span
+                        key={v}
+                        className="absolute inset-y-0 w-px bg-line"
+                        style={{ left: `${(v / TASK_AXIS_MAX) * 100}%` }}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                <ul className="relative z-10 space-y-5">
+                  {brandTasks.map((t) => (
+                    <li
+                      key={t.name}
+                      className="grid grid-cols-1 gap-y-2 md:grid-cols-[15rem_1fr] md:items-center md:gap-x-6"
+                    >
+                      <div className="md:text-right">
+                        <p
+                          className={`text-sm font-medium leading-snug ${
+                            t.highlight ? "text-accent-ink" : "text-ink"
+                          }`}
+                        >
+                          {t.name}
+                        </p>
+                        <p className="mt-0.5 text-xs leading-5 text-muted">
+                          {t.detail}
+                        </p>
+                      </div>
+                      <div
+                        className={`h-2.5 rounded-full ${
+                          t.highlight ? "bg-accent" : "bg-ink/25"
+                        }`}
+                        style={{ width: `${(t.value / TASK_AXIS_MAX) * 100}%` }}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* X-axis */}
+              <div className="mt-3 grid grid-cols-1 md:grid-cols-[15rem_1fr] md:gap-x-6">
+                <div className="hidden md:block" />
+                <div className="relative h-4">
+                  {taskAxisTicks.map((v) => (
+                    <span
+                      key={v}
+                      className="absolute -translate-x-1/2 text-[11px] tabular-nums text-muted"
+                      style={{ left: `${(v / TASK_AXIS_MAX) * 100}%` }}
+                    >
+                      {v}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+            </figure>
+          </div>
+        </section>
+
+        {/* Competitive landscape */}
+        <section className="border-t border-line py-20 md:py-28">
+          <div className="mx-auto max-w-4xl px-6 md:px-10">
+            <SectionHead
+              eyebrow="The market"
               title="The competitive landscape"
             />
             <p className="reveal mt-5 max-w-2xl text-base leading-7 text-muted">
-              “Performance measurement &amp; optimization” was the second
-              most-struggled-with area of brand tasks. Here’s how existing tools
-              approach it — and where Social Insights fits.
+              Before designing, I mapped the tools marketers already reach for,
+              grouped by their strength and by where they leave the
+              strategy-first marketer short. Each covers part of the job, but
+              none turns a Reddit thread into a decision marketing leaders can
+              act on.
             </p>
 
             <div className="mt-10 overflow-hidden rounded-2xl border border-line">
@@ -388,7 +560,7 @@ export default function SocialInsightsCaseStudy() {
                   key={c.category}
                   className={`reveal grid grid-cols-1 gap-4 p-5 md:grid-cols-12 md:gap-6 md:p-6 ${
                     i > 0 ? "border-t border-line" : ""
-                  } ${c.highlight ? "bg-sage/50" : ""}`}
+                  }`}
                 >
                   <div className="md:col-span-3">
                     <h3 className="font-display text-lg font-medium tracking-tight text-ink">
@@ -403,13 +575,33 @@ export default function SocialInsightsCaseStudy() {
                     </p>
                   </div>
                   <div className="md:col-span-5">
-                    <p className="eyebrow">
-                      {c.highlight ? "Why it works" : "Gap for the strategy-first marketer"}
-                    </p>
+                    <p className="eyebrow">Gap for the strategy-first marketer</p>
                     <p className="mt-1.5 text-sm leading-6 text-ink/80">{c.gap}</p>
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Social Insights — pulled out as the answer, not a table row */}
+            <div className="reveal mt-6 rounded-2xl border border-sage-ink/30 bg-sage/60 p-6 md:p-8">
+              <p className="eyebrow text-sage-ink">Where we fit</p>
+              <h3 className="mt-2 font-display text-2xl font-medium tracking-tight text-ink md:text-3xl">
+                Social Insights
+              </h3>
+              <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+                <div>
+                  <p className="eyebrow text-sage-ink">Strength</p>
+                  <p className="mt-1.5 text-sm leading-6 text-ink/85">
+                    {socialInsights.strength}
+                  </p>
+                </div>
+                <div>
+                  <p className="eyebrow text-sage-ink">Why it works</p>
+                  <p className="mt-1.5 text-sm leading-6 text-ink/85">
+                    {socialInsights.why}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -419,8 +611,8 @@ export default function SocialInsightsCaseStudy() {
           <div className="mx-auto max-w-4xl px-6 md:px-10">
             <SectionHead eyebrow="Approach" title="How I work" />
             <p className="reveal mt-5 max-w-2xl text-base leading-7 text-muted">
-              Four moves I make on every project — design craft and the human
-              work of keeping a team aligned.
+              Four moves I make on every project, spanning design craft and the
+              human work of keeping a team aligned.
             </p>
             <div className="mt-10 grid grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2">
               {approach.map((a) => (
@@ -440,17 +632,140 @@ export default function SocialInsightsCaseStudy() {
           </div>
         </section>
 
+        {/* Design process — iterate, validate, map friction */}
+        <section className="border-t border-line py-20 md:py-28">
+          <div className="mx-auto max-w-4xl px-6 md:px-10">
+            <SectionHead
+              eyebrow="Design process"
+              title="Iterate, validate, map friction."
+            />
+            <p className="reveal mt-5 max-w-2xl text-base leading-7 text-muted">
+              Weekly build, share and refine cycles with Loom walkthroughs, plus
+              14 user interviews mid-build. Approaching launch, a friction
+              analysis turned unknowns into owned trade-offs, each with a plan
+              for after the public beta.
+            </p>
+
+            {/* Desktop timeline */}
+            <div className="reveal mt-16 hidden md:block">
+              <div className="relative">
+                {/* Annotations */}
+                <div className="relative h-12">
+                  {/* Repeat weekly — loop bracket over 01–03 */}
+                  <div className="absolute bottom-0 left-7 right-[calc((100%_+_1.75rem)/3)] top-3 rounded-t-2xl border-x border-t border-dashed border-ink/40" />
+                  <div className="absolute left-[calc(1.75rem_+_(100%_-_3.5rem)/3)] top-0 flex -translate-x-1/2 items-center gap-1.5 whitespace-nowrap rounded-full border border-ink/50 bg-bg px-3 py-1 text-xs font-semibold text-ink">
+                    <span className="h-1.5 w-1.5 rounded-full bg-ink" />
+                    Repeat weekly
+                  </div>
+                  {/* Approaching launch — connector to 04 */}
+                  <div className="absolute bottom-0 right-7 top-3 w-px border-l border-dashed border-ink/40" />
+                  <div className="absolute right-0 top-0 flex items-center gap-1.5 whitespace-nowrap rounded-full border border-ink/50 bg-bg px-3 py-1 text-xs font-semibold text-ink">
+                    <span className="h-1.5 w-1.5 rounded-full bg-ink" />
+                    Approaching launch
+                  </div>
+                </div>
+
+                {/* Track: line + nodes */}
+                <div className="relative flex items-center justify-between">
+                  <div className="absolute left-7 right-7 top-1/2 h-0.5 -translate-y-1/2 bg-ink" />
+                  {processSteps.map((s) => (
+                    <div
+                      key={s.n}
+                      className={`relative flex h-14 w-14 items-center justify-center rounded-full font-display text-sm text-bg-raised ${
+                        s.n === "04" ? "bg-accent" : "bg-ink"
+                      }`}
+                    >
+                      {s.n}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Labels */}
+                <div className="relative mt-4 h-11">
+                  {processSteps.map((s, i) => {
+                    const isFirst = i === 0;
+                    const isLast = i === processSteps.length - 1;
+                    return (
+                      <div
+                        key={s.n}
+                        className={`absolute top-0 whitespace-nowrap ${
+                          isFirst
+                            ? "left-0 text-left"
+                            : isLast
+                              ? "right-0 text-right"
+                              : "-translate-x-1/2 text-center"
+                        }`}
+                        style={
+                          isFirst || isLast
+                            ? undefined
+                            : { left: `calc(1.75rem + ${i} * (100% - 3.5rem) / 3)` }
+                        }
+                      >
+                        <p className="font-display text-base font-medium text-ink">
+                          {s.name}
+                        </p>
+                        <p className="mt-0.5 text-xs text-muted">{s.sub}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile timeline */}
+            <ol className="reveal mt-10 md:hidden">
+              {processSteps.map((s, i) => (
+                <li key={s.n} className="flex gap-4">
+                  <div className="flex flex-col items-center">
+                    <div
+                      className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-xs font-medium text-bg-raised ${
+                        s.n === "04" ? "bg-accent" : "bg-ink"
+                      }`}
+                    >
+                      {s.n}
+                    </div>
+                    {i < processSteps.length - 1 && (
+                      <div className="mt-1 w-px flex-1 bg-ink/20" />
+                    )}
+                  </div>
+                  <div className="pb-6">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <p className="font-display text-base font-medium text-ink">
+                        {s.name}
+                      </p>
+                      {s.n === "01" && (
+                        <span className="rounded-full border border-ink/40 px-2 py-0.5 text-[11px] font-medium text-muted">
+                          Repeat weekly
+                        </span>
+                      )}
+                      {s.n === "04" && (
+                        <span className="rounded-full border border-ink/40 px-2 py-0.5 text-[11px] font-medium text-muted">
+                          Approaching launch
+                        </span>
+                      )}
+                    </div>
+                    <p className="mt-0.5 text-xs text-muted">{s.sub}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
         {/* AI as a working partner */}
-        <section className="py-20 md:py-28">
+        <section className="border-t border-line py-20 md:py-28">
           <div className="mx-auto max-w-4xl px-6 md:px-10">
             <SectionHead eyebrow="Process" title="AI was a working partner" />
             <p className="reveal mt-5 max-w-2xl text-base leading-7 text-muted">
-              I’d use AI to run the legwork and spend the saved time on judgement.
-              The thinking stays mine; the legwork goes on.
+              I use AI to run the legwork so I can spend the saved time on
+              judgement. The thinking stays mine.
             </p>
-            <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
               {aiPartner.map((a) => (
-                <div key={a.n} className="reveal">
+                <div
+                  key={a.n}
+                  className="reveal flex flex-col rounded-2xl border border-line bg-bg-raised/50 p-6"
+                >
                   <span className="font-display text-lg text-accent-ink">
                     {a.n}
                   </span>
@@ -458,7 +773,7 @@ export default function SocialInsightsCaseStudy() {
                     {a.name}
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-muted">{a.desc}</p>
-                  <p className="mt-4 text-xs uppercase tracking-wider text-accent-ink">
+                  <p className="mt-auto pt-4 text-xs uppercase tracking-wider text-accent-ink">
                     {a.tools}
                   </p>
                 </div>
@@ -484,14 +799,52 @@ export default function SocialInsightsCaseStudy() {
           </div>
         </section>
 
+        {/* Impact at a glance */}
+        <section className="border-y border-line bg-bg-raised/50 py-16 md:py-20">
+          <div className="mx-auto max-w-4xl px-6 md:px-10">
+            <p className="eyebrow reveal">Impact at a glance</p>
+            <div className="mt-8 grid grid-cols-1 gap-10 sm:grid-cols-3">
+              {stats.map((s) => (
+                <div key={s.value} className="reveal">
+                  <div className="font-display text-5xl font-medium tracking-tight text-ink">
+                    {s.value}
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-muted">{s.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Outcomes */}
+        <section className="py-20 md:py-28">
+          <div className="mx-auto max-w-4xl px-6 md:px-10">
+            <SectionHead eyebrow="Outcomes" title="What it added up to" />
+            <div className="mt-10 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2">
+              {outcomes.map((o) => (
+                <div key={o.lead} className="reveal border-t border-line pt-6">
+                  <div className="font-display text-4xl font-medium tracking-tight text-ink md:text-5xl">
+                    {o.value}
+                  </div>
+                  <p className="mt-3 text-base leading-7 text-ink/85">{o.lead}</p>
+                  <p className="mt-1 text-xs uppercase tracking-wider text-muted">
+                    {o.note}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Where it goes next */}
         <section className="py-20 md:py-28">
           <div className="mx-auto max-w-4xl px-6 md:px-10">
             <SectionHead eyebrow="Where it goes next" title="An AI-native take" />
             <p className="reveal mt-5 max-w-2xl text-base leading-7 text-muted">
               The beta surfaces brand-relevant data. The next version should feel
-              like a teammate — three agentic moves I’m exploring, alongside a
-              broader rethink of the Social home experience now in user testing.
+              like a teammate. Here are three agentic moves I’m exploring,
+              alongside a broader rethink of the Social home experience now in
+              user testing.
             </p>
             <div className="mt-10 space-y-6">
               {nextMoves.map((m) => (
@@ -531,26 +884,6 @@ export default function SocialInsightsCaseStudy() {
                   <p className="mt-3 text-sm leading-6 text-muted">{c.desc}</p>
                   <p className="mt-4 border-t border-line pt-4 text-sm font-medium text-accent-ink">
                     Trade-off · {c.tradeoff}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Outcomes */}
-        <section className="py-20 md:py-28">
-          <div className="mx-auto max-w-4xl px-6 md:px-10">
-            <SectionHead eyebrow="Outcomes" title="What it added up to" />
-            <div className="mt-10 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2">
-              {outcomes.map((o) => (
-                <div key={o.lead} className="reveal border-t border-line pt-6">
-                  <div className="font-display text-4xl font-medium tracking-tight text-ink md:text-5xl">
-                    {o.value}
-                  </div>
-                  <p className="mt-3 text-base leading-7 text-ink/85">{o.lead}</p>
-                  <p className="mt-1 text-xs uppercase tracking-wider text-muted">
-                    {o.note}
                   </p>
                 </div>
               ))}
