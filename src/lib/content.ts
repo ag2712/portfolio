@@ -111,7 +111,7 @@ export const experience: Role[] = [
     title: "Senior Product Designer",
     period: "Nov 2023 — Present",
     blurb:
-      "Design scalable, insight-driven experiences for brand decision-making in the content editor space. Shipped multiple editor features and established processes to streamline feature requests and prioritization.",
+      "Led design for Social Insights, an AI-assisted 0→1 product turning Reddit conversations into brand insights marketers can act on — validated with 14 marketing leaders and shipped to a public beta with 32% activation. Shipped multiple editor features and established processes to streamline feature requests and prioritization.",
   },
   {
     company: "HubSpot",
