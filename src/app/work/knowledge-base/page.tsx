@@ -18,8 +18,11 @@ export const metadata: Metadata = {
 const meta = [
   { label: "Role", value: "Lead product designer · end-to-end" },
   { label: "Team", value: "Customer service & content platform" },
-  { label: "Timeline", value: "2022–2024 · two-phase delivery" },
-  { label: "Priority", value: "Top company priority (P0)" },
+  { label: "Timeline", value: "2022–2024 · overlapping phases" },
+  {
+    label: "Priority",
+    value: "Top company priority (P0 — highest engineering priority tier)",
+  },
 ];
 
 // Customer- and business-side framing of the same P0 problem.
@@ -27,8 +30,8 @@ const problemViews = [
   {
     label: "The customer view",
     points: [
-      "40%+ of all feedback on HubSpot's customer-service product was about the Knowledge Base tool — up from 30% the prior quarter",
-      "The community request for multiple knowledge bases had 760 votes — the #1 unmet ask in the customer-service product",
+      "The Knowledge Base tool had become the single largest source of feedback on HubSpot's customer-service product — and complaint volume was still climbing quarter over quarter",
+      "The community's request for multiple knowledge bases was its #1 unmet ask, with more votes than any other open request",
       "Customers bought second HubSpot portals or switched to competitors as a workaround",
       "Branding, categorization and customization were severely limited",
     ],
@@ -37,10 +40,42 @@ const problemViews = [
     label: "The business view",
     points: [
       "Support for multiple knowledge bases was the #1 deal-blocker for top-tier (Enterprise) accounts",
-      "Q3 2022 alone: $9,444 MRR lost to the missing feature",
-      "$450K+ cumulative missed revenue since 2018 — a conservative estimate",
+      "Measurable recurring revenue was being lost each quarter to the missing feature",
+      "A significant, six-figure sum in missed revenue had accumulated since 2018 — by a conservative estimate",
       "Platform improvements didn't flow through, so every fix was expensive",
     ],
+  },
+];
+
+// Where the Knowledge Base tool sat in HubSpot's product org over time.
+// Service Hub and Content Hub are siblings — both Hubs under the platform —
+// so they share a depth; only the move between them is what changed.
+const ecosystem = [
+  {
+    depth: 0,
+    level: "Level 01 · Platform",
+    name: "HubSpot",
+    desc: "Marketing, sales, service, content, data and revenue teams all work from one shared customer record.",
+  },
+  {
+    depth: 1,
+    level: "Level 02 · Hub — where it started",
+    name: "Service Hub",
+    desc: "The Knowledge Base tool originally lived in Service Hub, HubSpot's customer-service product line, alongside support tickets and chat.",
+    moveNote: "→ moved to",
+  },
+  {
+    depth: 1,
+    level: "Level 02 · Hub — where it moved",
+    name: "Content Hub",
+    desc: "HubSpot later regrouped its content-authoring tools — blog, website pages, Knowledge Base — under Content Hub, aligning it with the products it actually shares an editor and publishing model with.",
+  },
+  {
+    depth: 2,
+    level: "Level 03 · This work",
+    name: "Knowledge Base",
+    desc: "My team. The tool moved again, this time onto HubSpot's shared content platform infrastructure — the two-phase initiative this case study covers.",
+    highlight: true,
   },
 ];
 
@@ -53,9 +88,9 @@ const phases = [
   },
   {
     phase: "Phase 2",
-    window: "2023",
+    window: "Scoping began Q4 2022, alongside Phase 1 · delivered 2023",
     name: "Platform migration",
-    desc: "Rebuild the Knowledge Base tool on HubSpot's content data platform, adopt the scalable editor, integrate CMS themes, and design the migration path for existing customers onto the new system.",
+    desc: "Rebuild the Knowledge Base tool on HubSpot's content data platform, adopt the scalable editor, integrate content management system (CMS) themes, and design the migration path for existing customers onto the new system.",
   },
 ];
 
@@ -72,7 +107,7 @@ const methods = [
   },
   {
     method: "Community forum analysis",
-    participants: "697-vote thread and related requests",
+    participants: "760-vote thread and related requests",
     output: "Adoption patterns and use cases for multiple knowledge bases",
   },
   {
@@ -87,12 +122,12 @@ const testQuotes = [
   {
     quote:
       "I felt like it was very tailored to just an article, and it helped me stay more focused. I believe that one would have a higher productivity.",
-    who: "Tiffany · HubSpot Knowledge Base user",
+    who: "HubSpot Knowledge Base user",
   },
   {
     quote:
       "I definitely lean towards the core-focused one — I was confident in there. In the other, I was searching around a lot and it was hard to find what I needed.",
-    who: "Jennifer · competitor-tool user",
+    who: "Competitor-tool user",
   },
 ];
 
@@ -140,13 +175,13 @@ const designAreas = [
 
 const stats = [
   {
-    value: "$169,675",
+    value: "Six figures",
     label:
-      "net-new ARR from customers activating the feature after upgrading to a top-tier plan (Mar–Sep 2023).",
+      "in net-new ARR from customers activating the feature after upgrading to a top-tier plan (Mar–Sep 2023).",
   },
   {
     value: "13.6%",
-    label: "activation rate — beat the Q2 2023 goal of 8.6% by 58%.",
+    label: "activation rate — well ahead of the team's internal target.",
   },
   {
     value: ">90%",
@@ -162,8 +197,8 @@ const outcomes = [
   {
     track: "Phase 1 · multiple knowledge bases",
     points: [
-      "13.6% activation rate — beat the 8.6% goal by 58%",
-      "$169,675 in net-new ARR after top-tier (Enterprise) upgrades",
+      "13.6% activation rate — well ahead of the team's internal target",
+      "Six figures in net-new ARR after top-tier (Enterprise) upgrades",
       "Recently upgraded Enterprise accounts activate at a higher rate than new or existing ones — a clear upgrade driver",
       ">90% customer satisfaction on post-launch feedback",
     ],
@@ -180,9 +215,9 @@ const outcomes = [
 ];
 
 const broaderImpact = [
-  "A headline piece of the customer-service product's 2023 strategy — “maturing the product for the mid-market.”",
-  "Simultaneously served the website/CMS product's 2023 goal to grow its content platform.",
-  "The article-editor research fed the top-priority 2023 roadmap for HubSpot's content-editor platform team.",
+  "A headline initiative in the customer-service product's push to mature for mid-market customers.",
+  "Also advanced the content platform's broader goal of bringing more products onto one shared system.",
+  "The article-editor research directly shaped the roadmap for HubSpot's content-editor platform team.",
   "Established a documented content-platform adoption process for other HubSpot product teams.",
 ];
 
@@ -225,27 +260,27 @@ function SectionHead({ eyebrow, title }: { eyebrow: string; title: string }) {
   );
 }
 
-// Abstract avatar mark for the concept-test participant — geometric, not a
+// Abstract avatar mark for a concept-test participant — geometric, not a
 // fabricated likeness, in the same generative style as the project cover art.
-function ConceptTesterAvatar() {
+// Each participant gets a distinct accent so the two quotes read as
+// different people without naming anyone.
+function ConceptTesterAvatar({ variant = 0 }: { variant?: number }) {
+  const accent = variant % 2 === 0 ? "var(--sage-ink)" : "var(--accent-ink)";
   return (
-    <div className="flex flex-col items-center">
-      <svg
-        viewBox="0 0 200 200"
-        className="h-44 w-44 md:h-52 md:w-52"
-        aria-hidden="true"
-      >
-        <circle cx="100" cy="100" r="100" fill="var(--mist)" />
-        <path
-          d="M40 168c6-34 30-52 60-52s54 18 60 52"
-          fill="var(--ink)"
-          opacity="0.14"
-        />
-        <circle cx="100" cy="82" r="36" fill="var(--ink)" opacity="0.16" />
-        <rect x="132" y="34" width="22" height="22" rx="5" fill="var(--sage-ink)" />
-      </svg>
-      <p className="eyebrow mt-4 text-sage-ink">Concept-test participant</p>
-    </div>
+    <svg
+      viewBox="0 0 200 200"
+      className="h-16 w-16 shrink-0 md:h-20 md:w-20"
+      aria-hidden="true"
+    >
+      <circle cx="100" cy="100" r="100" fill="var(--mist)" />
+      <path
+        d="M40 168c6-34 30-52 60-52s54 18 60 52"
+        fill="var(--ink)"
+        opacity="0.14"
+      />
+      <circle cx="100" cy="82" r="36" fill="var(--ink)" opacity="0.16" />
+      <rect x="132" y="34" width="22" height="22" rx="5" fill={accent} />
+    </svg>
   );
 }
 
@@ -281,8 +316,9 @@ export default function KnowledgeBaseCaseStudy() {
               Knowledge Base<span className="text-accent-ink">.</span>
             </h1>
             <p className="reveal mt-6 max-w-2xl text-lg leading-8 text-muted md:text-xl">
-              A maintenance-mode tool generating 40%+ of the complaints for
-              HubSpot&apos;s customer-service product. As lead designer, I ran a
+              A maintenance-mode tool that had become the single largest
+              source of complaints for HubSpot&apos;s customer-service
+              product. As lead designer, I ran a
               two-phase initiative — ship support for multiple knowledge bases to
               unblock upmarket sales, then migrate the whole tool onto
               HubSpot&apos;s modern content platform.
@@ -296,6 +332,43 @@ export default function KnowledgeBaseCaseStudy() {
                 </div>
               ))}
             </dl>
+          </div>
+        </section>
+
+        {/* Landscape — where it sits, for readers new to HubSpot */}
+        <section className="py-20 md:py-28">
+          <div className="mx-auto max-w-4xl px-6 md:px-10">
+            <SectionHead eyebrow="The landscape" title="Where this sits" />
+            <p className="reveal mt-5 max-w-2xl text-base leading-7 text-muted">
+              New to HubSpot? Here&apos;s where the Knowledge Base tool has
+              lived — it moved twice before this case study even starts.
+            </p>
+            <div className="mt-10 space-y-3">
+              {ecosystem.map((e) => (
+                <div key={e.name} style={{ marginLeft: `${e.depth * 20}px` }}>
+                  <div
+                    className={`reveal rounded-2xl border p-5 md:p-6 ${
+                      e.highlight
+                        ? "border-sage-ink/30 bg-sage/60"
+                        : "border-line bg-bg-raised/40"
+                    }`}
+                  >
+                    <p className="eyebrow">{e.level}</p>
+                    <h3 className="mt-1.5 font-display text-xl font-medium tracking-tight text-ink">
+                      {e.name}
+                    </h3>
+                    <p className="mt-1.5 text-sm leading-6 text-muted">
+                      {e.desc}
+                    </p>
+                  </div>
+                  {e.moveNote && (
+                    <p className="reveal mt-3 pl-2 text-xs font-medium uppercase tracking-wide text-muted">
+                      {e.moveNote}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -372,9 +445,11 @@ export default function KnowledgeBaseCaseStudy() {
             <p className="reveal mt-5 max-w-2xl text-base leading-7 text-muted">
               Two intertwined problems: customers couldn&apos;t create multiple
               knowledge bases, and the infrastructure was decoupled from the
-              modern content platform. Tackling both at once would have been slow and risky. I
-              advocated for a phased strategy — ship customer value now on legacy
-              rails, then migrate once the team was battle-tested.
+              modern content platform. Tackling both at once would have been slow and risky.
+              We worked on a phased strategy. Ship customer value now on legacy
+              rails, and start scoping the harder platform migration in
+              parallel as soon as the team had enough shared context to take
+              it on.
             </p>
 
             <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -400,10 +475,10 @@ export default function KnowledgeBaseCaseStudy() {
               <p className="mt-3 text-sm leading-7 text-ink/85 md:text-base">
                 The core product trio — PM, engineering and design — was newly
                 formed. Starting with a scoped, high-urgency problem built the
-                working relationships and shared context we needed before taking
-                on a multi-team platform migration. Senior
-                design is as much about sequencing an org&apos;s energy as it is
-                about designing interfaces.
+                working relationships and shared context we needed to begin
+                scoping a multi-team platform migration in parallel, well
+                before Phase 1 shipped — trust we drew on for the harder work
+                that followed.
               </p>
             </div>
           </div>
@@ -457,40 +532,38 @@ export default function KnowledgeBaseCaseStudy() {
               ))}
             </div>
 
-            {/* Headline finding + participant voices */}
-            <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-8">
-              <div className="md:col-span-7">
-                <p className="eyebrow reveal">Headline finding</p>
-                <p className="reveal mt-4 font-display text-4xl font-medium tracking-tight text-ink md:text-5xl">
-                  7 of 12
-                </p>
-                <p className="reveal mt-3 max-w-md text-base leading-7 text-ink/85">
-                  participants preferred the core-only editor — “simple,”
-                  “straightforward,” something that helped them “stay focused.”
-                  The minority who preferred the core-plus-shell editor tended to
-                  hold admin roles with header and footer access.
-                </p>
+            {/* Headline finding */}
+            <div className="mt-12">
+              <p className="eyebrow reveal">Headline finding</p>
+              <p className="reveal mt-4 font-display text-4xl font-medium tracking-tight text-ink md:text-5xl">
+                7 of 12
+              </p>
+              <p className="reveal mt-3 max-w-2xl text-base leading-7 text-ink/85">
+                participants preferred the core-only editor — “simple,”
+                “straightforward,” something that helped them “stay focused.”
+                The minority who preferred the core-plus-shell editor tended to
+                hold admin roles with header and footer access.
+              </p>
+            </div>
 
-                <div className="mt-8 space-y-6">
-                  {testQuotes.map((q) => (
-                    <figure
-                      key={q.who}
-                      className="reveal border-l-2 border-accent pl-6"
-                    >
-                      <blockquote className="font-display text-lg font-medium leading-snug tracking-tight text-ink md:text-xl">
-                        “{q.quote}”
-                      </blockquote>
-                      <figcaption className="mt-3 text-sm text-muted">
-                        {q.who} · concept-test participant
-                      </figcaption>
-                    </figure>
-                  ))}
+            {/* Participant voices — one row per quote */}
+            <div className="mt-10 space-y-5">
+              {testQuotes.map((q, i) => (
+                <div
+                  key={q.who}
+                  className="reveal flex flex-col gap-5 rounded-2xl border border-line bg-bg-raised/40 p-6 sm:flex-row sm:items-center md:p-8"
+                >
+                  <ConceptTesterAvatar variant={i} />
+                  <figure className="border-l-2 border-accent pl-6">
+                    <blockquote className="font-display text-lg font-medium leading-snug tracking-tight text-ink md:text-xl">
+                      “{q.quote}”
+                    </blockquote>
+                    <figcaption className="mt-3 text-sm text-muted">
+                      {q.who} · concept-test participant
+                    </figcaption>
+                  </figure>
                 </div>
-              </div>
-
-              <div className="reveal flex items-start justify-center md:col-span-5">
-                <ConceptTesterAvatar />
-              </div>
+              ))}
             </div>
 
             {/* Findings that reshaped scope */}
@@ -511,11 +584,12 @@ export default function KnowledgeBaseCaseStudy() {
             <div className="reveal mt-12 rounded-2xl border border-sage-ink/30 bg-sage/60 p-6 md:p-8">
               <p className="eyebrow text-sage-ink">Why this mattered beyond the Knowledge Base tool</p>
               <p className="mt-3 text-sm leading-7 text-ink/85 md:text-base">
-                The article-editor research shaped the requirements for
-                HubSpot&apos;s content-editor platform team, directly feeding a
-                top-priority 2023 initiative. It clarified technical gaps for the
-                structured-editor plan, focused the team on higher-impact
-                features, and — critically — broke the stakeholder deadlock.
+                This research didn&apos;t stay contained to the Knowledge Base
+                tool. It fed directly into a top priority 2023 initiative for
+                HubSpot&apos;s content editor platform team, clarifying
+                technical gaps in their structured editor plan and focusing
+                the team on higher impact features. It also broke the
+                stakeholder deadlock that had stalled our own roadmap.
               </p>
             </div>
           </div>
@@ -532,27 +606,29 @@ export default function KnowledgeBaseCaseStudy() {
               Design split into two tracks: the multiple–knowledge base
               experience on legacy rails, and the end-to-end platform rebuild.
               The second required coordinating with five platform teams — themes,
-              editor, structured content and publishing — each with its own
-              roadmap and design language.
+              editor, structured content, publishing and DDC {/* TODO: confirm what DDC stands for */}
+              — each with its own roadmap and design language.
             </p>
 
             <div className="reveal mt-10 rounded-2xl border border-line bg-bg p-6 md:p-8">
               <p className="eyebrow">Track 01 · Multiple knowledge bases on legacy rails</p>
               <p className="mt-3 text-sm leading-7 text-ink/85 md:text-base">
                 I leveraged proven patterns from the blog tool — which already
-                supported multiple blogs — to deliver a familiar experience with
-                minimal engineering lift. Each knowledge base got its own domain,
+                supported multiple blogs — so customers who&apos;d used that
+                model before could apply the same mental model here: consistent
+                navigation, naming and setup flow instead of a pattern they had
+                to learn from scratch. Each knowledge base got its own domain,
                 branding, categories, content and analytics, scoped to 5 per
                 account and 2,000 articles each based on legacy performance
                 limits.
               </p>
             </div>
 
-            <div className="mt-6">
-              <p className="eyebrow reveal">Track 02 · KBv3 on the content platform</p>
+            <div className="reveal mt-6 rounded-2xl border border-line bg-bg p-6 md:p-8">
+              <p className="eyebrow">Track 02 · Platform migration</p>
               <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
                 {designAreas.map((d) => (
-                  <div key={d.name} className="reveal border-t border-line pt-5">
+                  <div key={d.name} className="border-t border-line pt-5">
                     <h3 className="font-display text-lg font-medium leading-snug tracking-tight text-ink">
                       {d.name}
                     </h3>
@@ -562,9 +638,10 @@ export default function KnowledgeBaseCaseStudy() {
               </div>
             </div>
 
-            {/* The editor decision */}
-            <div className="reveal mt-12 rounded-2xl border border-line bg-bg p-6 md:p-8">
-              <p className="eyebrow">The editor decision · standing up for users, brokering the room</p>
+            {/* The editor decision — a narrative beat, styled apart from the
+                two design-track cards above it */}
+            <div className="reveal mt-12 rounded-2xl border border-sage-ink/30 bg-sage/60 p-6 md:p-8">
+              <p className="eyebrow text-sage-ink">The editor decision · standing up for users, brokering the room</p>
               <p className="mt-4 text-sm leading-7 text-ink/85 md:text-base">
                 The research gave me a clear recommendation: optimize the editor
                 for core article creation. I delivered it in a tense read-out
@@ -695,8 +772,8 @@ export default function KnowledgeBaseCaseStudy() {
             </div>
 
             <p className="reveal mt-12 max-w-2xl text-base leading-7 text-muted">
-              This initiative is the work that earned my promotion from Product
-              Designer to Senior Product Designer.
+              Together, these two initiatives are the work that earned my
+              promotion from Product Designer to Senior Product Designer.
             </p>
 
             <div className="reveal mt-10">
