@@ -51,6 +51,8 @@ export type Project = {
   // Two tailwind color stops drive the generated cover art — no images needed.
   cover: { from: string; to: string; ink: string };
   href?: string;
+  // Set true to keep a project in this file but drop it from the Work grid.
+  hidden?: boolean;
 };
 
 export const projects: Project[] = [
@@ -67,18 +69,20 @@ export const projects: Project[] = [
     href: "/work/social-insights",
   },
   {
-    slug: "knowledge-bases",
-    title: "Knowledge Bases on the content platform",
+    slug: "knowledge-base",
+    title: "Modernizing HubSpot’s Knowledge Base",
     summary:
-      "I designed the Knowledge Base features and first-run experience as the tool moved onto HubSpot’s content platform — all aimed at getting teams to value fast.",
-    role: "Product Designer · HubSpot",
-    year: "2023",
-    tags: ["Research", "Activation", "Platform"],
-    metric: { value: "13.6%", label: "activation in 90 days" },
+      "A maintenance-mode tool was generating 40%+ of the complaints for HubSpot’s customer-service product. As lead designer, I ran a two-phase initiative — ship support for multiple knowledge bases to unblock upmarket sales, then migrate the whole tool onto HubSpot’s modern content platform.",
+    role: "Lead product designer · HubSpot",
+    year: "2022–24",
+    tags: ["Research", "Design strategy", "Platform"],
+    metric: { value: "$169K", label: "net-new ARR" },
     cover: { from: "#3f6f6b", to: "#7fb2a6", ink: "#0e1f1d" },
-    href: "#",
+    href: "/work/knowledge-base",
   },
   {
+    // Hidden for now — only building out two case studies. Flip `hidden` to
+    // false (or remove it) to bring this back into the Work grid.
     slug: "platform-migration",
     title: "Migrating a standalone tool onto the platform",
     summary:
@@ -90,6 +94,7 @@ export const projects: Project[] = [
     metric: { value: "Standalone → Platform", label: "migration led" },
     cover: { from: "#6f7f4a", to: "#a7b681", ink: "#1a2010" },
     href: "#",
+    hidden: true,
   },
 ];
 

@@ -154,9 +154,11 @@ export default function Work() {
         </div>
 
         <div className="mt-14 grid grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2">
-          {projects.map((project, i) => (
-            <Card key={project.slug} project={project} index={i} />
-          ))}
+          {projects
+            .filter((project) => !project.hidden)
+            .map((project, i) => (
+              <Card key={project.slug} project={project} index={i} />
+            ))}
         </div>
       </div>
     </section>

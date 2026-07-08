@@ -16,10 +16,10 @@ export const metadata: Metadata = {
 };
 
 const meta = [
-  { label: "Role", value: "Senior Product Designer" },
-  { label: "Team", value: "Brand Awareness · Marketing Hub" },
-  { label: "Timeline", value: "2026 · mid-build → public beta" },
-  { label: "Platform", value: "HubSpot" },
+  { label: "Role", value: "Senior Product Designer · sole designer" },
+  { label: "Team", value: "Marketing analytics · 0→1 product" },
+  { label: "Timeline", value: "2026 · concept to public beta" },
+  { label: "Priority", value: "Strategic 0→1 bet" },
 ];
 
 const stats = [
@@ -189,7 +189,7 @@ const aiPartner = [
 
 const craft = [
   {
-    name: "Worked within HubSpot Canvas",
+    name: "Built on HubSpot's design system",
     desc: "Chose to extend existing patterns rather than reinvent. Every component decision had to earn its place against the system.",
   },
   {
