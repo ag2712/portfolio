@@ -36,7 +36,6 @@ export const about = {
     { label: "Focus", value: "Content platform · Systems" },
     { label: "Experience", value: "7+ years" }, // TODO: adjust if you prefer
     { label: "Currently", value: "Senior PD @ HubSpot" },
-    { label: "Education", value: "University of Maryland" }, // TODO: add degree
   ],
 } as const;
 
@@ -72,7 +71,7 @@ export const projects: Project[] = [
     slug: "knowledge-base",
     title: "Modernizing HubSpot’s Knowledge Base",
     summary:
-      "A maintenance-mode tool was generating 40%+ of the complaints for HubSpot’s customer-service product. As lead designer, I ran a two-phase initiative — ship support for multiple knowledge bases to unblock upmarket sales, then migrate the whole tool onto HubSpot’s modern content platform.",
+      "HubSpot’s Knowledge Base was placed in maintenance mode, and it showed: over 40% of support-product complaints traced back to it. I connected sales, support, and engineering priorities into one two-phase plan — unblock upmarket deals with multi-KB support, then migrate the tool onto HubSpot’s modern content platform for good.",
     role: "Lead product designer · HubSpot",
     year: "2022–24",
     tags: ["Research", "Design strategy", "Platform"],
@@ -104,6 +103,25 @@ export type Role = {
   period: string;
   blurb: string;
 };
+
+export type Education = {
+  school: string;
+  degree: string;
+  period: string;
+};
+
+export const education: Education[] = [
+  {
+    school: "University of Maryland",
+    degree: "Master's degree, Information Management",
+    period: "2017 – 2019",
+  },
+  {
+    school: "Symbiosis International University",
+    degree: "Engineer's Degree, Information Technology",
+    period: "2012 – 2016",
+  },
+];
 
 export const experience: Role[] = [
   {

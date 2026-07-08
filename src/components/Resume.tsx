@@ -1,4 +1,4 @@
-import { experience, site } from "@/lib/content";
+import { education, experience, site } from "@/lib/content";
 
 export default function Resume() {
   return (
@@ -43,6 +43,33 @@ export default function Resume() {
                 </div>
                 <p className="mt-2 max-w-2xl text-base leading-7 text-muted">
                   {role.blurb}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
+
+        <div className="reveal mt-20">
+          <h3 className="font-display text-2xl font-medium tracking-tight text-ink md:text-3xl">
+            Education
+          </h3>
+        </div>
+
+        <ol className="mt-8 border-t border-line">
+          {education.map((entry) => (
+            <li
+              key={`${entry.school}-${entry.period}`}
+              className="reveal grid grid-cols-1 gap-2 border-b border-line py-8 md:grid-cols-12 md:gap-8"
+            >
+              <div className="md:col-span-3">
+                <p className="text-sm text-muted">{entry.period}</p>
+              </div>
+              <div className="md:col-span-9">
+                <h4 className="font-display text-xl font-medium tracking-tight text-ink">
+                  {entry.school}
+                </h4>
+                <p className="mt-2 max-w-2xl text-base leading-7 text-muted">
+                  {entry.degree}
                 </p>
               </div>
             </li>
