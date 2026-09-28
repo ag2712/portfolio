@@ -12,7 +12,7 @@ export const site = {
   role: "Senior Product Designer",
   // A short, spoken-word intro used in the hero.
   tagline:
-    "Senior product designer at HubSpot. Seven years and a few time zones in, I connect the dots other people miss — and make the messy middle of content tooling feel easy.",
+    "Senior product designer at HubSpot. Seven years and a few time zones in, I connect the dots and make the messy middle of content tooling feel easy.",
   // TODO: add your city (left blank so nothing is invented).
   location: "",
   email: "a27gonsalves@gmail.com",
