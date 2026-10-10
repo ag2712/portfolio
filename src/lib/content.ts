@@ -99,9 +99,10 @@ export const projects: Project[] = [
 
 export type Role = {
   company: string;
+  location: string;
   title: string;
   period: string;
-  blurb: string;
+  bullets: string[];
 };
 
 export type Education = {
@@ -113,53 +114,82 @@ export type Education = {
 export const education: Education[] = [
   {
     school: "University of Maryland",
-    degree: "Master's degree, Information Management",
+    degree: "Master of Information Management",
     period: "2017 – 2019",
   },
   {
     school: "Symbiosis International University",
-    degree: "Engineer's Degree, Information Technology",
+    degree: "Bachelor of Engineering in Information Technology",
     period: "2012 – 2016",
   },
 ];
 
+export const resumeSummary =
+  "Senior product designer with 7+ years of experience leading AI-powered, content, and platform products from discovery through launch. Skilled at turning customer feedback and complex business requirements into measurable product outcomes.";
+
 export const experience: Role[] = [
   {
     company: "HubSpot",
+    location: "Cambridge, MA",
     title: "Senior Product Designer",
     period: "Nov 2023 — Present",
-    blurb:
-      "Led design for Social Insights, an AI-assisted 0→1 product turning Reddit conversations into brand insights marketers can act on — validated with 14 marketing leaders and shipped to a public beta with 32% activation. Shipped multiple editor features and established processes to streamline feature requests and prioritization.",
+    bullets: [
+      "Led design for Social Insights, a product that turns Reddit conversations into brand insights marketers can act on. Validated with 14 marketing leaders mid-build and shipped to public beta, reaching 32% activation.",
+      "Used AI across the design process: built prototypes to test multiple entry points in days rather than weeks, synthesized user feedback into themes, and wrote small PRs that tightened design-to-engineering handoffs.",
+      "Shipped multiple editor features and set up processes to streamline feature requests and prioritization.",
+    ],
   },
   {
     company: "HubSpot",
+    location: "Cambridge, MA",
     title: "Product Designer",
     period: "Sep 2021 — Oct 2023",
-    blurb:
-      "Led the design strategy to move a standalone tool onto HubSpot’s content platform. Designed knowledge base features that reached a 13.6% activation rate within 90 days, and created a testing process for faster pre-release bug resolution.",
+    bullets: [
+      "Led design strategy to move the standalone Knowledge Base product onto HubSpot’s content platform, joining business and engineering priorities into a two-phase plan. Result: $169K net-new ARR.",
+      "Designed knowledge base features that reached a 13.6% activation rate within 90 days.",
+      "Created a GitHub-based bug quality testing process for faster pre-release bug resolution.",
+    ],
   },
   {
     company: "CentralSquare Technologies",
+    location: "Lake Mary, FL",
     title: "Associate UX Designer",
     period: "Aug 2019 — Aug 2021",
-    blurb:
-      "Ran qualitative research — user interviews and usability sessions — and set up product tracking for quantitative insight. Built processes to streamline cross-functional collaboration.",
+    bullets: [
+      "Ran qualitative research, including user interviews and usability sessions.",
+      "Set up product tracking to add quantitative insight.",
+      "Built processes to streamline cross-functional collaboration.",
+    ],
   },
   {
     company: "University of Maryland",
+    location: "College Park, MD",
     title: "UX Graduate Assistant",
     period: "Sep 2018 — May 2019",
-    blurb:
-      "Gathered and reported user feedback through usability testing, co-authored a usability issues document with proposed UX solutions, and helped clean faculty data for import.",
+    bullets: [
+      "Surfaced usability issues by running usability tests and reporting user feedback to guide design improvements.",
+      "Co-authored a usability issues document that paired each issue with a proposed UX solution.",
+      "Cleaned faculty data so it was ready for import.",
+    ],
   },
   {
     company: "Experian",
+    location: "Costa Mesa, CA",
     title: "Business UX Analyst Intern",
     period: "Jun 2018 — Aug 2018",
-    blurb:
-      "Audited an internal tool for usability and delivered issue artifacts with prototyped improvement solutions.",
+    bullets: [
+      "Audited an internal tool for usability and delivered issue artifacts with prototyped improvements.",
+    ],
   },
 ];
+
+export const tools = [
+  { label: "Design", items: ["Figma", "Sketch", "Photoshop", "Framer"] },
+  {
+    label: "AI",
+    items: ["Lovable", "Conductor", "Claude", "Glean", "NotebookLM"],
+  },
+] as const;
 
 export const capabilities = [
   "Product strategy",
