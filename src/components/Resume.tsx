@@ -1,4 +1,10 @@
-import { education, experience, site } from "@/lib/content";
+import {
+  education,
+  experience,
+  resumeSummary,
+  site,
+  tools,
+} from "@/lib/content";
 
 export default function Resume() {
   return (
@@ -24,6 +30,10 @@ export default function Resume() {
           </a>
         </div>
 
+        <p className="reveal mt-10 max-w-2xl text-lg leading-8 text-ink/80">
+          {resumeSummary}
+        </p>
+
         <ol className="mt-14 border-t border-line">
           {experience.map((role) => (
             <li
@@ -32,6 +42,7 @@ export default function Resume() {
             >
               <div className="md:col-span-3">
                 <p className="text-sm text-muted">{role.period}</p>
+                <p className="text-sm text-muted">{role.location}</p>
               </div>
               <div className="md:col-span-9">
                 <div className="flex flex-wrap items-baseline gap-x-3">
@@ -41,9 +52,11 @@ export default function Resume() {
                   <span className="text-muted">·</span>
                   <span className="text-ink/70">{role.company}</span>
                 </div>
-                <p className="mt-2 max-w-2xl text-base leading-7 text-muted">
-                  {role.blurb}
-                </p>
+                <ul className="mt-3 max-w-2xl list-disc space-y-2 pl-5 text-base leading-7 text-muted marker:text-line-strong">
+                  {role.bullets.map((bullet) => (
+                    <li key={bullet}>{bullet}</li>
+                  ))}
+                </ul>
               </div>
             </li>
           ))}
@@ -75,6 +88,28 @@ export default function Resume() {
             </li>
           ))}
         </ol>
+
+        <div className="reveal mt-20">
+          <h3 className="font-display text-2xl font-medium tracking-tight text-ink md:text-3xl">
+            Tools
+          </h3>
+        </div>
+
+        <dl className="mt-8 border-t border-line">
+          {tools.map((group) => (
+            <div
+              key={group.label}
+              className="reveal grid grid-cols-1 gap-2 border-b border-line py-8 md:grid-cols-12 md:gap-8"
+            >
+              <dt className="text-sm text-muted md:col-span-3">
+                {group.label}
+              </dt>
+              <dd className="text-base leading-7 text-ink/80 md:col-span-9">
+                {group.items.join(" · ")}
+              </dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
   );
