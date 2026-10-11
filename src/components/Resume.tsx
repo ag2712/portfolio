@@ -2,7 +2,6 @@ import {
   education,
   experience,
   resumeSummary,
-  site,
   tools,
 } from "@/lib/content";
 
@@ -17,17 +16,6 @@ export default function Resume() {
               Experience
             </h2>
           </div>
-          <a
-            href={site.resumeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 rounded-full border border-line-strong px-5 py-3 text-sm font-medium text-ink transition-colors hover:border-ink hover:bg-ink hover:text-bg-raised"
-          >
-            Download resume (PDF)
-            <span className="transition-transform group-hover:translate-y-0.5">
-              ↓
-            </span>
-          </a>
         </div>
 
         <p className="reveal mt-10 text-lg leading-8 text-ink/80">
