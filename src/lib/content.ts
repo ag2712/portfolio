@@ -125,7 +125,7 @@ export const education: Education[] = [
 ];
 
 export const resumeSummary =
-  "Senior product designer with 7+ years of experience leading AI-powered, content, and platform products from discovery through launch. Skilled at turning customer feedback and complex business requirements into measurable product outcomes.";
+  "Senior product designer with 7+ years of experience shaping content and platform products, with growing expertise in AI-powered features. I turn customer feedback and complex requirements into measurable outcomes.";
 
 export const experience: Role[] = [
   {
