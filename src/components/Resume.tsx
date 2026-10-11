@@ -30,7 +30,7 @@ export default function Resume() {
           </a>
         </div>
 
-        <p className="reveal mt-10 max-w-2xl text-lg leading-8 text-ink/80">
+        <p className="reveal mt-10 text-lg leading-8 text-ink/80">
           {resumeSummary}
         </p>
 
