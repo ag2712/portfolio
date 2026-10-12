@@ -12,7 +12,7 @@ export const site = {
   role: "Senior Product Designer",
   // A short, spoken-word intro used in the hero.
   tagline:
-    "Senior product designer at HubSpot. Seven years and a few time zones in, I connect the dots and make the messy middle of content tooling feel easy.",
+    "Seven years and a few time zones in, I connect the dots and make the messy middle of content tooling feel easy.",
   // TODO: add your city (left blank so nothing is invented).
   location: "",
   email: "a27gonsalves@gmail.com",
@@ -27,7 +27,7 @@ export const site = {
 export const about = {
   // 2–3 short paragraphs. Keep it human.
   paragraphs: [
-    "I’m a senior product designer at HubSpot, designing the content tools brands rely on to publish — and to make smarter calls about what they publish.",
+    "I design the content tools brands rely on to publish — and to make smarter calls about what they publish.",
     "I got here sideways: an engineering degree, a master’s in information management, and a UX career that started in research — picked up across a few different countries along the way. That mix is why I adapt quickly, and why I can speak “engineer,” “researcher,” and “PM” in the same meeting.",
     "These days I care most about the parts of a product that are easy to skip — the processes, the edge states, and the handoffs that quietly decide whether good design actually ships.",
   ],
