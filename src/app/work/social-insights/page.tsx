@@ -464,7 +464,7 @@ export default function SocialInsightsCaseStudy() {
         </section>
 
         {/* Research — where marketers struggle */}
-        <section className="overflow-x-clip py-20 md:py-28">
+        <section className="py-20 md:py-28">
           <div className="mx-auto max-w-4xl px-6 md:px-10">
             <SectionHead
               eyebrow="Research"
@@ -554,9 +554,9 @@ export default function SocialInsightsCaseStudy() {
               <Image
                 src={researchSynthesisBoard}
                 alt="Affinity board of six research findings from 14 interviews across 12 businesses: Reddit is trusted as a source of truth; monitoring today is manual and overwhelming; multi-platform coverage is expected; action matters more than raw data; competitive intel is the top use case; reports give insights weight. Participant notes are blurred for confidentiality."
-                sizes="(max-width: 1280px) 100vw, 1280px"
+                sizes="(max-width: 896px) 100vw, 816px"
                 placeholder="blur"
-                className="mt-6 h-auto w-[min(80rem,100vw)] max-w-none ml-[calc(50%-min(40rem,50vw))]"
+                className="mt-6 h-auto w-full"
               />
             </figure>
           </div>
