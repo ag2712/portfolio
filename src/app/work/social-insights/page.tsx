@@ -5,6 +5,8 @@ import Contact from "@/components/Contact";
 import RevealScript from "@/components/RevealScript";
 import { site } from "@/lib/content";
 import researchSynthesisBoard from "./research-synthesis-board.png";
+import socialInsightsDashboard from "./social-insights-dashboard.png";
+import marketingLeaderIllustration from "./marketing-leader-illustration.png";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // CASE STUDY — Social Insights
@@ -289,25 +291,19 @@ function SectionHead({ eyebrow, title }: { eyebrow: string; title: string }) {
   );
 }
 
-// Abstract avatar mark for the validation quote — geometric, not a fabricated
-// likeness, in the same generative style as the project cover art.
+// Illustrated persona for the validation quote — a representative figure,
+// not a likeness of the interviewee. Sits as a bust inside the sage circle.
 function MarketingLeaderAvatar() {
   return (
     <div className="flex flex-col items-center">
-      <svg
-        viewBox="0 0 200 200"
-        className="h-44 w-44 md:h-52 md:w-52"
-        aria-hidden="true"
-      >
-        <circle cx="100" cy="100" r="100" fill="var(--sage)" />
-        <path
-          d="M40 168c6-34 30-52 60-52s54 18 60 52"
-          fill="var(--ink)"
-          opacity="0.14"
+      <div className="relative h-44 w-44 overflow-hidden rounded-full bg-sage md:h-52 md:w-52">
+        <Image
+          src={marketingLeaderIllustration}
+          alt=""
+          sizes="(min-width: 768px) 208px, 176px"
+          className="absolute bottom-0 left-1/2 h-auto w-[70%] -translate-x-1/2 translate-y-[8%]"
         />
-        <circle cx="100" cy="82" r="36" fill="var(--ink)" opacity="0.16" />
-        <circle cx="150" cy="46" r="11" fill="var(--accent)" />
-      </svg>
+      </div>
       <p className="eyebrow mt-4 text-sage-ink">Marketing leader</p>
     </div>
   );
@@ -356,6 +352,18 @@ export default function SocialInsightsCaseStudy() {
                 </div>
               ))}
             </dl>
+
+            <figure className="reveal mt-12 md:mt-16">
+              <Image
+                src={socialInsightsDashboard}
+                alt="The Social Insights dashboard inside HubSpot’s Social tool. Headline metrics for total mentions, engagement and share of voice sit above a set of tracked Reddit conversations, each shown as a card with a sentiment tag, matched keywords and a reply recommendation."
+                sizes="(max-width: 896px) 100vw, 816px"
+                placeholder="blur"
+                loading="eager"
+                fetchPriority="high"
+                className="h-auto w-full rounded-2xl border border-line shadow-[0_24px_48px_-24px_rgba(24,24,27,0.25)]"
+              />
+            </figure>
           </div>
         </section>
 
@@ -548,7 +556,7 @@ export default function SocialInsightsCaseStudy() {
                 alt="Affinity board of six research findings from 14 interviews across 12 businesses: Reddit is trusted as a source of truth; monitoring today is manual and overwhelming; multi-platform coverage is expected; action matters more than raw data; competitive intel is the top use case; reports give insights weight. Participant notes are blurred for confidentiality."
                 sizes="(max-width: 896px) 100vw, 816px"
                 placeholder="blur"
-                className="mt-6 h-auto w-full rounded-2xl border border-line"
+                className="mt-6 h-auto w-full"
               />
             </figure>
           </div>
