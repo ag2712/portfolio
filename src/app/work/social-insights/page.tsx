@@ -5,6 +5,7 @@ import Contact from "@/components/Contact";
 import RevealScript from "@/components/RevealScript";
 import { site } from "@/lib/content";
 import researchSynthesisBoard from "./research-synthesis-board.png";
+import socialInsightsDashboard from "./social-insights-dashboard.png";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // CASE STUDY — Social Insights
@@ -356,6 +357,18 @@ export default function SocialInsightsCaseStudy() {
                 </div>
               ))}
             </dl>
+
+            <figure className="reveal mt-12 md:mt-16">
+              <Image
+                src={socialInsightsDashboard}
+                alt="The Social Insights dashboard inside HubSpot’s Social tool. Headline metrics for total mentions, engagement and share of voice sit above a set of tracked Reddit conversations, each shown as a card with a sentiment tag, matched keywords and a reply recommendation."
+                sizes="(max-width: 896px) 100vw, 816px"
+                placeholder="blur"
+                loading="eager"
+                fetchPriority="high"
+                className="h-auto w-full rounded-2xl border border-line shadow-[0_24px_48px_-24px_rgba(24,24,27,0.25)]"
+              />
+            </figure>
           </div>
         </section>
 
