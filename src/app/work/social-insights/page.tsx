@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Contact from "@/components/Contact";
 import RevealScript from "@/components/RevealScript";
 import { site } from "@/lib/content";
+import researchSynthesisBoard from "./research-synthesis-board.png";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // CASE STUDY — Social Insights
@@ -535,6 +537,19 @@ export default function SocialInsightsCaseStudy() {
                 </div>
               </div>
 
+            </figure>
+
+            <figure className="reveal mt-16">
+              <figcaption className="eyebrow">
+                Interview synthesis
+              </figcaption>
+              <Image
+                src={researchSynthesisBoard}
+                alt="Affinity board of six research findings from 14 interviews across 12 businesses: Reddit is trusted as a source of truth; monitoring today is manual and overwhelming; multi-platform coverage is expected; action matters more than raw data; competitive intel is the top use case; reports give insights weight. Participant notes are blurred for confidentiality."
+                sizes="(max-width: 896px) 100vw, 816px"
+                placeholder="blur"
+                className="mt-6 h-auto w-full rounded-2xl border border-line"
+              />
             </figure>
           </div>
         </section>
