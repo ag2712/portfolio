@@ -6,6 +6,7 @@ import RevealScript from "@/components/RevealScript";
 import { site } from "@/lib/content";
 import researchSynthesisBoard from "./research-synthesis-board.png";
 import socialInsightsDashboard from "./social-insights-dashboard.png";
+import marketingLeaderIllustration from "./marketing-leader-illustration.png";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // CASE STUDY — Social Insights
@@ -290,25 +291,19 @@ function SectionHead({ eyebrow, title }: { eyebrow: string; title: string }) {
   );
 }
 
-// Abstract avatar mark for the validation quote — geometric, not a fabricated
-// likeness, in the same generative style as the project cover art.
+// Illustrated persona for the validation quote — a representative figure,
+// not a likeness of the interviewee. Sits as a bust inside the sage circle.
 function MarketingLeaderAvatar() {
   return (
     <div className="flex flex-col items-center">
-      <svg
-        viewBox="0 0 200 200"
-        className="h-44 w-44 md:h-52 md:w-52"
-        aria-hidden="true"
-      >
-        <circle cx="100" cy="100" r="100" fill="var(--sage)" />
-        <path
-          d="M40 168c6-34 30-52 60-52s54 18 60 52"
-          fill="var(--ink)"
-          opacity="0.14"
+      <div className="relative h-44 w-44 overflow-hidden rounded-full bg-sage md:h-52 md:w-52">
+        <Image
+          src={marketingLeaderIllustration}
+          alt=""
+          sizes="(min-width: 768px) 208px, 176px"
+          className="absolute bottom-0 left-1/2 h-auto w-[70%] -translate-x-1/2 translate-y-[8%]"
         />
-        <circle cx="100" cy="82" r="36" fill="var(--ink)" opacity="0.16" />
-        <circle cx="150" cy="46" r="11" fill="var(--accent)" />
-      </svg>
+      </div>
       <p className="eyebrow mt-4 text-sage-ink">Marketing leader</p>
     </div>
   );
