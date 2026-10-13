@@ -54,6 +54,32 @@ const meta = [
 ];
 
 // Customer- and business-side framing of the same P0 problem.
+// How the tool declined before this work began.
+// Sources: this case study and Alisha's résumé (work began Q3 2022).
+const decline = [
+  {
+    year: 2017,
+    title: "Built before the platform",
+    desc: "HubSpot launches its Knowledge Base tool on older infrastructure.",
+  },
+  {
+    year: 2018,
+    title: "Deals start slipping",
+    desc: "Without multiple knowledge bases, missed revenue begins to add up.",
+  },
+  {
+    year: 2019,
+    title: "Maintenance mode",
+    desc: "New investment stops. Only essential fixes ship.",
+  },
+  {
+    year: 2022,
+    title: "#1 source of feedback",
+    desc: "More complaints than any other part of the product. This work begins.",
+    highlight: true,
+  },
+];
+
 const problemViews = [
   {
     label: "The customer view",
@@ -277,6 +303,57 @@ const lessons = [
   },
 ];
 
+// Decline timeline for the Context section. Four equal columns on larger
+// screens, each year's dot sitting above its own text; the dashed segment marks
+// the three years in maintenance mode. A simple vertical list on phones.
+function DeclineTimeline() {
+  return (
+    <div className="reveal mt-10 rounded-2xl border border-line bg-bg-raised/50 p-6 md:p-8">
+      <p className="eyebrow">How it got here</p>
+
+      <ol className="relative mt-8 space-y-6 border-l-2 border-line pl-6 md:grid md:grid-cols-4 md:gap-6 md:space-y-0 md:border-l-0 md:pl-0">
+        {/* Desktop connecting line: solid 2017 to 2019, dashed 2019 to 2022 */}
+        <span
+          aria-hidden
+          className="absolute left-0 top-[7px] hidden h-0.5 w-1/2 bg-ink/25 md:block"
+        />
+        <span
+          aria-hidden
+          className="absolute left-1/2 top-[7px] hidden w-[calc(25%+0.375rem)] border-t-2 border-dashed border-accent/50 md:block"
+        />
+        <span
+          aria-hidden
+          className="absolute -top-6 left-[62.5%] hidden -translate-x-1/2 whitespace-nowrap text-xs font-medium text-accent-ink md:block"
+        >
+          Three years in maintenance mode
+        </span>
+
+        {decline.map((d) => (
+          <li key={d.year} className="relative">
+            <span
+              aria-hidden
+              className={`absolute -left-[31px] top-2 block h-4 w-4 rounded-full border-2 md:static md:mb-4 ${
+                d.highlight
+                  ? "border-accent bg-accent ring-4 ring-accent/15"
+                  : "border-ink/40 bg-bg-raised"
+              }`}
+            />
+            <p
+              className={`font-display text-2xl font-medium tracking-tight ${
+                d.highlight ? "text-accent-ink" : "text-ink"
+              }`}
+            >
+              {d.year}
+            </p>
+            <p className="mt-1 text-sm font-medium text-ink">{d.title}</p>
+            <p className="mt-1 text-sm leading-6 text-muted">{d.desc}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
 function SectionHead({ eyebrow, title }: { eyebrow: string; title: string }) {
   return (
     <div className="reveal">
@@ -453,7 +530,9 @@ export default function KnowledgeBaseCaseStudy() {
               getting worse.
             </p>
 
-            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+            <DeclineTimeline />
+
+            <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
               {problemViews.map((v) => (
                 <div
                   key={v.label}
