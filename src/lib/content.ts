@@ -12,7 +12,7 @@ export const site = {
   role: "Senior Product Designer",
   // A short, spoken-word intro used in the hero.
   tagline:
-    "Seven years and a few time zones in, I connect the dots and make the messy middle of content tooling feel easy.",
+    "Seven years and a few time zones in, I connect the dots and make the messy middle of marketing tools feel easy.",
   // TODO: add your city (left blank so nothing is invented).
   location: "",
   email: "a27gonsalves@gmail.com",
@@ -27,13 +27,13 @@ export const site = {
 export const about = {
   // 2–3 short paragraphs. Keep it human.
   paragraphs: [
-    "I design the content tools brands rely on to publish — and to make smarter calls about what they publish.",
+    "I design tools in the marketing space that help brands get their message out — and understand how it’s landing.",
     "I got here sideways: an engineering degree, a master’s in information management, and a UX career that started in research — picked up across a few different countries along the way. That mix is why I adapt quickly, and why I can speak “engineer,” “researcher,” and “PM” in the same meeting.",
     "These days I care most about the parts of a product that are easy to skip — the processes, the edge states, and the handoffs that quietly decide whether good design actually ships.",
   ],
   // Quick facts shown as a small grid.
   facts: [
-    { label: "Focus", value: "Content platform · Systems" },
+    { label: "Focus", value: "Marketing tools" },
     { label: "Experience", value: "7+ years" }, // TODO: adjust if you prefer
     { label: "Currently", value: "Senior PD @ HubSpot" },
   ],
