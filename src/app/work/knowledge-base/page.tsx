@@ -358,7 +358,7 @@ const quarters = ["Q3 ’22", "Q4 ’22", "Q1 ’23", "Q2 ’23", "Q3 ’23", "Q
 function PhaseRoadmap() {
   return (
     <div className="reveal mt-10 rounded-2xl border border-line bg-bg-raised/50 p-6 md:p-8">
-      <p className="eyebrow">How the two phases overlapped</p>
+      <p className="eyebrow">Knowledge Base two phases timeline</p>
 
       {/* Desktop: quarter grid */}
       <div
