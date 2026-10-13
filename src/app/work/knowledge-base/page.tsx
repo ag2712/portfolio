@@ -6,6 +6,8 @@ import RevealScript from "@/components/RevealScript";
 import { site } from "@/lib/content";
 import kbBefore from "./kb-before.png";
 import kbAfter from "./kb-after.png";
+import participant1 from "./participant-1.png";
+import participant2 from "./participant-2.png";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // CASE STUDY — Knowledge Base
@@ -455,27 +457,27 @@ function SectionHead({ eyebrow, title }: { eyebrow: string; title: string }) {
   );
 }
 
-// Abstract avatar mark for a concept-test participant — geometric, not a
-// fabricated likeness, in the same generative style as the project cover art.
-// Each participant gets a distinct accent so the two quotes read as
-// different people without naming anyone.
+// Illustrated avatar for a concept-test participant. A representative figure,
+// not a likeness of the real person. Shirts are recoloured to the site palette
+// (accent blue, sage green) so the two quotes read as different people.
+const testerAvatars = [
+  { src: participant1, bg: "bg-mist", width: "w-[78%]" },
+  { src: participant2, bg: "bg-sage", width: "w-[96%]" },
+];
+
 function ConceptTesterAvatar({ variant = 0 }: { variant?: number }) {
-  const accent = variant % 2 === 0 ? "var(--sage-ink)" : "var(--accent-ink)";
+  const a = testerAvatars[variant % testerAvatars.length];
   return (
-    <svg
-      viewBox="0 0 200 200"
-      className="h-16 w-16 shrink-0 md:h-20 md:w-20"
-      aria-hidden="true"
+    <div
+      className={`relative h-20 w-20 shrink-0 overflow-hidden rounded-full md:h-24 md:w-24 ${a.bg}`}
     >
-      <circle cx="100" cy="100" r="100" fill="var(--mist)" />
-      <path
-        d="M40 168c6-34 30-52 60-52s54 18 60 52"
-        fill="var(--ink)"
-        opacity="0.14"
+      <Image
+        src={a.src}
+        alt=""
+        sizes="96px"
+        className={`absolute bottom-0 left-1/2 h-auto -translate-x-1/2 translate-y-[6%] ${a.width}`}
       />
-      <circle cx="100" cy="82" r="36" fill="var(--ink)" opacity="0.16" />
-      <rect x="132" y="34" width="22" height="22" rx="5" fill={accent} />
-    </svg>
+    </div>
   );
 }
 
