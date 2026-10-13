@@ -23,20 +23,20 @@ export const metadata: Metadata = {
 // slider would misalign mid-drag. Colleagues' names are blurred in the images.
 const beforeAfter = [
   {
-    tag: "Before · 2022",
-    title: "Phase 1 on the old infrastructure",
+    tag: "Before · Legacy tool",
+    title: "The original Knowledge Base",
     caption:
-      "Multiple knowledge bases shipped through a switcher in the sidebar. Template and category settings still sat behind one Configure menu.",
+      "The tool on its pre-platform infrastructure. Template and category settings each had their own button.",
     image: kbBefore,
-    alt: "The 2022 Knowledge Base article list in HubSpot, with a knowledge base switcher in the sidebar and a single Configure menu beside Create article.",
+    alt: "The legacy Knowledge Base article list in HubSpot, with Customize template, Organize categories and Create article buttons, and article counts by status.",
   },
   {
-    tag: "After · 2023",
-    title: "Phase 2 on the content platform",
+    tag: "After · Content platform",
+    title: "Rebuilt on the content platform",
     caption:
-      "Customize template and Organize categories became their own buttons, backed by CMS themes and drag-and-drop categories.",
+      "The same view on the platform HubSpot’s blog and website use. Settings now sit under one Configure menu.",
     image: kbAfter,
-    alt: "The 2023 Knowledge Base article list on the content platform, with Customize template, Organize categories and Create article buttons, and article counts by status.",
+    alt: "The new Knowledge Base article list on HubSpot’s content platform, with a knowledge base switcher in the sidebar and a Configure menu beside Create article.",
   },
 ];
 
