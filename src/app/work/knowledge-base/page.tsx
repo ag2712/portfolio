@@ -63,11 +63,6 @@ const decline = [
     desc: "HubSpot launches its Knowledge Base tool on older infrastructure.",
   },
   {
-    year: 2018,
-    title: "Deals start slipping",
-    desc: "Without multiple knowledge bases, missed revenue begins to add up.",
-  },
-  {
     year: 2019,
     title: "Maintenance mode",
     desc: "New investment stops. Only essential fixes ship.",
@@ -303,7 +298,7 @@ const lessons = [
   },
 ];
 
-// Decline timeline for the Context section. Four equal columns on larger
+// Decline timeline for the Context section. Three equal columns on larger
 // screens, each year's dot sitting above its own text; the dashed segment marks
 // the three years in maintenance mode. A simple vertical list on phones.
 function DeclineTimeline() {
@@ -311,19 +306,19 @@ function DeclineTimeline() {
     <div className="reveal mt-10 rounded-2xl border border-line bg-bg-raised/50 p-6 md:p-8">
       <p className="eyebrow">How it got here</p>
 
-      <ol className="relative mt-8 space-y-6 border-l-2 border-line pl-6 md:grid md:grid-cols-4 md:gap-6 md:space-y-0 md:border-l-0 md:pl-0">
+      <ol className="relative mt-8 space-y-6 border-l-2 border-line pl-6 md:grid md:grid-cols-3 md:gap-6 md:space-y-0 md:border-l-0 md:pl-0">
         {/* Desktop connecting line: solid 2017 to 2019, dashed 2019 to 2022 */}
         <span
           aria-hidden
-          className="absolute left-0 top-[7px] hidden h-0.5 w-1/2 bg-ink/25 md:block"
+          className="absolute left-0 top-[7px] hidden h-0.5 w-[calc(33.333%+0.5rem)] bg-ink/25 md:block"
         />
         <span
           aria-hidden
-          className="absolute left-1/2 top-[7px] hidden w-[calc(25%+0.375rem)] border-t-2 border-dashed border-accent/50 md:block"
+          className="absolute left-[calc(33.333%+0.5rem)] top-[7px] hidden w-[calc(33.333%+0.5rem)] border-t-2 border-dashed border-accent/50 md:block"
         />
         <span
           aria-hidden
-          className="absolute -top-6 left-[62.5%] hidden -translate-x-1/2 whitespace-nowrap text-xs font-medium text-accent-ink md:block"
+          className="absolute -top-6 left-[calc(50%+0.75rem)] hidden -translate-x-1/2 whitespace-nowrap text-xs font-medium text-accent-ink md:block"
         >
           Three years in maintenance mode
         </span>
