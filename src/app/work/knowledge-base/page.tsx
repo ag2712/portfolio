@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Contact from "@/components/Contact";
 import RevealScript from "@/components/RevealScript";
 import { site } from "@/lib/content";
+import kbBefore from "./kb-before.png";
+import kbAfter from "./kb-after.png";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // CASE STUDY — Knowledge Base
@@ -14,6 +17,28 @@ export const metadata: Metadata = {
   description:
     "Modernizing HubSpot's Knowledge Base. A two-phase initiative — ship support for multiple knowledge bases to unblock upmarket sales, then migrate the whole tool onto HubSpot's content platform.",
 };
+
+// Before / after of the article list. Shown side by side rather than as a
+// drag slider: the two screens differ in scale and layout, so an overlay
+// slider would misalign mid-drag. Colleagues' names are blurred in the images.
+const beforeAfter = [
+  {
+    tag: "Before · 2022",
+    title: "Phase 1 on legacy rails",
+    caption:
+      "Multiple knowledge bases shipped through the knowledge base switcher, while template and category settings sat behind a single Configure menu.",
+    image: kbBefore,
+    alt: "The 2022 Knowledge Base article list in HubSpot, with a knowledge base switcher in the sidebar and a single Configure menu beside Create article.",
+  },
+  {
+    tag: "After · 2023",
+    title: "Phase 2 on the content platform",
+    caption:
+      "Customize template and Organize categories became first-class actions, backed by CMS themes and drag-and-drop categories.",
+    image: kbAfter,
+    alt: "The 2023 Knowledge Base article list on the content platform, with Customize template, Organize categories and Create article buttons, and article counts by status.",
+  },
+];
 
 const meta = [
   { label: "Role", value: "Lead product designer · end-to-end" },
@@ -308,7 +333,7 @@ export default function KnowledgeBaseCaseStudy() {
       <main className="flex-1">
         {/* Hero */}
         <section className="relative overflow-hidden">
-          <div className="mx-auto max-w-4xl px-6 pb-14 pt-16 md:px-10 md:pb-20 md:pt-24">
+          <div className="mx-auto max-w-4xl px-6 pt-16 md:px-10 md:pt-24">
             <p className="eyebrow reveal">
               Case study · Modernizing HubSpot&apos;s Knowledge Base
             </p>
@@ -332,6 +357,41 @@ export default function KnowledgeBaseCaseStudy() {
                 </div>
               ))}
             </dl>
+          </div>
+
+          {/* Before / after — breaks out wider than the reading column so
+              the screens stay legible side by side */}
+          <div className="mx-auto mt-12 max-w-6xl px-6 pb-14 md:mt-16 md:px-10 md:pb-20">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6">
+              {beforeAfter.map((s) => (
+                <figure key={s.tag} className="reveal">
+                  <a
+                    href={s.image.src}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block overflow-hidden rounded-xl border border-line bg-bg-raised shadow-sm transition-shadow hover:shadow-md"
+                    aria-label={`${s.title} — open full-size screenshot`}
+                  >
+                    <Image
+                      src={s.image}
+                      alt={s.alt}
+                      sizes="(min-width: 1152px) 540px, (min-width: 768px) 46vw, 100vw"
+                      className="h-auto w-full"
+                      placeholder="blur"
+                    />
+                  </a>
+                  <figcaption className="mt-4">
+                    <p className="eyebrow">{s.tag}</p>
+                    <p className="mt-1.5 font-display text-lg font-medium tracking-tight text-ink">
+                      {s.title}
+                    </p>
+                    <p className="mt-1.5 text-sm leading-6 text-muted">
+                      {s.caption}
+                    </p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </section>
 
