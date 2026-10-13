@@ -442,7 +442,7 @@ export default function KnowledgeBaseCaseStudy() {
           <div className="mx-auto max-w-4xl px-6 md:px-10">
             <SectionHead
               eyebrow="Context"
-              title="A P0 problem hiding in a maintenance-mode tool"
+              title="A problem hiding in a maintenance-mode tool"
             />
             <p className="reveal mt-5 max-w-2xl text-base leading-7 text-muted">
               Knowledge bases let businesses publish help articles, so
