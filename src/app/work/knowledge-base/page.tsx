@@ -22,49 +22,24 @@ export const metadata: Metadata = {
 // drag slider: the two screens differ in scale and layout, so an overlay
 // slider would misalign mid-drag. Both frames share the before shot's aspect
 // ratio, top-aligned, so the pair sits level. Colleagues' names are blurred.
-type Hotspot = { n: number; x: number; y: number; w: number; h: number };
-
-// Hotspot boxes are percentages of each screenshot. Matching numbers on the
-// before and after screens point at the same change, so readers compare
-// like for like instead of hunting for differences.
-const beforeAfter: {
-  tag: string;
-  title: string;
-  state: "before" | "after";
-  image: typeof kbBefore;
-  alt: string;
-  hotspots: Hotspot[];
-  notes: string[];
-}[] = [
+const beforeAfter = [
   {
     tag: "Before · Legacy tool",
     title: "The original Knowledge Base",
-    state: "before",
+    label: "Before",
+    caption:
+      "The tool on its pre-platform infrastructure. Template and category settings each had their own button.",
     image: kbBefore,
-    alt: "The legacy Knowledge Base article list in HubSpot, with separate Customize template and Organize categories buttons, and no way to switch between knowledge bases.",
-    hotspots: [
-      { n: 1, x: 4.3, y: 21.5, w: 15.2, h: 20.5 },
-      { n: 2, x: 64.6, y: 8.4, w: 21.3, h: 5.8 },
-    ],
-    notes: [
-      "One knowledge base per account, with no way to switch",
-      "Template and category settings on separate buttons",
-    ],
+    alt: "The legacy Knowledge Base article list in HubSpot, with Customize template, Organize categories and Create article buttons, and article counts by status.",
   },
   {
     tag: "After · Content platform",
     title: "Rebuilt on the content platform",
-    state: "after",
+    label: "After",
+    caption:
+      "The same view on the platform HubSpot’s blog and website use. Settings now sit under one Configure menu.",
     image: kbAfter,
     alt: "The new Knowledge Base article list on HubSpot’s content platform, with a knowledge base switcher in the sidebar and a Configure menu beside Create article.",
-    hotspots: [
-      { n: 1, x: 3.6, y: 28.3, w: 14.4, h: 10.6 },
-      { n: 2, x: 76.8, y: 11.0, w: 9.3, h: 6.6 },
-    ],
-    notes: [
-      "Switch between knowledge bases from the sidebar",
-      "Settings grouped under one Configure menu",
-    ],
   },
 ];
 
@@ -389,129 +364,38 @@ export default function KnowledgeBaseCaseStudy() {
           {/* Before / after — breaks out wider than the reading column so
               the screens stay legible side by side */}
           <div className="mx-auto mt-12 max-w-6xl px-6 pb-14 md:mt-16 md:px-10 md:pb-20">
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-10">
-              {beforeAfter.map((s) => {
-                const isAfter = s.state === "after";
-                return (
-                  <figure key={s.tag} className="reveal">
-                    <div className="relative">
-                      <a
-                        href={s.image.src}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`group relative block aspect-[2880/1610] overflow-hidden rounded-xl border bg-white transition-shadow hover:shadow-md ${
-                          isAfter
-                            ? "border-accent/40 shadow-md ring-4 ring-accent/10"
-                            : "border-line shadow-sm"
-                        }`}
-                        aria-label={`${s.title}. Open full-size screenshot`}
-                      >
-                        <Image
-                          src={s.image}
-                          alt={s.alt}
-                          sizes="(min-width: 1152px) 540px, (min-width: 768px) 46vw, 100vw"
-                          className={`h-full w-full object-contain object-top transition duration-300 ${
-                            isAfter ? "" : "saturate-[.55] group-hover:saturate-100"
-                          }`}
-                          placeholder="blur"
-                        />
-
-                        {/* Hotspots — an overlay sized to the screenshot itself */}
-                        <div
-                          aria-hidden
-                          className="pointer-events-none absolute inset-x-0 top-0"
-                          style={{
-                            aspectRatio: `${s.image.width} / ${s.image.height}`,
-                          }}
-                        >
-                          {s.hotspots.map((h) => (
-                            <span
-                              key={h.n}
-                              className={`absolute rounded-md ${
-                                isAfter
-                                  ? "border-2 border-accent bg-accent/10"
-                                  : "border-2 border-dashed border-ink/45"
-                              }`}
-                              style={{
-                                left: `${h.x}%`,
-                                top: `${h.y}%`,
-                                width: `${h.w}%`,
-                                height: `${h.h}%`,
-                              }}
-                            >
-                              <span
-                                className={`absolute -left-2.5 -top-2.5 flex h-5 w-5 items-center justify-center rounded-full text-[11px] font-semibold ${
-                                  isAfter
-                                    ? "bg-accent text-white"
-                                    : "bg-ink/70 text-white"
-                                }`}
-                              >
-                                {h.n}
-                              </span>
-                            </span>
-                          ))}
-                        </div>
-
-                        {/* On-image label */}
-                        <span
-                          className={`absolute bottom-3 left-3 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide shadow-sm ${
-                            isAfter
-                              ? "bg-accent text-white"
-                              : "bg-ink/75 text-white"
-                          }`}
-                        >
-                          {isAfter ? "After" : "Before"}
-                        </span>
-                      </a>
-
-                      {/* Arrow between the two screens */}
-                      {isAfter && (
-                        <span
-                          aria-hidden
-                          className="absolute left-1/2 -top-6 z-10 flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 rotate-90 items-center justify-center rounded-full border border-line bg-bg text-ink shadow-sm md:-left-5 md:top-1/2 md:rotate-0"
-                        >
-                          <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none">
-                            <path
-                              d="M4 10h11m-4-4 4 4-4 4"
-                              stroke="currentColor"
-                              strokeWidth="1.75"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </span>
-                      )}
-                    </div>
-
-                    <figcaption className="mt-5">
-                      <p className={`eyebrow ${isAfter ? "text-accent-ink" : ""}`}>
-                        {s.tag}
-                      </p>
-                      <p className="mt-1.5 font-display text-lg font-medium tracking-tight text-ink">
-                        {s.title}
-                      </p>
-                      <ol className="mt-3 space-y-2">
-                        {s.notes.map((note, i) => (
-                          <li
-                            key={note}
-                            className="flex gap-3 text-sm leading-6 text-muted"
-                          >
-                            <span
-                              aria-hidden
-                              className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[11px] font-semibold text-white ${
-                                isAfter ? "bg-accent" : "bg-ink/70"
-                              }`}
-                            >
-                              {i + 1}
-                            </span>
-                            {note}
-                          </li>
-                        ))}
-                      </ol>
-                    </figcaption>
-                  </figure>
-                );
-              })}
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6">
+              {beforeAfter.map((s) => (
+                <figure key={s.tag} className="reveal">
+                  <a
+                    href={s.image.src}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative block aspect-[2880/1610] overflow-hidden rounded-xl border border-line bg-white shadow-sm transition-shadow hover:shadow-md"
+                    aria-label={`${s.title}. Open full-size screenshot`}
+                  >
+                    <Image
+                      src={s.image}
+                      alt={s.alt}
+                      sizes="(min-width: 1152px) 540px, (min-width: 768px) 46vw, 100vw"
+                      className="h-full w-full object-contain object-top"
+                      placeholder="blur"
+                    />
+                    <span className="absolute bottom-3 left-3 rounded-full bg-ink/75 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white shadow-sm">
+                      {s.label}
+                    </span>
+                  </a>
+                  <figcaption className="mt-4">
+                    <p className="eyebrow">{s.tag}</p>
+                    <p className="mt-1.5 font-display text-lg font-medium tracking-tight text-ink">
+                      {s.title}
+                    </p>
+                    <p className="mt-1.5 text-sm leading-6 text-muted">
+                      {s.caption}
+                    </p>
+                  </figcaption>
+                </figure>
+              ))}
             </div>
           </div>
         </section>
