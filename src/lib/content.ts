@@ -12,7 +12,7 @@ export const site = {
   role: "Senior Product Designer",
   // A short, spoken-word intro used in the hero.
   tagline:
-    "Seven years and a few time zones in, I connect the dots and make the messy middle of software feel easy.",
+    "Seven years and a few time zones in, I connect the dots and make the messy middle of building products feel easy.",
   // TODO: add your city (left blank so nothing is invented).
   location: "",
   email: "a27gonsalves@gmail.com",
