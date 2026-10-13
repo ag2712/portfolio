@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 // ratio, top-aligned, so the pair sits level. Colleagues' names are blurred.
 const beforeAfter = [
   {
-    tag: "Before · Legacy tool",
+    tag: "Legacy tool",
     title: "The original Knowledge Base",
     label: "Before",
     caption:
@@ -33,7 +33,7 @@ const beforeAfter = [
     alt: "The legacy Knowledge Base article list in HubSpot, with Customize template, Organize categories and Create article buttons, and article counts by status.",
   },
   {
-    tag: "After · Content platform",
+    tag: "Content platform",
     title: "Rebuilt on the content platform",
     label: "After",
     caption:
