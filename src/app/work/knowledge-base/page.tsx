@@ -20,7 +20,8 @@ export const metadata: Metadata = {
 
 // Before / after of the article list. Shown side by side rather than as a
 // drag slider: the two screens differ in scale and layout, so an overlay
-// slider would misalign mid-drag. Colleagues' names are blurred in the images.
+// slider would misalign mid-drag. Both frames share the before shot's aspect
+// ratio, top-aligned, so the pair sits level. Colleagues' names are blurred.
 const beforeAfter = [
   {
     tag: "Before · Legacy tool",
@@ -368,14 +369,14 @@ export default function KnowledgeBaseCaseStudy() {
                     href={s.image.src}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block overflow-hidden rounded-xl border border-line bg-bg-raised shadow-sm transition-shadow hover:shadow-md"
+                    className="block aspect-[2880/1610] overflow-hidden rounded-xl border border-line bg-white shadow-sm transition-shadow hover:shadow-md"
                     aria-label={`${s.title}. Open full-size screenshot`}
                   >
                     <Image
                       src={s.image}
                       alt={s.alt}
                       sizes="(min-width: 1152px) 540px, (min-width: 768px) 46vw, 100vw"
-                      className="h-auto w-full"
+                      className="h-full w-full object-contain object-top"
                       placeholder="blur"
                     />
                   </a>
