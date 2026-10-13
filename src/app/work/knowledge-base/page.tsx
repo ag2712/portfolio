@@ -876,10 +876,11 @@ export default function KnowledgeBaseCaseStudy() {
             <div className="reveal mt-12 rounded-2xl border border-sage-ink/30 bg-sage/60 p-6 md:p-8">
               <p className="eyebrow text-sage-ink">The editor decision · siding with users, keeping the room together</p>
               <p className="mt-4 text-sm leading-7 text-ink/85 md:text-base">
-                The research gave a clear answer: build the editor for writing
-                articles. I shared it in a tense meeting where one side was
-                going to lose. The evidence was strong, and I stood by what
-                users needed.
+                The research pointed clearly to an editor built for writing
+                articles. Not everyone had hoped for that answer, so I shared
+                the findings openly, including where the full-page view still
+                mattered to admins. The evidence was strong, and I kept the
+                conversation focused on what users needed.
               </p>
               <p className="mt-4 text-sm leading-7 text-ink/85 md:text-base">
                 I also wanted the other side to stay on board. So I proposed a
