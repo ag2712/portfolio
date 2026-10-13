@@ -33,7 +33,7 @@ export const about = {
   ],
   // Quick facts shown as a small grid.
   facts: [
-    { label: "Focus", value: "Content platform · Systems" },
+    { label: "Focus", value: "Marketing tools" },
     { label: "Experience", value: "7+ years" }, // TODO: adjust if you prefer
     { label: "Currently", value: "Senior PD @ HubSpot" },
   ],
