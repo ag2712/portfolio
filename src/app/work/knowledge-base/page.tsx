@@ -305,7 +305,7 @@ const lessons = [
 // the three years in maintenance mode. A simple vertical list on phones.
 function DeclineTimeline() {
   return (
-    <div className="reveal mt-10 rounded-2xl border border-line bg-bg-raised/50 p-6 md:p-8">
+    <div className="mt-10 rounded-2xl border border-line bg-bg-raised/50 p-6 md:p-8">
       <p className="eyebrow">How it got here</p>
 
       <ol className="relative mt-8 space-y-6 border-l-2 border-line pl-6 md:grid md:grid-cols-3 md:gap-6 md:space-y-0 md:border-l-0 md:pl-0">
@@ -359,7 +359,7 @@ const quarters = ["Q3 ’22", "Q4 ’22", "Q1 ’23", "Q2 ’23", "Q3 ’23", "Q
 
 function PhaseRoadmap() {
   return (
-    <div className="reveal mt-10 rounded-2xl border border-line bg-bg-raised/50 p-6 md:p-8">
+    <div className="mt-10 rounded-2xl border border-line bg-bg-raised/50 p-6 md:p-8">
       <p className="eyebrow">Knowledge Base two phases timeline</p>
 
       {/* Desktop: quarter grid */}
