@@ -370,7 +370,7 @@ function PhaseRoadmap() {
         <span
           aria-hidden
           className="rounded-lg bg-accent/[0.07]"
-          style={{ gridColumn: "3", gridRow: "1 / span 4" }}
+          style={{ gridColumn: "3", gridRow: "1 / span 3" }}
         />
 
         {/* Quarter header */}
@@ -418,13 +418,6 @@ function PhaseRoadmap() {
           Platform migration · shipped 2023
         </span>
 
-        {/* Overlap label */}
-        <span
-          className="relative text-center text-xs font-medium text-accent-ink"
-          style={{ gridColumn: "3", gridRow: "4" }}
-        >
-          Overlap
-        </span>
       </div>
 
       {/* Mobile: stacked lanes */}
