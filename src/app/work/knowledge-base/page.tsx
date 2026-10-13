@@ -349,6 +349,101 @@ function DeclineTimeline() {
   );
 }
 
+// Two-lane roadmap for the Strategy section. Dates come from the case study
+// and Alisha's résumé: Phase 1 ran Q3 to Q4 2022, Phase 2 scoping began in
+// Q4 2022 alongside it, and the migration shipped in 2023. Exact Phase 2
+// quarters aren't recorded, so the 2023 bar spans the year.
+const quarters = ["Q3 ’22", "Q4 ’22", "Q1 ’23", "Q2 ’23", "Q3 ’23", "Q4 ’23"];
+
+function PhaseRoadmap() {
+  return (
+    <div className="reveal mt-10 rounded-2xl border border-line bg-bg-raised/50 p-6 md:p-8">
+      <p className="eyebrow">Knowledge Base two phases timeline</p>
+
+      {/* Desktop: quarter grid */}
+      <div
+        className="mt-8 hidden grid-cols-[5.5rem_repeat(6,minmax(0,1fr))] gap-x-1.5 gap-y-3 md:grid"
+        role="img"
+        aria-label="Roadmap. Phase 1, multiple knowledge bases, ran from Q3 to Q4 2022. Phase 2 scoping began in Q4 2022, overlapping Phase 1, and the platform migration shipped in 2023."
+      >
+        {/* Overlap band behind Q4 2022 */}
+        <span
+          aria-hidden
+          className="rounded-lg bg-accent/[0.07]"
+          style={{ gridColumn: "3", gridRow: "1 / span 3" }}
+        />
+
+        {/* Quarter header */}
+        {quarters.map((q, i) => (
+          <span
+            key={q}
+            className="relative text-center text-xs font-medium text-muted"
+            style={{ gridColumn: `${i + 2}`, gridRow: "1" }}
+          >
+            {q}
+          </span>
+        ))}
+
+        {/* Phase 1 lane */}
+        <span
+          className="eyebrow self-center"
+          style={{ gridColumn: "1", gridRow: "2" }}
+        >
+          Phase 1
+        </span>
+        <span
+          className="relative rounded-lg border border-sage-ink/30 bg-sage px-3 py-2.5 text-sm font-medium text-ink"
+          style={{ gridColumn: "2 / span 2", gridRow: "2" }}
+        >
+          Multiple knowledge bases
+        </span>
+
+        {/* Phase 2 lane */}
+        <span
+          className="eyebrow self-center"
+          style={{ gridColumn: "1", gridRow: "3" }}
+        >
+          Phase 2
+        </span>
+        <span
+          className="relative rounded-lg border-2 border-dashed border-accent/50 bg-bg px-3 py-2 text-sm font-medium text-accent-ink"
+          style={{ gridColumn: "3", gridRow: "3" }}
+        >
+          Scoping
+        </span>
+        <span
+          className="relative rounded-lg border border-accent/30 bg-accent/15 px-3 py-2.5 text-sm font-medium text-accent-ink"
+          style={{ gridColumn: "4 / span 4", gridRow: "3" }}
+        >
+          Platform migration · shipped 2023
+        </span>
+
+      </div>
+
+      {/* Mobile: stacked lanes */}
+      <ol className="mt-6 space-y-5 md:hidden">
+        <li>
+          <p className="eyebrow">Phase 1 · Q3 to Q4 2022</p>
+          <p className="mt-2 rounded-lg border border-sage-ink/30 bg-sage px-3 py-2.5 text-sm font-medium text-ink">
+            Multiple knowledge bases
+          </p>
+        </li>
+        <li>
+          <p className="eyebrow">Phase 2 · Q4 2022 to 2023</p>
+          <div className="mt-2 space-y-2">
+            <p className="rounded-lg border-2 border-dashed border-accent/50 bg-bg px-3 py-2 text-sm font-medium text-accent-ink">
+              Scoping, alongside Phase 1
+            </p>
+            <p className="rounded-lg border border-accent/30 bg-accent/15 px-3 py-2.5 text-sm font-medium text-accent-ink">
+              Platform migration · shipped 2023
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  );
+}
+
 function SectionHead({ eyebrow, title }: { eyebrow: string; title: string }) {
   return (
     <div className="reveal">
@@ -590,14 +685,16 @@ export default function KnowledgeBaseCaseStudy() {
               take it on.
             </p>
 
-            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+            <PhaseRoadmap />
+
+            <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
               {phases.map((p) => (
                 <div
                   key={p.phase}
                   className="reveal rounded-2xl border border-line bg-bg-raised/50 p-6 md:p-8"
                 >
-                  <div className="flex items-baseline justify-between gap-4">
-                    <p className="eyebrow">{p.phase}</p>
+                  <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                    <p className="eyebrow shrink-0">{p.phase}</p>
                     <span className="text-xs text-muted">{p.window}</span>
                   </div>
                   <h3 className="mt-2 font-display text-xl font-medium tracking-tight text-ink">
