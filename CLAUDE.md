@@ -8,6 +8,7 @@ Single-page, editorial style. Next.js (App Router) + TypeScript + Tailwind v4.
 - **All editable content lives in `src/lib/content.ts`** — copy, projects, experience, links, skills. Change content there, not in components.
 - **Design tokens** (colors, fonts) live in `src/app/globals.css`; type pairing is Fraunces (display) + Inter (body) set in `src/app/layout.tsx`.
 - **Sections** are components in `src/components/` (Hero, Work, About, Resume, Contact), composed in `src/app/page.tsx`.
+- **Personal brand kit** lives in `docs/brand-kit/` (guidelines in `README.md`, tokens in `tokens.json`). It is the newer source of truth for fonts, colours and voice, but it has not been applied to the site yet. `docs/brand.md` still describes what is currently built.
 - Run the dev server via the preview launch config `folio-dev` (port 3000).
 - Open `// TODO` items in `content.ts` are unresolved facts (location, real metrics, education degree) — don't invent values for these.
 
