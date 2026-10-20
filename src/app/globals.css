@@ -1,18 +1,35 @@
 @import "tailwindcss";
 
 /* ─── Design tokens ──────────────────────────────────────────────────────── */
+/* Values come from the Alisha Gonsalves brand kit (Design System artifact).
+   Brand names first; the older names below are kept as aliases so every
+   component picks up the new palette without a rename. */
 :root {
-  --bg: #f0eee7; /* warm cream / greige */
-  --bg-raised: #f7f5ef;
-  --ink: #18181b; /* neutral near-black */
-  --muted: #64656b;
-  --line: rgba(24, 24, 27, 0.12);
-  --line-strong: rgba(24, 24, 27, 0.22);
-  --accent: #3a52cf; /* blue — links & interactive emphasis */
-  --accent-ink: #2d3fb0; /* darker blue for text (passes AA on cream) */
-  --sage: #dde3cd; /* muted green — highlight surface */
-  --sage-ink: #55663e; /* darker sage — labels, dots, borders */
-  --mist: #dde4e7; /* cool grey-blue — secondary surface */
+  /* Brand kit palette */
+  --paper: #f4f2ec; /* every page background */
+  --sand: #d8d5cb; /* hairlines, card borders, tag fills */
+  --rule: #7c7c78; /* stronger rules, axes, outline icons. Never text. */
+  --ink-strong: #0a0a0a; /* headings, display type, metrics */
+  --ink-soft: #1a1a1a; /* body copy */
+  --ink-muted: #5a5a56; /* captions, dates, mono labels */
+  --mist: #dce4e9; /* card and callout fills */
+  --mist-deep: #b7cad3; /* one full-bleed accent section per page */
+  --sage: #d9e3cc; /* a second full-bleed accent, for outcomes */
+  --slate: #2c4150; /* the accent: links, key numbers, main button */
+  --on-slate: #ffffff; /* text on slate fills */
+  --brand-shadow-card: 0 1px 2px rgba(10, 10, 10, 0.05),
+    0 4px 16px rgba(10, 10, 10, 0.06);
+
+  /* Aliases used across the components */
+  --bg: var(--paper);
+  --bg-raised: var(--paper);
+  --ink: var(--ink-strong);
+  --muted: var(--ink-muted);
+  --line: var(--sand);
+  --line-strong: var(--rule);
+  --accent: var(--slate);
+  --accent-ink: var(--slate);
+  --sage-ink: var(--ink-muted);
 }
 
 @theme inline {
@@ -27,8 +44,19 @@
   --color-sage: var(--sage);
   --color-sage-ink: var(--sage-ink);
   --color-mist: var(--mist);
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-newsreader);
+  --color-mist-deep: var(--mist-deep);
+  --color-paper: var(--paper);
+  --color-sand: var(--sand);
+  --color-rule: var(--rule);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-muted: var(--ink-muted);
+  --color-slate: var(--slate);
+  --color-on-slate: var(--on-slate);
+  --shadow-card: var(--brand-shadow-card);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  /* The brand kit has one sans for headings and text: Inter Semibold for display. */
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, Menlo, monospace;
 }
 
 html {
@@ -36,45 +64,43 @@ html {
 }
 
 body {
-  background: var(--bg);
-  color: var(--ink);
+  background: var(--paper);
+  color: var(--ink-soft);
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: var(--accent);
-  color: var(--bg-raised);
+  background: var(--slate);
+  color: var(--on-slate);
 }
 
-/* Marker highlight — a warm marigold swipe behind a key word.
-   Sits low like a real highlighter, with soft uneven ends. Personality
-   without decoration; use it sparingly (one word per view). */
-.marker {
-  background-image: linear-gradient(
-    101deg,
-    rgba(151, 173, 108, 0) 0.5%,
-    rgba(151, 173, 108, 0.55) 2%,
-    rgba(151, 173, 108, 0.38) 50%,
-    rgba(151, 173, 108, 0.55) 96%,
-    rgba(151, 173, 108, 0) 99.5%
-  );
-  background-repeat: no-repeat;
-  background-size: 100% 56%;
-  background-position: 0 82%;
-  padding-inline: 0.1em;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--slate);
+  outline-offset: 3px;
 }
 
-/* Thin uppercase eyebrow label used across sections */
+/* Brand kit `label`: IBM Plex Mono 500, 12/16, capitals, +8% tracking.
+   Eyebrows above headings and labels under metrics. */
 .eyebrow {
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
+  font-family: var(--font-plex-mono), ui-monospace, Menlo, monospace;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--ink-muted);
   font-weight: 500;
+}
+
+/* Brand kit `caption`: IBM Plex Mono 400, 13/20. Dates, sources, captions. */
+.caption {
+  font-family: var(--font-plex-mono), ui-monospace, Menlo, monospace;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: var(--ink-muted);
 }
 
 /* Reveal-on-scroll (progressively enhanced by IntersectionObserver) */

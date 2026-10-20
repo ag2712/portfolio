@@ -1,4 +1,8 @@
-# Brand & Design System — Alisha Gonsalves
+# Brand & Design System: Alisha Gonsalves
+
+> **The source of truth is the brand kit** (the "Alisha Gonsalves" Design System
+> artifact in Claude). This file is a working summary for the codebase. If the two
+> ever disagree, the brand kit wins.
 
 The one-line strategy this whole system serves:
 
@@ -27,8 +31,13 @@ charming.
 
 ## 2. Voice & tone
 
-Bubbly and sassy — but senior. The rule of thumb: **sass is seasoning, not the meal.**
+Bubbly and sassy, but senior. The rule of thumb: **sass is seasoning, not the meal.**
 One wink per section, not per sentence.
+
+**House style (from the brand kit)**
+- British spelling everywhere: *modernising*, *colour*, *learnt*, *organise*.
+- **No em dashes.** Use a full stop, comma, colon or brackets. Ranges: "2022 to 2024" or "2022–2024".
+- Sentence case for headings and buttons. No emoji.
 
 **Principles**
 1. **Write like you talk.** First person, contractions, short sentences.
@@ -45,9 +54,9 @@ One wink per section, not per sentence.
 | Do | Don't |
 | --- | --- |
 | "I make complex tools feel obvious." | "Passionate about crafting delightful experiences." |
-| "Seven years and a few time zones in — I connect the dots other people miss." | "Results-driven design professional." |
-| "Case study's in the oven — ask me about it." | "Coming soon." |
-| "Say hi — I don't bite (much)." | "Please feel free to reach out at your convenience." |
+| "Seven years and a few time zones in, I connect the dots other people miss." | "Results-driven design professional." |
+| "Case study's in the oven. Ask me about it." | "Coming soon." |
+| "Say hi. I don't bite (much)." | "Please feel free to reach out at your convenience." |
 
 **Tone shifts by context**
 - **Hero / about:** most personality — this is where she's allowed to be sassy.
@@ -58,53 +67,62 @@ One wink per section, not per sentence.
 
 ## 3. Typography
 
-A deliberately small, two-family system. Restraint here *is* the taste signal.
+Two free Google Fonts, loaded with `next/font` in `src/app/layout.tsx`.
 
-| Role | Typeface | Notes |
+| Role | Typeface | Tailwind |
 | --- | --- | --- |
-| **Display** — headlines, project titles, big statements | **Newsreader** (variable `opsz`; roman + italic) | Elegant, classical letterforms with clean `f`/`j` and a beautiful italic (used for the marker word). Refined, not wonky. Use it *only* at large sizes. |
-| **Text / UI** — body, nav, labels, buttons, metadata | **Inter** | Neutral, legible workhorse. Keeps the whole thing calm and senior. |
+| Headings and body | **Inter** (600 for headings, 400 for text) | `font-display` / `font-sans` |
+| Labels, captions, dates | **IBM Plex Mono** (500 labels, 400 captions) | `.eyebrow`, `.caption`, `font-mono` |
 
-**Usage rules**
-- **One display moment per section.** Fraunces earns its impact by being rare.
-- **Never set long-form text in Newsreader display sizes.** It's a display serif here; body stays Inter.
-- **Sentence case, not Title Case.** Warmer, more human, matches the voice.
-- **Eyebrow labels:** Inter, uppercase, 0.18em tracking, muted — the quiet counterpoint
-  to the big serif.
+| Style | Size / line height | Notes |
+| --- | --- | --- |
+| display | 56 / 60 px | Inter 600, −2% tracking. One per page. |
+| metric | 48 / 52 px | Inter 600, `ink` or `slate` |
+| heading-1 | 40 / 48 px | Inter 600 |
+| heading-2 | 28 / 36 px | Inter 600, section headings |
+| heading-3 | 20 / 28 px | Inter 600, card titles and roles |
+| body-lg | 18 / 28 px | Intro paragraphs |
+| body | 16 / 26 px | Running text |
+| label | 12 / 16 px | `.eyebrow`: Plex Mono 500, capitals, +8% tracking |
+| caption | 13 / 20 px | `.caption`: Plex Mono 400 |
 
-**Type scale (current)** — display 3rem→5.5rem, section heads ~2rem, body 1rem–1.25rem,
-eyebrow 0.72rem. Defined in components + `globals.css`.
+Plex Mono is never used for paragraphs or headings.
 
 ---
 
-## 4. Color
+## 4. Colour
 
-Cool, muted, restrained — a warm cream ground under near-black text, with color used
-as *structure* (blue = interactive) and *highlight* (sage = "here / matters"), never as
-decoration.
+Tokens live in `src/app/globals.css`. Brand names first; older names are aliases.
 
-| Token | Hex | Role |
-| --- | --- | --- |
-| `--bg` | `#f0eee7` | Warm cream / greige canvas |
-| `--bg-raised` | `#f7f5ef` | Slightly lifted surfaces |
-| `--ink` | `#18181b` | Neutral near-black — primary text |
-| `--muted` | `#64656b` | Secondary text |
-| `--accent` (blue) | `#3a52cf` | Interactive — links, emphasis, hover |
-| `--accent-ink` | `#2d3fb0` | Darker blue for text (passes AA on cream) |
-| `--sage` | `#dde3cd` | **Highlight surface** — "you are here", featured rows |
-| `--sage-ink` | `#55663e` | Darker sage — the status dot, marker, labels |
-| `--mist` | `#dde4e7` | Cool grey-blue — secondary surface |
+| Token | Hex | Use it for | Old alias |
+| --- | --- | --- | --- |
+| `paper` | `#f4f2ec` | Every page background | `bg`, `bg-raised` |
+| `sand` | `#d8d5cb` | Hairlines, card borders, tag fills | `line` |
+| `rule` | `#7c7c78` | Stronger rules, axes, icons. Never text. | `line-strong` |
+| `ink` | `#0a0a0a` | Headings, display type, metrics | `ink` |
+| `ink-soft` | `#1a1a1a` | Body copy | |
+| `ink-muted` | `#5a5a56` | Captions, dates, labels (on paper and mist only) | `muted`, `sage-ink` |
+| `mist` | `#dce4e9` | Card and callout fills | |
+| `mist-deep` | `#b7cad3` | One full-bleed accent section (the contact footer) | |
+| `sage` | `#d9e3cc` | A second full-bleed accent, for outcomes | |
+| `slate` | `#2c4150` | Links, key numbers, the main button | `accent`, `accent-ink` |
+| `on-slate` | `#ffffff` | Text on slate fills | |
 
-**The system.** Blue does the *interactive* work (links, the accented word, step
-numbers). Sage does the *highlight* work (the marker swipe, the "current" card, featured
-table rows) — and doubles as the quiet warmth/heritage nod, a soft green instead of a
-literal motif. Mist is a neutral surface for grouped cards. Near-black text on cream keeps
-it grown-up.
+**Rules**
+- Nearly everything is `ink` and `ink-soft` on `paper`.
+- `slate` marks **one** thing per view: a key number, a link or the main button.
+- `mist-deep` and `sage` as full backgrounds once or twice a page, never side by side.
+- No gradients, no pure black, no bright saturated colours, no coloured left-border cards.
 
-**Usage & guardrails**
-- **Blue = interactive, sage = highlight.** Keep the two jobs separate; don't tint a
-  highlight surface blue or make a link sage.
-- **Accessibility:** `--ink` and `--accent-ink` pass WCAG AA on cream. `--sage` and
-  `--sage-ink` are **surface/decoration** tones — fine for fills, dots, and the marker, but
-  don't set important body text in them.
-- **Restraint test:** if a screen has more than ~2 spots of color, pull one out.
+---
+
+## 5. Shape and spacing
+
+- 4px base. `16` tightest margin, `24` card padding, `64` between major sections, `96` around a hero.
+- Radius: 8px (`rounded-lg`) for cards, buttons and case-study images; 4px (`rounded-sm`) for tags; pill (`rounded-full`) for skill chips only.
+- Separate with `sand` hairlines first; `shadow-card` only when a card truly needs to lift.
+
+## Retired
+
+The serif display face (Fraunces, then Newsreader), the blue accent (`#3a52cf`), the
+sage highlighter swipe and the gradient project covers.

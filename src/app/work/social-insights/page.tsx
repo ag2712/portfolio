@@ -284,7 +284,7 @@ function SectionHead({ eyebrow, title }: { eyebrow: string; title: string }) {
   return (
     <div className="reveal">
       <p className="eyebrow">{eyebrow}</p>
-      <h2 className="mt-3 font-display text-3xl font-medium tracking-tight text-ink md:text-4xl">
+      <h2 className="mt-3 font-display text-[1.75rem] font-semibold leading-9 tracking-[-0.01em] text-ink">
         {title}
       </h2>
     </div>
@@ -317,7 +317,7 @@ export default function SocialInsightsCaseStudy() {
         <nav className="mx-auto flex h-16 max-w-4xl items-center justify-between px-6 md:px-10">
           <Link
             href="/"
-            className="font-display text-lg font-medium tracking-tight text-ink"
+            className="font-display text-lg font-semibold tracking-tight text-ink"
           >
             {site.name}
           </Link>
@@ -335,7 +335,7 @@ export default function SocialInsightsCaseStudy() {
         <section className="relative overflow-hidden">
           <div className="mx-auto max-w-4xl px-6 pb-14 pt-16 md:px-10 md:pb-20 md:pt-24">
             <p className="eyebrow reveal">Case study · Reddit-powered brand visibility</p>
-            <h1 className="reveal mt-5 font-display text-5xl font-medium leading-[1.02] tracking-tight text-ink sm:text-6xl md:text-7xl">
+            <h1 className="reveal mt-5 font-display text-[2.5rem] font-semibold leading-[1.08] tracking-[-0.02em] text-ink sm:text-5xl md:text-[3.5rem] md:leading-[3.75rem]">
               Social Insights<span className="text-accent-ink">.</span>
             </h1>
             <p className="reveal mt-6 max-w-2xl text-lg leading-8 text-muted md:text-xl">
@@ -361,7 +361,7 @@ export default function SocialInsightsCaseStudy() {
                 placeholder="blur"
                 loading="eager"
                 fetchPriority="high"
-                className="h-auto w-full rounded-2xl border border-line shadow-[0_24px_48px_-24px_rgba(24,24,27,0.25)]"
+                className="h-auto w-full rounded-lg border border-line shadow-card"
               />
             </figure>
           </div>
@@ -387,7 +387,7 @@ export default function SocialInsightsCaseStudy() {
                   style={{ marginLeft: `${i * 20}px` }}
                 >
                   <p className="eyebrow">{e.level}</p>
-                  <h3 className="mt-1.5 font-display text-xl font-medium tracking-tight text-ink">
+                  <h3 className="mt-1.5 font-display text-xl font-semibold tracking-tight text-ink">
                     {e.name}
                   </h3>
                   <p className="mt-1.5 text-sm leading-6 text-muted">
@@ -403,7 +403,7 @@ export default function SocialInsightsCaseStudy() {
         <section className="border-t border-line bg-bg-raised/50 py-20 md:py-28">
           <div className="mx-auto max-w-4xl px-6 md:px-10">
             <p className="eyebrow reveal">The brief</p>
-            <p className="reveal mt-4 max-w-2xl font-display text-2xl font-medium leading-snug tracking-tight text-ink md:text-3xl">
+            <p className="reveal mt-4 max-w-2xl font-display text-2xl font-semibold leading-snug tracking-tight text-ink md:text-3xl">
               Help HubSpot’s strategic marketers turn Reddit conversations into
               confident decisions. The goal was a decision tool, not another
               social listening feed.
@@ -415,7 +415,7 @@ export default function SocialInsightsCaseStudy() {
         <section className="border-t border-line py-20 md:py-28">
           <div className="mx-auto max-w-4xl px-6 md:px-10">
             <p className="eyebrow reveal">The problem</p>
-            <p className="reveal mt-5 max-w-3xl font-display text-2xl font-medium leading-snug tracking-tight text-ink md:text-3xl">
+            <p className="reveal mt-5 max-w-3xl font-display text-2xl font-semibold leading-snug tracking-tight text-ink md:text-3xl">
               Users{" "}
               <span className="rounded bg-accent/15 px-1 text-accent-ink">
                 struggle to understand their customers’ sentiment
@@ -443,8 +443,8 @@ export default function SocialInsightsCaseStudy() {
                   leadership rather than more feeds to scan.
                 </p>
 
-                <figure className="reveal mt-8 border-l-2 border-accent pl-6 md:pl-8">
-                  <blockquote className="font-display text-xl font-medium leading-snug tracking-tight text-ink md:text-2xl">
+                <figure className="reveal mt-8">
+                  <blockquote className="font-display text-xl font-semibold leading-snug tracking-tight text-ink md:text-2xl">
                     “Reddit is the source of truth. Surveys give you what
                     people will say. Reddit gives you what they actually
                     think.”
@@ -586,7 +586,7 @@ export default function SocialInsightsCaseStudy() {
                   }`}
                 >
                   <div className="md:col-span-3">
-                    <h3 className="font-display text-lg font-medium tracking-tight text-ink">
+                    <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
                       {c.category}
                     </h3>
                     <p className="mt-1 text-xs text-muted">{c.examples}</p>
@@ -608,7 +608,7 @@ export default function SocialInsightsCaseStudy() {
             {/* Social Insights — pulled out as the answer, not a table row */}
             <div className="reveal mt-6 rounded-2xl border border-sage-ink/30 bg-sage/60 p-6 md:p-8">
               <p className="eyebrow text-sage-ink">Where we fit</p>
-              <h3 className="mt-2 font-display text-2xl font-medium tracking-tight text-ink md:text-3xl">
+              <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight text-ink md:text-3xl">
                 Social Insights
               </h3>
               <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
@@ -644,7 +644,7 @@ export default function SocialInsightsCaseStudy() {
                     <span className="font-display text-lg text-accent-ink">
                       {a.step}
                     </span>
-                    <h3 className="font-display text-xl font-medium tracking-tight text-ink">
+                    <h3 className="font-display text-xl font-semibold tracking-tight text-ink">
                       {a.name}
                     </h3>
                   </div>
@@ -724,7 +724,7 @@ export default function SocialInsightsCaseStudy() {
                             : { left: `calc(1.75rem + ${i} * (100% - 3.5rem) / 3)` }
                         }
                       >
-                        <p className="font-display text-base font-medium text-ink">
+                        <p className="font-display text-base font-semibold text-ink">
                           {s.name}
                         </p>
                         <p className="mt-0.5 text-xs text-muted">{s.sub}</p>
@@ -753,7 +753,7 @@ export default function SocialInsightsCaseStudy() {
                   </div>
                   <div className="pb-6">
                     <div className="flex flex-wrap items-center gap-2">
-                      <p className="font-display text-base font-medium text-ink">
+                      <p className="font-display text-base font-semibold text-ink">
                         {s.name}
                       </p>
                       {s.n === "01" && (
@@ -792,7 +792,7 @@ export default function SocialInsightsCaseStudy() {
                   <span className="font-display text-lg text-accent-ink">
                     {a.n}
                   </span>
-                  <h3 className="mt-1 font-display text-xl font-medium tracking-tight text-ink">
+                  <h3 className="mt-1 font-display text-xl font-semibold tracking-tight text-ink">
                     {a.name}
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-muted">{a.desc}</p>
@@ -812,7 +812,7 @@ export default function SocialInsightsCaseStudy() {
             <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
               {craft.map((c) => (
                 <div key={c.name} className="reveal border-t border-line pt-5">
-                  <h3 className="font-display text-lg font-medium leading-snug tracking-tight text-ink">
+                  <h3 className="font-display text-lg font-semibold leading-snug tracking-tight text-ink">
                     {c.name}
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-muted">{c.desc}</p>
@@ -829,7 +829,7 @@ export default function SocialInsightsCaseStudy() {
             <div className="mt-8 grid grid-cols-1 gap-10 sm:grid-cols-3">
               {stats.map((s) => (
                 <div key={s.value} className="reveal">
-                  <div className="font-display text-5xl font-medium tracking-tight text-ink">
+                  <div className="font-display text-5xl font-semibold tracking-tight text-ink">
                     {s.value}
                   </div>
                   <p className="mt-3 text-sm leading-6 text-muted">{s.label}</p>
@@ -846,7 +846,7 @@ export default function SocialInsightsCaseStudy() {
             <div className="mt-10 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2">
               {outcomes.map((o) => (
                 <div key={o.lead} className="reveal border-t border-line pt-6">
-                  <div className="font-display text-4xl font-medium tracking-tight text-ink md:text-5xl">
+                  <div className="font-display text-4xl font-semibold tracking-[-0.02em] text-ink md:text-5xl md:leading-[3.25rem]">
                     {o.value}
                   </div>
                   <p className="mt-3 text-base leading-7 text-ink/85">{o.lead}</p>
@@ -879,7 +879,7 @@ export default function SocialInsightsCaseStudy() {
                     <span className="font-display text-lg text-accent-ink">
                       {m.n}
                     </span>
-                    <h3 className="font-display text-xl font-medium tracking-tight text-ink">
+                    <h3 className="font-display text-xl font-semibold tracking-tight text-ink">
                       {m.name}
                     </h3>
                   </div>
@@ -901,7 +901,7 @@ export default function SocialInsightsCaseStudy() {
                   className="reveal rounded-2xl border border-line bg-bg p-6"
                 >
                   <p className="eyebrow">{c.label}</p>
-                  <h3 className="mt-2 font-display text-xl font-medium tracking-tight text-ink">
+                  <h3 className="mt-2 font-display text-xl font-semibold tracking-tight text-ink">
                     {c.name}
                   </h3>
                   <p className="mt-3 text-sm leading-6 text-muted">{c.desc}</p>
@@ -926,7 +926,7 @@ export default function SocialInsightsCaseStudy() {
                 >
                   <p className="eyebrow md:col-span-3">{l.tag}</p>
                   <div className="md:col-span-9">
-                    <h3 className="font-display text-xl font-medium tracking-tight text-ink">
+                    <h3 className="font-display text-xl font-semibold tracking-tight text-ink">
                       {l.name}
                     </h3>
                     <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
@@ -940,7 +940,7 @@ export default function SocialInsightsCaseStudy() {
             <div className="reveal mt-16">
               <Link
                 href="/#work"
-                className="inline-flex items-center gap-2 rounded-full border border-line-strong px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink hover:bg-ink hover:text-bg-raised"
+                className="inline-flex items-center gap-2 rounded-lg border border-line-strong px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink hover:bg-ink hover:text-bg-raised"
               >
                 ← Back to all work
               </Link>
