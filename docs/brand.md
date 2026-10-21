@@ -86,7 +86,9 @@ Two free Google Fonts, loaded with `next/font` in `src/app/layout.tsx`.
 | label | 12 / 16 px | `.eyebrow`: Plex Mono 500, capitals, +8% tracking |
 | caption | 13 / 20 px | `.caption`: Plex Mono 400 |
 
-Plex Mono is never used for paragraphs or headings.
+Plex Mono is never used for paragraphs or headings, with **one exception**: the
+accent word in the home page headline ("obvious") is set in Plex Mono Medium
+Italic. It's the site's single typographic flourish, so keep it to that one word.
 
 ---
 
@@ -108,6 +110,11 @@ Tokens live in `src/app/globals.css`. Brand names first; older names are aliases
 | `slate` | `#2c4150` | Links, key numbers, the main button | `accent`, `accent-ink` |
 | `on-slate` | `#ffffff` | Text on slate fills | |
 
+**Highlights**
+- `sage` is the one highlight colour across the site: the `.marker` swipe behind a
+  key word or phrase, highlighted cards and text selection.
+- Keep it to one or two highlighted phrases per section, so it still means "look here".
+
 **Rules**
 - Nearly everything is `ink` and `ink-soft` on `paper`.
 - `slate` marks **one** thing per view: a key number, a link or the main button.
@@ -125,4 +132,4 @@ Tokens live in `src/app/globals.css`. Brand names first; older names are aliases
 ## Retired
 
 The serif display face (Fraunces, then Newsreader), the blue accent (`#3a52cf`), the
-sage highlighter swipe and the gradient project covers.
+faded gradient highlighter swipe and the gradient project covers.
