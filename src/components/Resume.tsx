@@ -12,13 +12,13 @@ export default function Resume() {
         <div className="reveal flex flex-wrap items-end justify-between gap-6">
           <div>
             <p className="eyebrow">Resume</p>
-            <h2 className="mt-3 font-display text-3xl font-medium tracking-tight text-ink md:text-4xl">
+            <h2 className="mt-2 font-display text-[1.75rem] font-semibold leading-9 tracking-[-0.01em] text-ink">
               Experience
             </h2>
           </div>
         </div>
 
-        <p className="reveal mt-10 text-lg leading-8 text-ink/80">
+        <p className="reveal mt-8 max-w-[65ch] text-lg leading-7 text-ink-soft">
           {resumeSummary}
         </p>
 
@@ -29,18 +29,18 @@ export default function Resume() {
               className="reveal group grid grid-cols-1 gap-2 border-b border-line py-8 md:grid-cols-12 md:gap-8"
             >
               <div className="md:col-span-3">
-                <p className="text-sm text-muted">{role.period}</p>
-                <p className="text-sm text-muted">{role.location}</p>
+                <p className="caption">{role.period}</p>
+                <p className="caption">{role.location}</p>
               </div>
               <div className="md:col-span-9">
                 <div className="flex flex-wrap items-baseline gap-x-3">
-                  <h3 className="font-display text-xl font-medium tracking-tight text-ink">
+                  <h3 className="font-display text-xl font-semibold leading-7 text-ink">
                     {role.title}
                   </h3>
                   <span className="text-muted">·</span>
-                  <span className="text-ink/70">{role.company}</span>
+                  <span className="text-ink-soft">{role.company}</span>
                 </div>
-                <ul className="mt-3 max-w-2xl list-disc space-y-2 pl-5 text-base leading-7 text-muted marker:text-line-strong">
+                <ul className="mt-3 max-w-2xl list-disc space-y-2 pl-5 text-base leading-[1.625rem] text-ink-soft marker:text-rule">
                   {role.bullets.map((bullet) => (
                     <li key={bullet}>{bullet}</li>
                   ))}
@@ -51,7 +51,7 @@ export default function Resume() {
         </ol>
 
         <div className="reveal mt-20">
-          <h3 className="font-display text-2xl font-medium tracking-tight text-ink md:text-3xl">
+          <h3 className="font-display text-[1.75rem] font-semibold leading-9 tracking-[-0.01em] text-ink">
             Education
           </h3>
         </div>
@@ -63,13 +63,13 @@ export default function Resume() {
               className="reveal grid grid-cols-1 gap-2 border-b border-line py-8 md:grid-cols-12 md:gap-8"
             >
               <div className="md:col-span-3">
-                <p className="text-sm text-muted">{entry.period}</p>
+                <p className="caption">{entry.period}</p>
               </div>
               <div className="md:col-span-9">
-                <h4 className="font-display text-xl font-medium tracking-tight text-ink">
+                <h4 className="font-display text-xl font-semibold leading-7 text-ink">
                   {entry.school}
                 </h4>
-                <p className="mt-2 max-w-2xl text-base leading-7 text-muted">
+                <p className="mt-2 max-w-2xl text-base leading-[1.625rem] text-ink-soft">
                   {entry.degree}
                 </p>
               </div>
@@ -78,7 +78,7 @@ export default function Resume() {
         </ol>
 
         <div className="reveal mt-20">
-          <h3 className="font-display text-2xl font-medium tracking-tight text-ink md:text-3xl">
+          <h3 className="font-display text-[1.75rem] font-semibold leading-9 tracking-[-0.01em] text-ink">
             Tools
           </h3>
         </div>
@@ -89,10 +89,10 @@ export default function Resume() {
               key={group.label}
               className="reveal grid grid-cols-1 gap-2 border-b border-line py-8 md:grid-cols-12 md:gap-8"
             >
-              <dt className="text-sm text-muted md:col-span-3">
+              <dt className="eyebrow md:col-span-3">
                 {group.label}
               </dt>
-              <dd className="text-base leading-7 text-ink/80 md:col-span-9">
+              <dd className="text-base leading-[1.625rem] text-ink-soft md:col-span-9">
                 {group.items.join(" · ")}
               </dd>
             </div>

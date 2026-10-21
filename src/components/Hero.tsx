@@ -9,20 +9,24 @@ export default function Hero() {
           {site.location ? ` · ${site.location}` : ""}
         </p>
 
-        <h1 className="reveal mt-6 max-w-4xl font-display text-5xl font-medium leading-[1.02] tracking-tight text-ink sm:text-6xl md:text-7xl lg:text-[5.5rem]">
+        <h1 className="reveal mt-6 max-w-4xl font-display text-[2.75rem] font-semibold leading-[1.05] tracking-[-0.03em] text-ink sm:text-6xl md:text-7xl lg:text-[5.5rem]">
           I make complex tools
           <br className="hidden sm:block" />{" "}
-          feel <span className="marker italic">obvious</span>.
+          feel{" "}
+          <span className="marker font-mono font-medium italic tracking-[-0.04em]">
+            obvious
+          </span>
+          .
         </h1>
 
-        <p className="reveal mt-8 max-w-xl text-lg leading-8 text-muted md:text-xl">
+        <p className="reveal mt-8 max-w-xl text-lg leading-7 text-ink-soft">
           {site.tagline}
         </p>
 
         <div className="reveal mt-10 flex flex-wrap items-center gap-3">
           <a
             href="#work"
-            className="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-medium text-bg-raised transition-transform hover:-translate-y-0.5"
+            className="group inline-flex items-center gap-2 rounded-lg bg-slate px-6 py-3 text-sm font-medium text-on-slate transition-transform hover:-translate-y-0.5"
           >
             View selected work
             <span className="transition-transform group-hover:translate-x-0.5">
@@ -31,7 +35,7 @@ export default function Hero() {
           </a>
           <a
             href={`mailto:${site.email}`}
-            className="inline-flex items-center gap-2 rounded-full border border-line-strong px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink"
+            className="inline-flex items-center gap-2 rounded-lg border border-line-strong px-6 py-3 text-sm font-medium text-ink-soft transition-colors hover:border-ink"
           >
             {site.email}
           </a>

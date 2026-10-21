@@ -30,7 +30,7 @@ export default function Nav() {
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 md:px-10">
         <a
           href="#top"
-          className="font-display text-lg font-medium tracking-tight text-ink"
+          className="font-display text-lg font-semibold tracking-tight text-ink"
         >
           {site.name}
         </a>
@@ -41,7 +41,7 @@ export default function Nav() {
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className="rounded-full px-3 py-2 text-sm text-muted transition-colors hover:text-ink"
+                  className="rounded-md px-3 py-2 text-sm text-muted transition-colors hover:text-ink"
                 >
                   {l.label}
                 </a>
@@ -50,7 +50,7 @@ export default function Nav() {
           </ul>
           <a
             href={`mailto:${site.email}`}
-            className="rounded-full border border-line-strong px-4 py-2 text-sm font-medium text-ink transition-colors hover:border-ink hover:bg-ink hover:text-bg-raised"
+            className="rounded-lg border border-line-strong px-4 py-2 text-sm font-medium text-ink transition-colors hover:border-ink hover:bg-ink hover:text-bg-raised"
           >
             Get in touch
           </a>

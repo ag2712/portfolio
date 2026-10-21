@@ -6,7 +6,7 @@ A personal design portfolio for **Alisha Gonsalves**, Senior Product Designer at
 Single-page, editorial style. Next.js (App Router) + TypeScript + Tailwind v4.
 
 - **All editable content lives in `src/lib/content.ts`** — copy, projects, experience, links, skills. Change content there, not in components.
-- **Design tokens** (colors, fonts) live in `src/app/globals.css`; type pairing is Fraunces (display) + Inter (body) set in `src/app/layout.tsx`.
+- **Design tokens** (colours, fonts) live in `src/app/globals.css` and follow the brand kit summarised in `docs/brand.md`: Inter for headings and text, IBM Plex Mono for labels and dates, set in `src/app/layout.tsx`.
 - **Sections** are components in `src/components/` (Hero, Work, About, Resume, Contact), composed in `src/app/page.tsx`.
 - Run the dev server via the preview launch config `folio-dev` (port 3000).
 - Open `// TODO` items in `content.ts` are unresolved facts (location, real metrics, education degree) — don't invent values for these.

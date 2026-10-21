@@ -1,31 +1,31 @@
 import Link from "next/link";
 import { projects, type Project } from "@/lib/content";
 
-// Flagship cover — an abstract "insight card" (named theme + sentiment split)
-// floating on the brand gradient, echoing what the product actually surfaces.
+// Flagship cover: an abstract "insight card" (named theme + sentiment split)
+// on a flat brand fill, echoing what the product actually surfaces.
 function SocialInsightsCover({ project }: { project: Project }) {
-  const { from, to, ink } = project.cover;
+  const { bg, ink } = project.cover;
   return (
     <div
-      className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl"
-      style={{ background: `linear-gradient(135deg, ${from}, ${to})` }}
+      className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-line"
+      style={{ background: bg }}
     >
       <div
         aria-hidden
-        className="absolute -left-16 -top-16 h-52 w-52 rounded-full opacity-25"
+        className="absolute -left-16 -top-16 h-52 w-52 rounded-full opacity-10"
         style={{ background: ink }}
       />
 
       {/* back card for depth */}
       <div
         aria-hidden
-        className="absolute right-[7%] top-[13%] h-[56%] w-[47%] rotate-6 rounded-xl bg-white/20"
+        className="absolute right-[7%] top-[13%] h-[56%] w-[47%] rotate-6 rounded-lg bg-paper/50"
       />
 
       {/* front insight card */}
-      <div className="absolute right-[11%] top-[19%] w-[50%] -rotate-2 rounded-xl bg-bg-raised p-4 shadow-xl ring-1 ring-black/5">
+      <div className="absolute right-[11%] top-[19%] w-[50%] -rotate-2 rounded-lg bg-paper p-4 shadow-card ring-1 ring-line">
         <div className="flex items-center justify-between">
-          <span className="rounded-full bg-accent/15 px-2 py-[3px] text-[9px] font-semibold uppercase tracking-wide text-accent-ink">
+          <span className="rounded-sm bg-mist px-2 py-[3px] font-mono text-[9px] font-medium uppercase tracking-[0.08em] text-slate">
             Theme
           </span>
           <div aria-hidden className="flex gap-1">
@@ -50,11 +50,11 @@ function SocialInsightsCover({ project }: { project: Project }) {
 
       <div className="absolute inset-0 flex items-end p-6">
         <span
-          className="font-display text-2xl font-medium tracking-tight"
+          className="font-display text-3xl font-semibold tracking-[-0.02em]"
           style={{ color: ink }}
         >
           {project.metric.value}
-          <span className="ml-2 align-middle text-sm font-normal opacity-70">
+          <span className="ml-2 align-middle font-mono text-xs font-medium uppercase tracking-[0.08em] text-ink-muted">
             {project.metric.label}
           </span>
         </span>
@@ -67,30 +67,30 @@ function ProjectCover({ project }: { project: Project }) {
   if (project.slug === "social-insights") {
     return <SocialInsightsCover project={project} />;
   }
-  const { from, to, ink } = project.cover;
+  const { bg, ink } = project.cover;
   return (
     <div
-      className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl"
-      style={{ background: `linear-gradient(135deg, ${from}, ${to})` }}
+      className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-line"
+      style={{ background: bg }}
     >
-      {/* generative geometric motif so every card feels distinct */}
+      {/* quiet geometric motif so every card feels distinct */}
       <div
         aria-hidden
-        className="absolute -right-10 -top-10 h-48 w-48 rounded-full opacity-30"
+        className="absolute -right-10 -top-10 h-48 w-48 rounded-full opacity-10"
         style={{ background: ink }}
       />
       <div
         aria-hidden
-        className="absolute bottom-6 left-6 h-24 w-24 rounded-full border-2 opacity-40"
+        className="absolute bottom-6 right-6 h-24 w-24 rounded-full border-2 opacity-25"
         style={{ borderColor: ink }}
       />
       <div className="absolute inset-0 flex items-end p-6">
         <span
-          className="font-display text-2xl font-medium tracking-tight"
+          className="font-display text-3xl font-semibold tracking-[-0.02em]"
           style={{ color: ink }}
         >
           {project.metric.value}
-          <span className="ml-2 align-middle text-sm font-normal opacity-70">
+          <span className="ml-2 align-middle font-mono text-xs font-medium uppercase tracking-[0.08em] text-ink-muted">
             {project.metric.label}
           </span>
         </span>
@@ -109,24 +109,24 @@ function Card({ project, index }: { project: Project; index: number }) {
       <ProjectCover project={project} />
 
       <div className="mt-6 flex items-start justify-between gap-6">
-        <h3 className="max-w-md font-display text-2xl font-medium leading-snug tracking-tight text-ink transition-colors group-hover:text-accent-ink md:text-3xl">
+        <h3 className="max-w-md font-display text-xl font-semibold leading-7 text-ink transition-colors group-hover:text-slate">
           {project.title}
         </h3>
-        <span className="mt-1 shrink-0 text-sm text-muted">{project.year}</span>
+        <span className="caption mt-1 shrink-0">{project.year}</span>
       </div>
 
-      <p className="mt-3 max-w-2xl text-base leading-7 text-muted">
+      <p className="mt-3 max-w-2xl text-base leading-[1.625rem] text-ink-soft">
         {project.summary}
       </p>
 
       <div className="mt-5 flex flex-wrap items-center gap-2">
-        <span className="rounded-full bg-ink/5 px-3 py-1 text-xs font-medium text-ink">
+        <span className="rounded-sm bg-sand px-2.5 py-1 text-xs font-medium text-ink">
           {project.role}
         </span>
         {project.tags.map((tag) => (
           <span
             key={tag}
-            className="rounded-full border border-line px-3 py-1 text-xs text-muted"
+            className="rounded-sm border border-line px-2.5 py-1 text-xs text-ink-muted"
           >
             {tag}
           </span>
@@ -143,12 +143,12 @@ export default function Work() {
         <div className="reveal flex items-end justify-between gap-6">
           <div>
             <p className="eyebrow">Selected work</p>
-            <h2 className="mt-3 font-display text-3xl font-medium tracking-tight text-ink md:text-4xl">
+            <h2 className="mt-3 font-display text-[1.75rem] font-semibold leading-9 tracking-[-0.01em] text-ink">
               A few things I&apos;ve shipped
             </h2>
           </div>
           <p className="hidden max-w-xs text-sm leading-6 text-muted sm:block">
-            Deeper case studies on request — the messy middle included, not
+            Deeper case studies on request. The messy middle included, not
             just the tidy final screens.
           </p>
         </div>
