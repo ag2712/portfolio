@@ -9,12 +9,14 @@ const inter = Inter({
   display: "swap",
 });
 
-// Brand kit: IBM Plex Mono is for small labels, captions and dates only.
+// Brand kit: IBM Plex Mono is for small labels, captions and dates, plus the
+// one italic accent word in the home page headline.
 const plexMono = IBM_Plex_Mono({
   variable: "--font-plex-mono",
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {

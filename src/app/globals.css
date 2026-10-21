@@ -72,14 +72,27 @@ body {
 }
 
 ::selection {
-  background: var(--slate);
-  color: var(--on-slate);
+  background: var(--sage);
+  color: var(--ink);
 }
 
 a:focus-visible,
 button:focus-visible {
   outline: 2px solid var(--slate);
   outline-offset: 3px;
+}
+
+/* Highlight: a solid brand `sage` swipe sitting low behind a key word or
+   phrase, like a real highlighter. The one highlight colour site-wide. */
+.marker {
+  background-image: linear-gradient(var(--sage), var(--sage));
+  background-repeat: no-repeat;
+  background-size: 100% 58%;
+  background-position: 0 85%;
+  padding-inline: 0.12em;
+  margin-inline: -0.04em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 /* Brand kit `label`: IBM Plex Mono 500, 12/16, capitals, +8% tracking.

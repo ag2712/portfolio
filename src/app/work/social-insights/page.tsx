@@ -381,7 +381,7 @@ export default function SocialInsightsCaseStudy() {
                   key={e.name}
                   className={`reveal rounded-2xl border p-5 md:p-6 ${
                     e.highlight
-                      ? "border-sage-ink/30 bg-sage/60"
+                      ? "border-sand bg-sage"
                       : "border-line bg-bg-raised/40"
                   }`}
                   style={{ marginLeft: `${i * 20}px` }}
@@ -417,11 +417,11 @@ export default function SocialInsightsCaseStudy() {
             <p className="eyebrow reveal">The problem</p>
             <p className="reveal mt-5 max-w-3xl font-display text-2xl font-semibold leading-snug tracking-tight text-ink md:text-3xl">
               Users{" "}
-              <span className="rounded bg-accent/15 px-1 text-accent-ink">
+              <span className="marker text-ink">
                 struggle to understand their customers’ sentiment
               </span>{" "}
               about their brand because...{" "}
-              <span className="rounded bg-accent/15 px-1 text-accent-ink">
+              <span className="marker text-ink">
                 insights are scattered across tools
               </span>{" "}
               and lack context, leaving them reactive and unsure of their
@@ -472,7 +472,7 @@ export default function SocialInsightsCaseStudy() {
             />
             <p className="reveal mt-5 max-w-2xl text-base leading-7 text-muted">
               A large-scale, brand-focused survey surfaced that{" "}
-              <span className="rounded bg-accent/15 px-1 text-accent-ink">
+              <span className="marker text-ink">
                 “Performance measurement &amp; optimization” ranked second
               </span>{" "}
               among the top brand tasks marketers struggle with.
@@ -606,7 +606,7 @@ export default function SocialInsightsCaseStudy() {
             </div>
 
             {/* Social Insights — pulled out as the answer, not a table row */}
-            <div className="reveal mt-6 rounded-2xl border border-sage-ink/30 bg-sage/60 p-6 md:p-8">
+            <div className="reveal mt-6 rounded-2xl border border-sand bg-sage p-6 md:p-8">
               <p className="eyebrow text-sage-ink">Where we fit</p>
               <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight text-ink md:text-3xl">
                 Social Insights

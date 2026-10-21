@@ -583,7 +583,7 @@ export default function KnowledgeBaseCaseStudy() {
                   <div
                     className={`reveal rounded-2xl border p-5 md:p-6 ${
                       e.highlight
-                        ? "border-sage-ink/30 bg-sage/60"
+                        ? "border-sand bg-sage"
                         : "border-line bg-bg-raised/40"
                     }`}
                   >
@@ -657,12 +657,12 @@ export default function KnowledgeBaseCaseStudy() {
             <p className="eyebrow reveal">The problem</p>
             <p className="reveal mt-5 max-w-3xl font-display text-2xl font-semibold leading-snug tracking-tight text-ink md:text-3xl">
               Upmarket customers{" "}
-              <span className="rounded bg-accent/15 px-1 text-accent-ink">
+              <span className="marker text-ink">
                 couldn&apos;t create multiple knowledge bases
               </span>
               , the top deal-blocker for Enterprise accounts. The tool itself
               was{" "}
-              <span className="rounded bg-accent/15 px-1 text-accent-ink">
+              <span className="marker text-ink">
                 cut off from HubSpot&apos;s modern content platform
               </span>
               , so every fix was slow and expensive.
@@ -707,7 +707,7 @@ export default function KnowledgeBaseCaseStudy() {
               ))}
             </div>
 
-            <div className="reveal mt-6 rounded-2xl border border-sage-ink/30 bg-sage/60 p-6 md:p-8">
+            <div className="reveal mt-6 rounded-2xl border border-sand bg-sage p-6 md:p-8">
               <p className="eyebrow text-sage-ink">Why phasing mattered</p>
               <p className="mt-3 text-sm leading-7 text-ink/85 md:text-base">
                 Our product trio of PM, engineering and design was new.
@@ -815,7 +815,7 @@ export default function KnowledgeBaseCaseStudy() {
               </div>
             </div>
 
-            <div className="reveal mt-12 rounded-2xl border border-sage-ink/30 bg-sage/60 p-6 md:p-8">
+            <div className="reveal mt-12 rounded-2xl border border-sand bg-sage p-6 md:p-8">
               <p className="eyebrow text-sage-ink">Why this mattered beyond the Knowledge Base</p>
               <p className="mt-3 text-sm leading-7 text-ink/85 md:text-base">
                 The research reached beyond our team. It shaped a top 2023
@@ -873,7 +873,7 @@ export default function KnowledgeBaseCaseStudy() {
 
             {/* The editor decision — a narrative beat, styled apart from the
                 two design-track cards above it */}
-            <div className="reveal mt-12 rounded-2xl border border-sage-ink/30 bg-sage/60 p-6 md:p-8">
+            <div className="reveal mt-12 rounded-2xl border border-sand bg-sage p-6 md:p-8">
               <p className="eyebrow text-sage-ink">The editor decision · siding with users, keeping the room together</p>
               <p className="mt-4 text-sm leading-7 text-ink/85 md:text-base">
                 The research pointed clearly to an editor built for writing

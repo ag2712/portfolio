@@ -9,10 +9,14 @@ export default function Hero() {
           {site.location ? ` · ${site.location}` : ""}
         </p>
 
-        <h1 className="reveal mt-6 max-w-4xl font-display text-[2.5rem] font-semibold leading-[1.08] tracking-[-0.02em] text-ink sm:text-5xl md:text-[3.5rem] md:leading-[3.75rem]">
+        <h1 className="reveal mt-6 max-w-4xl font-display text-[2.75rem] font-semibold leading-[1.05] tracking-[-0.03em] text-ink sm:text-6xl md:text-7xl lg:text-[5.5rem]">
           I make complex tools
           <br className="hidden sm:block" />{" "}
-          feel obvious.
+          feel{" "}
+          <span className="marker font-mono font-medium italic tracking-[-0.04em]">
+            obvious
+          </span>
+          .
         </h1>
 
         <p className="reveal mt-8 max-w-xl text-lg leading-7 text-ink-soft">
