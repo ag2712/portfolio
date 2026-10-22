@@ -2,6 +2,7 @@ import {
   education,
   experience,
   resumeSummary,
+  site,
   tools,
 } from "@/lib/content";
 
@@ -16,6 +17,14 @@ export default function Resume() {
               Experience
             </h2>
           </div>
+          <a
+            href={site.resumeUrl}
+            download="Alisha-Gonsalves-Resume.pdf"
+            className="inline-flex items-center gap-2 rounded-lg border border-line-strong px-5 py-2.5 text-sm font-medium text-ink-soft transition-colors hover:border-ink"
+          >
+            Download PDF
+            <span aria-hidden="true">↓</span>
+          </a>
         </div>
 
         <p className="reveal mt-8 max-w-[65ch] text-lg leading-7 text-ink-soft">
