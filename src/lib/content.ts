@@ -15,7 +15,7 @@ export const site = {
     "Seven years and a few time zones in, I connect the dots and make the messy middle of building products feel easy.",
   // TODO: add your city (left blank so nothing is invented).
   location: "",
-  email: "a27gonsalves@gmail.com",
+  email: "alisha.gonsalves27@gmail.com",
   // The one-page PDF in /public/resume.pdf, linked from the Resume section.
   resumeUrl: "/resume.pdf",
   socials: [
