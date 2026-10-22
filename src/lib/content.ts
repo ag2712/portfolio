@@ -15,8 +15,8 @@ export const site = {
     "Seven years and a few time zones in, I connect the dots and make the messy middle of building products feel easy.",
   // TODO: add your city (left blank so nothing is invented).
   location: "",
-  email: "a27gonsalves@gmail.com",
-  // Drop a PDF at /public/resume.pdf to make this button work.
+  email: "alisha.gonsalves27@gmail.com",
+  // The one-page PDF in /public/resume.pdf, linked from the Resume section.
   resumeUrl: "/resume.pdf",
   socials: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/alisha-gonsalves/" },
@@ -116,76 +116,75 @@ export const education: Education[] = [
   {
     school: "University of Maryland",
     degree: "Master of Information Management",
-    period: "2017–2019",
+    period: "2019",
   },
   {
     school: "Symbiosis International University",
     degree: "Bachelor of Engineering in Information Technology",
-    period: "2012–2016",
+    period: "2016",
   },
 ];
 
 export const resumeSummary =
-  "Senior product designer with 7+ years of experience shaping content and platform products, with growing expertise in AI-powered features. I turn customer feedback and complex requirements into measurable outcomes.";
+  "Senior product designer with 7+ years of experience shaping B2B content and platform products. I work AI-first and iterate quickly, turning customer feedback and complex requirements into clear, scalable product experiences, from early research and prototyping through launch.";
 
 export const experience: Role[] = [
   {
     company: "HubSpot",
     location: "Cambridge, MA",
     title: "Senior Product Designer",
-    period: "Nov 2023 to present",
+    period: "2023 to present",
     bullets: [
-      "Led design for Social Insights, a product that turns Reddit conversations into brand insights marketers can act on. Validated with 14 marketing leaders mid-build and shipped to public beta, reaching 32% activation.",
-      "Used AI across the design process: built prototypes to test multiple entry points in days rather than weeks, synthesised user feedback into themes, and wrote small PRs that tightened design-to-engineering handoffs.",
-      "Shipped multiple editor features and set up processes to streamline feature requests and prioritisation.",
+      "Led design for Social Insights, an AI-assisted product that turns Reddit conversations into brand insights. Validated with 14 marketing leaders and shipped to public beta at 32% activation.",
+      "Integrated AI into the design workflow, cutting prototype time from weeks to days.",
+      "Pushed content design changes as pull requests straight to GitHub, tightening engineering handoff.",
+      "Designed a distraction-free focus mode for knowledge base writing, with a quick switch to module mode for reusable blocks.",
     ],
   },
   {
     company: "HubSpot",
     location: "Cambridge, MA",
     title: "Product Designer",
-    period: "Sep 2021 to Oct 2023",
+    period: "2021 to 2023",
     bullets: [
-      "Led design strategy to move the standalone Knowledge Base product onto HubSpot’s content platform, joining business and engineering priorities into a two-phase plan. Result: $169K net-new ARR.",
-      "Designed knowledge base features that reached a 13.6% activation rate within 90 days.",
-      "Created a GitHub-based bug quality testing process for faster pre-release bug resolution.",
+      "Gained $169K net-new ARR by moving the standalone Knowledge Base onto HubSpot’s content platform through a two-phase plan that joined business and engineering priorities.",
+      "Designed knowledge base features that hit 13.6% activation in 90 days, 58% above goal.",
+      "Built a GitHub bug testing process for designers, helping engineers fix bugs faster.",
     ],
   },
   {
     company: "CentralSquare Technologies",
     location: "Lake Mary, FL",
     title: "Associate UX Designer",
-    period: "Aug 2019 to Aug 2021",
+    period: "2019 to 2021",
     bullets: [
-      "Ran qualitative research, including user interviews and usability sessions.",
-      "Set up product tracking to add quantitative insight.",
-      "Built processes to streamline cross-functional collaboration.",
+      "Ran qualitative research, user interviews and usability sessions, to validate design direction.",
+      "Set up product tracking in Pendo to see how features performed, where users dropped off, which features went unused and which tasks users did most.",
     ],
   },
   {
     company: "University of Maryland",
     location: "College Park, MD",
     title: "UX Graduate Assistant",
-    period: "Sep 2018 to May 2019",
+    period: "2018 to 2019",
     bullets: [
-      "Surfaced usability issues by running usability tests and reporting user feedback to guide design improvements.",
-      "Co-authored a usability issues document that paired each issue with a proposed UX solution.",
-      "Cleaned faculty data so it was ready for import.",
+      "Ran usability tests and reported user feedback to guide design improvements.",
+      "Co-authored a usability issues report pairing each issue with a proposed fix.",
     ],
   },
   {
     company: "Experian",
     location: "Costa Mesa, CA",
     title: "Business UX Analyst Intern",
-    period: "Jun 2018 to Aug 2018",
+    period: "2018",
     bullets: [
-      "Audited an internal tool for usability and delivered issue artifacts with prototyped improvements.",
+      "Audited an internal tool for usability and prototyped improvements.",
     ],
   },
 ];
 
 export const tools = [
-  { label: "Design", items: ["Figma", "Sketch", "Photoshop", "Framer"] },
+  { label: "Design", items: ["Figma", "Sketch", "GitHub"] },
   {
     label: "AI",
     items: ["Lovable", "Conductor", "Claude", "Glean", "NotebookLM"],
