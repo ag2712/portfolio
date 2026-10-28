@@ -7,6 +7,11 @@
 // fill these in when you get a chance.
 // ─────────────────────────────────────────────────────────────────────────────
 
+import portraitImg from "@/assets/about/portrait.jpg";
+import plantsImg from "@/assets/about/plants.jpg";
+import bachataImg from "@/assets/about/bachata.jpg";
+import museumImg from "@/assets/about/museum.jpg";
+
 export const site = {
   name: "Alisha Gonsalves",
   role: "Senior Product Designer",
@@ -25,7 +30,16 @@ export const site = {
 } as const;
 
 export const about = {
-  // 2–3 short paragraphs. Keep it human.
+  greeting: "Hi, I’m Alisha.",
+  // The headshot sits beside the intro. Photos live in src/assets/about/.
+  portrait: {
+    src: portraitImg,
+    alt: "Alisha smiling and making a peace sign against a coral wall",
+  },
+  // The personal origin line, shown large under the greeting.
+  origin:
+    "I grew up across India, the Middle East and the US. Moving around taught me to read a room quickly and settle in fast.",
+  // 2–3 short paragraphs about the work. Keep it human.
   paragraphs: [
     "I design tools in the marketing space that help brands get their message out, and understand how it’s landing.",
     "I got here sideways: an engineering degree, a master’s in information management, and a UX career that started in research (picked up across a few different countries along the way). That mix is why I adapt quickly, and why I can speak “engineer”, “researcher” and “PM” in the same meeting.",
@@ -37,7 +51,36 @@ export const about = {
     { label: "Experience", value: "7+ years" }, // TODO: adjust if you prefer
     { label: "Currently", value: "Senior PD @ HubSpot" },
   ],
-} as const;
+  // Life outside work: three photo cards.
+  interests: [
+    {
+      title: "Plant parent",
+      body: "I take great pride in keeping multiple plants alive at the same time.",
+      image: plantsImg,
+      alt: "Orchids and leafy houseplants on a sunny windowsill",
+    },
+    {
+      title: "Bachata",
+      body: "I travel around the world to train as a bachata dancer.",
+      image: bachataImg,
+      alt: "Alisha dancing bachata with a partner by the waterfront",
+    },
+    {
+      title: "Museums & coffee",
+      body: "My favourite way into a new city is its museums and coffee shops.",
+      image: museumImg,
+      alt: "Sculptures in a glass-roofed museum courtyard",
+    },
+  ],
+  // The sage callout tying the personal story back to the work.
+  takeaway: {
+    eyebrow: "What moving taught me",
+    title: "Adaptability",
+    // Note: this line names Iru, so every visitor sees it. Swap for a general
+    // line when you're not tailoring the site to one company.
+    body: "I’m at ease with new teams, new domains and new users. Iru’s complex space is exactly the kind of challenge I look forward to.",
+  },
+};
 
 export type Project = {
   slug: string;
