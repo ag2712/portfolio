@@ -73,19 +73,6 @@ export default function About() {
           </ul>
         </div>
 
-        {/* What it adds up to */}
-        <div className="reveal mt-6 grid grid-cols-1 gap-3 rounded-lg bg-sage p-6 md:grid-cols-12 md:items-center md:gap-10">
-          <div className="md:col-span-4">
-            <p className="eyebrow">{about.takeaway.eyebrow}</p>
-            <p className="mt-1 font-display text-xl font-semibold leading-7 text-ink">
-              {about.takeaway.title}
-            </p>
-          </div>
-          <p className="text-base leading-[1.625rem] text-ink-soft md:col-span-8">
-            {about.takeaway.body}
-          </p>
-        </div>
-
         {/* Skills */}
         <div className="reveal mt-16 border-t border-line pt-8">
           <p className="eyebrow">What I do</p>

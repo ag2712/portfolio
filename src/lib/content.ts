@@ -72,14 +72,6 @@ export const about = {
       alt: "Sculptures in a glass-roofed museum courtyard",
     },
   ],
-  // The sage callout tying the personal story back to the work.
-  takeaway: {
-    eyebrow: "What moving taught me",
-    title: "Adaptability",
-    // Note: this line names Iru, so every visitor sees it. Swap for a general
-    // line when you're not tailoring the site to one company.
-    body: "I’m at ease with new teams, new domains and new users. Iru’s complex space is exactly the kind of challenge I look forward to.",
-  },
 };
 
 export type Project = {
