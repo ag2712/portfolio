@@ -6,7 +6,7 @@ type Props = {
   /** The steady first line of the heading, e.g. "Hi, I’m Alisha.". */
   lead: string;
   facts: readonly string[];
-  /** Classes for the heading. */
+  /** Classes for the page heading (an h1). */
   className?: string;
   /** Seconds each fact stays on screen. */
   seconds?: number;
@@ -64,7 +64,7 @@ export default function RotatingFacts({
 
   return (
     <>
-      <h2 className={className}>
+      <h1 className={className}>
         <span className="block">{lead}</span>
         <span
           aria-hidden="true"
@@ -81,7 +81,7 @@ export default function RotatingFacts({
             <span key={fact}> {fact}</span>
           ))}
         </span>
-      </h2>
+      </h1>
 
       {facts.length > 1 && (
         <button
