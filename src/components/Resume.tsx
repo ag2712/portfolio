@@ -8,24 +8,38 @@ import {
 import ExperienceTimeline from "./ExperienceTimeline";
 
 export default function Resume() {
+  const linkedin = site.socials.find((s) => s.label === "LinkedIn");
+
   return (
     <section id="resume" className="scroll-mt-20 py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
-        <div className="reveal flex flex-wrap items-end justify-between gap-6">
-          <div>
-            <p className="eyebrow">Resume</p>
-            <h2 className="mt-2 font-display text-[1.75rem] font-semibold leading-9 tracking-[-0.01em] text-ink">
-              Experience
-            </h2>
+        <div className="reveal">
+          <p className="eyebrow">Resume</p>
+          <h2 className="mt-2 font-display text-[1.75rem] font-semibold leading-9 tracking-[-0.01em] text-ink">
+            Experience
+          </h2>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <a
+              href={site.resumeUrl}
+              download="Alisha-Gonsalves-Resume.pdf"
+              className="inline-flex items-center gap-2 rounded-lg border border-line-strong px-5 py-2.5 text-sm font-medium text-ink-soft transition-colors hover:border-ink"
+            >
+              Download PDF
+              <span aria-hidden="true">↓</span>
+            </a>
+            {linkedin && (
+              <a
+                href={linkedin.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border border-line-strong px-5 py-2.5 text-sm font-medium text-ink-soft transition-colors hover:border-ink"
+              >
+                LinkedIn
+                <span aria-hidden="true">↗</span>
+                <span className="sr-only">(opens in a new tab)</span>
+              </a>
+            )}
           </div>
-          <a
-            href={site.resumeUrl}
-            download="Alisha-Gonsalves-Resume.pdf"
-            className="inline-flex items-center gap-2 rounded-lg border border-line-strong px-5 py-2.5 text-sm font-medium text-ink-soft transition-colors hover:border-ink"
-          >
-            Download PDF
-            <span aria-hidden="true">↓</span>
-          </a>
         </div>
 
         <p className="reveal mt-8 max-w-[65ch] text-lg leading-7 text-ink-soft">
