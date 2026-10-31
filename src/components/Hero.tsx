@@ -10,6 +10,7 @@ export default function Hero() {
         </p>
 
         <h1 className="reveal mt-6 max-w-4xl font-display text-[2.75rem] font-semibold leading-[1.05] tracking-[-0.03em] text-ink sm:text-6xl md:text-7xl lg:text-[5.5rem]">
+          <span className="block">{site.greeting}</span>
           I make complex tools
           <br className="hidden sm:block" />{" "}
           feel{" "}

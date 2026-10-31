@@ -10,6 +10,8 @@
 export const site = {
   name: "Alisha Gonsalves",
   role: "Senior Product Designer",
+  // The friendly opening line of the hero headline.
+  greeting: "Hi, I’m Alisha.",
   // A short, spoken-word intro used in the hero.
   tagline:
     "Seven years and a few time zones in, I connect the dots and make the messy middle of building products feel easy.",
