@@ -87,7 +87,7 @@ export default function ExperienceTimeline({ roles }: { roles: Role[] }) {
                 />
                 <span className="min-w-0">
                   <span className="block font-display text-base font-semibold leading-6">
-                    {role.title}
+                    {role.shortTitle ?? role.title}
                   </span>
                   <span
                     className={`block text-sm leading-5 ${
