@@ -104,6 +104,8 @@ export type Role = {
   company: string;
   location: string;
   title: string;
+  // Optional shorter title for the timeline step, when the full one is long.
+  shortTitle?: string;
   period: string;
   bullets: string[];
 };
@@ -178,6 +180,7 @@ export const experience: Role[] = [
     company: "Experian",
     location: "Costa Mesa, CA",
     title: "Business UX Analyst Intern",
+    shortTitle: "UX Analyst Intern",
     period: "2018",
     bullets: [
       "Audited an internal tool for usability and prototyped improvements.",
