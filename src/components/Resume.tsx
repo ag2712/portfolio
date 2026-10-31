@@ -11,13 +11,13 @@ export default function Resume() {
   const linkedin = site.socials.find((s) => s.label === "LinkedIn");
 
   return (
-    <section id="resume" className="scroll-mt-20 py-24 md:py-32">
+    <section id="resume" className="pb-24 pt-16 md:pb-32 md:pt-24">
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <div className="reveal">
           <p className="eyebrow">Resume</p>
-          <h2 className="mt-2 font-display text-[1.75rem] font-semibold leading-9 tracking-[-0.01em] text-ink">
+          <h1 className="mt-2 font-display text-[1.75rem] font-semibold leading-9 tracking-[-0.01em] text-ink">
             Experience
-          </h2>
+          </h1>
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <a
               href={site.resumeUrl}
@@ -56,9 +56,9 @@ export default function Resume() {
         <ExperienceTimeline roles={experience} />
 
         <div className="reveal mt-20">
-          <h3 className="font-display text-[1.75rem] font-semibold leading-9 tracking-[-0.01em] text-ink">
+          <h2 className="font-display text-[1.75rem] font-semibold leading-9 tracking-[-0.01em] text-ink">
             Education
-          </h3>
+          </h2>
         </div>
 
         <ol className="mt-8 border-t border-line">
@@ -71,9 +71,9 @@ export default function Resume() {
                 <p className="caption">{entry.period}</p>
               </div>
               <div className="md:col-span-9">
-                <h4 className="font-display text-xl font-semibold leading-7 text-ink">
+                <h3 className="font-display text-xl font-semibold leading-7 text-ink">
                   {entry.school}
-                </h4>
+                </h3>
                 <p className="mt-2 max-w-2xl text-base leading-[1.625rem] text-ink-soft">
                   {entry.degree}
                 </p>
@@ -83,9 +83,9 @@ export default function Resume() {
         </ol>
 
         <div className="reveal mt-20">
-          <h3 className="font-display text-[1.75rem] font-semibold leading-9 tracking-[-0.01em] text-ink">
+          <h2 className="font-display text-[1.75rem] font-semibold leading-9 tracking-[-0.01em] text-ink">
             Tools
-          </h3>
+          </h2>
         </div>
 
         <dl className="mt-8 border-t border-line">

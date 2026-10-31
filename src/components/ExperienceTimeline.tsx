@@ -18,10 +18,10 @@ function RoleDetails({ role }: { role: Role }) {
         {role.period}
         {role.location ? ` · ${role.location}` : ""}
       </p>
-      <h3 className="mt-3 font-display text-xl font-semibold leading-7 text-ink">
+      <h2 className="mt-3 font-display text-xl font-semibold leading-7 text-ink">
         {role.title}
         <span className="font-normal text-ink-muted"> · {role.company}</span>
-      </h3>
+      </h2>
       <ul className="mt-4 list-disc space-y-2 pl-5 text-base leading-[1.625rem] text-ink-soft marker:text-rule">
         {role.bullets.map((bullet) => (
           <li key={bullet}>{bullet}</li>
