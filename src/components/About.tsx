@@ -23,7 +23,7 @@ export default function About() {
 
           <div className="reveal md:col-span-7 md:col-start-6 md:pl-6">
             <RotatingFacts
-              lead="Fun fact:"
+              lead="Hi, I’m Alisha."
               facts={about.funFacts}
               className="font-display text-[1.75rem] font-semibold leading-[1.15] tracking-[-0.015em] text-ink md:text-[2.25rem]"
             />

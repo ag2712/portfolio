@@ -33,7 +33,7 @@ export const about = {
     "I got here sideways: an engineering degree, a master’s in information management, and a UX career that started in research (picked up across a few different countries along the way). That mix is why I adapt quickly, and why I can speak “engineer”, “researcher” and “PM” in the same meeting.",
     "These days I care most about the parts of a product that are easy to skip: the processes, the edge states, and the handoffs that quietly decide whether good design actually ships.",
   ],
-  // Rotates under "Fun fact:" in the About headline, one every few seconds.
+  // Rotates under "Hi, I’m Alisha." in the About headline, one every few seconds.
   // Keep each short enough to sit on one line on a laptop.
   funFacts: [
     "I studied engineering and design.",

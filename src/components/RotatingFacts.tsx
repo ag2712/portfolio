@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 type Props = {
-  /** The steady first line of the heading, e.g. "Fun fact:". */
+  /** The steady first line of the heading, e.g. "Hi, I’m Alisha.". */
   lead: string;
   facts: readonly string[];
   /** Classes for the heading. */
