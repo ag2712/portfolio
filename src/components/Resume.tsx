@@ -5,6 +5,7 @@ import {
   site,
   tools,
 } from "@/lib/content";
+import ExperienceTimeline from "./ExperienceTimeline";
 
 export default function Resume() {
   return (
@@ -31,33 +32,7 @@ export default function Resume() {
           {resumeSummary}
         </p>
 
-        <ol className="mt-14 border-t border-line">
-          {experience.map((role) => (
-            <li
-              key={`${role.company}-${role.period}`}
-              className="reveal group grid grid-cols-1 gap-2 border-b border-line py-8 md:grid-cols-12 md:gap-8"
-            >
-              <div className="md:col-span-3">
-                <p className="caption">{role.period}</p>
-                <p className="caption">{role.location}</p>
-              </div>
-              <div className="md:col-span-9">
-                <div className="flex flex-wrap items-baseline gap-x-3">
-                  <h3 className="font-display text-xl font-semibold leading-7 text-ink">
-                    {role.title}
-                  </h3>
-                  <span className="text-muted">·</span>
-                  <span className="text-ink-soft">{role.company}</span>
-                </div>
-                <ul className="mt-3 max-w-2xl list-disc space-y-2 pl-5 text-base leading-[1.625rem] text-ink-soft marker:text-rule">
-                  {role.bullets.map((bullet) => (
-                    <li key={bullet}>{bullet}</li>
-                  ))}
-                </ul>
-              </div>
-            </li>
-          ))}
-        </ol>
+        <ExperienceTimeline roles={experience} />
 
         <div className="reveal mt-20">
           <h3 className="font-display text-[1.75rem] font-semibold leading-9 tracking-[-0.01em] text-ink">
