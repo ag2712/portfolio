@@ -26,6 +26,19 @@ export default function Contact() {
             href={`mailto:${site.email}`}
             className="inline-flex items-center gap-2 rounded-lg bg-slate px-6 py-3 text-sm font-medium text-on-slate transition-transform hover:-translate-y-0.5"
           >
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              className="h-4 w-4"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.75"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m3 7 9 6 9-6" />
+            </svg>
             {site.email}
           </a>
           {site.socials.map((s) => (
@@ -37,6 +50,20 @@ export default function Contact() {
               className="inline-flex items-center gap-2 rounded-lg border border-ink/30 px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-ink"
             >
               {s.label}
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                className="h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M7 17 17 7" />
+                <path d="M8 7h9v9" />
+              </svg>
+              <span className="sr-only">(opens in a new tab)</span>
             </a>
           ))}
         </div>
