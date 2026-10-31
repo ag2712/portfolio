@@ -10,6 +10,7 @@ export default function Hero() {
         </p>
 
         <h1 className="reveal mt-6 max-w-4xl font-display text-[2.75rem] font-semibold leading-[1.05] tracking-[-0.03em] text-ink sm:text-6xl md:text-7xl lg:text-[5.5rem]">
+          <span className="block">{site.greeting}</span>
           I make complex tools
           <br className="hidden sm:block" />{" "}
           feel{" "}
@@ -32,12 +33,6 @@ export default function Hero() {
             <span className="transition-transform group-hover:translate-x-0.5">
               ↓
             </span>
-          </a>
-          <a
-            href={`mailto:${site.email}`}
-            className="inline-flex items-center gap-2 rounded-lg border border-line-strong px-6 py-3 text-sm font-medium text-ink-soft transition-colors hover:border-ink"
-          >
-            {site.email}
           </a>
         </div>
       </div>
