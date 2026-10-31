@@ -34,12 +34,6 @@ export default function Hero() {
               ↓
             </span>
           </a>
-          <a
-            href={`mailto:${site.email}`}
-            className="inline-flex items-center gap-2 rounded-lg border border-line-strong px-6 py-3 text-sm font-medium text-ink-soft transition-colors hover:border-ink"
-          >
-            {site.email}
-          </a>
         </div>
       </div>
     </section>
